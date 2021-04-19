@@ -1,4 +1,4 @@
-I am an Predoc with STICERD at the LSE, working with [Robin Burgess](https://robinburgess.com) and [Oriana Bandiera](orianabandiera.net). I am interested in political economy and development economics, and have previously worked on conflict and political reservations in India, democratic transitions and state repression, and longevity.
+I am an Predoc with STICERD at the LSE, working with [Robin Burgess](https://robinburgess.com) and [Oriana Bandiera](https://orianabandiera.net). I am interested in political economy and development economics, and have previously worked on conflict and political reservations in India, democratic transitions and state repression, and longevity.
 
 I plan to start a PhD in Economics in Fall 2021.
 
