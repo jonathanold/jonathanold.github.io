@@ -7,7 +7,6 @@ hugo*
 !hugo_travis_ci
 
 # Generated files at default location
-/public/
 /resources/_gen
 
 ### macOS ###

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sections on Jonathan Old</title>
+    <link>/sections/</link>
+    <description>Recent content in Sections on Jonathan Old</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/sections/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/sections/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sections/aboutme/</guid>
+      <description>I am an Predoc with STICERD at the LSE.
+This is some additional info about me.
+Curriculum Vitae (Updated January 2021)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/sections/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sections/contact/</guid>
+      <description>Email: grao@fas.harvard.edu
+Tel: +1 (857) 998-4505
+Address:
+Department of Economics
+Littauer Center M-30, Harvard University
+Cambridge, MA 02138
+U.S.A.
+Teaching (Spring 2021)
+Econ 2338: Behavioral Development Economics
+Econ 980: Behavioral Economics of Poverty and Development (junior seminar)
+Information for (potential) advisees</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/sections/other-papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sections/other-papers/</guid>
+      <description>Interactions between Organizations and Networks in Common-Pool Resource Governance, with Arun Agrawal, Dan Brown, Rick Riolo and Derek Robinson, Environmental Science &amp;amp; Policy, Volume 25, January 2013, Pages 138–146
+Preservation or degradation? Communal management and ecological change in a southeast Michigan forest, with Fred Nelson, Elisa Collins, Alain Frechette, Cynthia Koenig, Mosé Jones-Yellin, Brihannala Morgan, Gita Ramsay, and Claudia Rodriguez, Biodiversity and Conservation, October 2008, Volume 17, Issue 11, pp 2757-2772</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/sections/personal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sections/personal/</guid>
+      <description>Test pic
+Fearless Sidekick - Kirby passed in Aug 2016
+Website: I cloned the website from Gautam Rao. Please feel welcome to use and re-purpose the code for the website, which you can find at my GitHub repository.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/sections/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sections/projects/</guid>
+      <description>Hi have several projects with PhD students at HZDR.</description>
+    </item>
+    
+  </channel>
+</rss>
