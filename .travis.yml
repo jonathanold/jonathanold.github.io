@@ -1,5 +1,5 @@
 install:
-    - rm -rf public || exit 0
+    - rm -rf docs || exit 0
 
 script:
     - ./hugo_travis_ci
@@ -7,7 +7,7 @@ script:
 deploy:
     provider: pages
     skip_cleanup: true
-    local_dir: public
+    local_dir: docs
     target-branch: master
     github_token: $github_token
     on:
