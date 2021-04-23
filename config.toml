@@ -1,6 +1,6 @@
 relativeURLs = true
 title = "Jonathan Old"
-theme = ["academimal"]
+theme = ["academimall"]
 sectionPagesMenu = "main"
 defaultContentLanguage = "en"
 ignorefiles = [ "hugo_travis_ci", ".travis.yml" , "make.sh"]
