@@ -5,6 +5,10 @@ mv public docs
  
  git remote remove origin
  git remote add origin https://github.com/jonathanold/jonathanold.github.io.git
+
+ git add .
 git commit -m "Test"
 
- git push -u origin master
+ git push -u origin source
+
+ 
