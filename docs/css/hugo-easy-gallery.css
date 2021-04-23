@@ -3,20 +3,21 @@ Put this file in /static/css/hugo-easy-gallery.css
 Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
 */
 
+
 /*
 Grid Layout Styles
 */
 .gallery {
     overflow: hidden;
-    margin: 0px;
-    max-width: 768px ;
+    margin: 10px;
+    max-width: 768px;
 }
 .gallery .box {
     float: left;
     position: relative;
     /* Default: 1 tile wide */
-    width: 33.3%;
-    padding-bottom: 33.3%; 
+    width: 100%;
+    padding-bottom: 100%; 
 }
 @media only screen and (min-width : 365px) {
     /* Tablet view: 2 tiles */
@@ -28,8 +29,8 @@ Grid Layout Styles
 @media only screen and (min-width : 480px) {
     /* Small desktop / ipad view: 3 tiles */
     .gallery .box {
-        width: 33.3% ; /*  */
-        padding-bottom: 33.3%; 
+        width: 33.3%;
+        padding-bottom: 33.3%; /*  */
     }
 }
 @media only screen and (min-width : 9999px) {
@@ -61,7 +62,7 @@ figure {
 }
 .gallery figure {
     position: absolute;
-    left: 5px  ;
+    left: 5px;
     right: 5px;
     top: 5px;
     bottom: 5px;
@@ -85,10 +86,10 @@ img / a styles
 
 .gallery .img {
     position: absolute;
-    left: 0px ;
-    right: 0px ;
-    top: 0px ;
-    bottom: 0px ;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
