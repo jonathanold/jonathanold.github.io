@@ -4,3 +4,8 @@ I plan to start a PhD in Economics in Fall 2021.
 
 
 __[Curriculum Vitae](/pdf/JOld_CV.pdf)__ (Version November 2020)
+
+
+{{< load-photoswipe >}}
+
+{{< gallery dir="images/" />}}

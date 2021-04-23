@@ -2,9 +2,21 @@ works:
 - title: "Cycles of Fire: Politics and Forest Burning in Indonesia"
   pdflink: "/pdf/2021_Cycles_of_Fire.pdf"
   book: "American Economic Review Papers and Proceedings, May 2021"
-  coauthors: "Clare Balboni, Robin Burgess, Anton Heil, Ben Olken"
+  coauthors: "Clare Balboni, Robin Burgess, Anton Heil and Ben Olken"
   links:
     - url: "/pdf/2021_Cycles_of_Fire_Appendix.pdf"
       text: "Online Appendix"
   abstract: >
-    Test text for abstract
+    This paper examines the link between electoral incentives and environmental degradation by exploiting a satellite data set on 107,000 forest fires and 879 asynchronous district elections in Indonesia. Fires represent a cheap but illegal means of converting forested land to other uses, but risk burning out of control and creating substantial negative environmental externalities. We find a significant electoral cycle in forest fires. Ignitions and area burned decline during election years, but steeply increase in the year after. The results suggest that politicians may suppress this activity at times when it might particularly dent their electoral chances.
+
+- title: "Democracy and the transnational dimensions of low-level conflict and state repression"
+  pdflink: "/pdf/2021_Democracy_and_transnational_repression.pdf"
+  book: "Accepted, International Studies Quarterly"
+  coauthors: "Martin Rößler and Patrick Zwerschke"
+  links:
+    - url: "/pdf/2021_Democracy_and_transnational_repression_Appendix.pdf"
+      text: "Online Appendix"
+  abstract: >
+   This paper examines the transnational dimensions of low-level conflict and state repression. In this regard, special emphasis is placed on the role of political regimes. Drawing on a simple model, we argue that democracy has opposing effects on conflict intensity. On the one hand, democracy satisfies demand for political participation and thus reduces conflict potential. On the other hand, we highlight that domestic democracy may spur dissatisfaction and conflict abroad, which, in turn, may induce conflict spillovers. As a result, the net effect of democracy on low-level conflict and state repression is ambiguous and depends on the level of democracy in the neighborhood: We predict that democracy is more pacifying in democratic environments and may spur conflict in autocratic environments. By the symmetry of the model, we also predict that democratic environments are more pacifying for democratic countries and may spur conflict in autocracies. Empirical evidence using panel data on different types of low-level conflict and state repression for 160 countries in the period from 1950 to 2011 supports these hypotheses. Additionally, two case studies illustrate the mechanisms of our model.
+
+

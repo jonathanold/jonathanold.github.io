@@ -1,11 +1,16 @@
 relativeURLs = true
 title = "Jonathan Old"
-theme = "academimal"
+theme = ["academimal"]
 sectionPagesMenu = "main"
 defaultContentLanguage = "en"
-ignorefiles = [ "hugo_travis_ci", ".travis.yml" ]
+ignorefiles = [ "hugo_travis_ci", ".travis.yml" , "make.sh"]
 
 [params]
     shortbio = "Predoc at the LSE, future Economics PhD student"
     logo = "wald.jpg" 
     
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  
