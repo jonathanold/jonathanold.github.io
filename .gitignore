@@ -3,7 +3,6 @@
 
 ### Hugo ###
 # Hugo binary
-hugo*
 !hugo_travis_ci
 
 # Generated files at default location
