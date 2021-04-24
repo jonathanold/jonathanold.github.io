@@ -4,7 +4,7 @@ hugo
 mv public docs
  
  git remote remove origin
- git remote add origin https://github.com/jonathanold/jonathanold.github.io.git
+ git remote add origin git@github.com:jonathanold/jonathanold.github.io.git
 
  git add .
 git commit -m "Test"
