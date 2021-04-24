@@ -7,7 +7,7 @@ mv public docs
  git remote add origin git@github.com:jonathanold/jonathanold.github.io.git
 
  git add .
-git commit -m "Test"
+git commit -m "Added new favicon"
 
  git push -u origin source
 
