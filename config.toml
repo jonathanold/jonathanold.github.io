@@ -7,8 +7,6 @@ ignorefiles = [ "hugo_travis_ci", ".travis.yml" , "make.sh"]
 
 [params]
     shortbio = "Predoc at LSE. Interested in political economy and development economics."
-    ORCID = "0000-0003-3256-4700"
-    officeAddress = "32-G918"
     logo = "wald.jpg" 
     
 
