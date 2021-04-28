@@ -6,6 +6,8 @@ works:
   links:
     - url: "/pdf/2021_Cycles_of_Fire_Appendix.pdf"
       text: "Online Appendix"
+    - url: "https://www.openicpsr.org/openicpsr/project/130744/version/V1/view"
+      text: "Replication data (on OpenICPSR)"
   abstract: >
     This paper examines the link between electoral incentives and environmental degradation by exploiting a satellite data set on 107,000 forest fires and 879 asynchronous district elections in Indonesia. Fires represent a cheap but illegal means of converting forested land to other uses, but risk burning out of control and creating substantial negative environmental externalities. We find a significant electoral cycle in forest fires. Ignitions and area burned decline during election years, but steeply increase in the year after. The results suggest that politicians may suppress this activity at times when it might particularly dent their electoral chances.
 
