@@ -308,6 +308,10 @@ a:hover small {
   color: #777; }
 
 
+.wrapper {
+  width: 1060px;
+  margin: 0 auto; }
+
 blockquote {
   border-left: 1px solid #e5e5e5;
   margin: 0;
@@ -334,7 +338,7 @@ th, td {
   padding: 5px 10px;
   border-bottom: 1px solid #e5e5e5; }
 
-dt {
+dt { 
   color: #444;
   font-weight: 700; }
 
@@ -343,7 +347,6 @@ th {
 
 img {
   max-width: 100%; }
-
 
 .wrapper {
   max-width: 1060px;
@@ -380,13 +383,33 @@ header {
 
 section {
   width: 700px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
   padding-top: 20px;
 }
 
+
+@media (max-width: 767px) {
+.headx {
+  position: relative !important;
+}
+
+#header02 {
+  top: 0px;
+}
+
+.wrapper {
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+}
+
+}
+
+
 header ul {
   list-style: none;
-  height: 40px;
+  height: 20px;
   padding: 0;
   background: #f4f4f4;
   border-radius: 5px;
@@ -434,32 +457,6 @@ header ul a strong {
   display: block;
   color: #222; }
 
-section {
-  width: 700px;
-  float: right;
-  padding-bottom: 50px; }
-
-
-
-
-@media (max-width: 767px) {
-.headx {
-  position: relative !important;
-}
-
-#header02 {
-  top: 0px;
-}
-
-.wrapper {
-  max-width: 1060px;
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
-}
-
-}
-
 
 small {
   font-size: 11px; }
@@ -487,8 +484,7 @@ footer {
     position: static;
     width: auto; }
 
-  header {
-    padding-right: 320px; }
+
 
   section {
     border: 1px solid #e5e5e5;
