@@ -439,6 +439,28 @@ section {
   float: right;
   padding-bottom: 50px; }
 
+
+
+
+@media (max-width: 767px) {
+.headx {
+  position: relative !important;
+}
+
+#header02 {
+  top: 0px;
+}
+
+.wrapper {
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+}
+
+}
+
+
 small {
   font-size: 11px; }
 
