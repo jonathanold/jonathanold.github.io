@@ -8,11 +8,13 @@
         <title>Jonathan Old | Homepage</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-
+        <link rel=”stylesheet” href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity=”sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T” crossorigin=”anonymous”>
         <script data-goatcounter="https://jonathanold.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+        <script scr="https://d3js.org/d3.v2.js"></script>
 
-    </head>
+
+    </head> 
 
 
     <body>
@@ -175,6 +177,81 @@
 
 
 </div>
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+
+
+
+var comma = d3.format(",");
+
+d3.json("otherdata/test.json", function(data) {
+
+	
+	var selector = d3.select("body")
+		.append("select")
+		.attr("id", "cityselector")
+		.selectAll("option")
+		.data(data)
+		.enter().append("option")
+		.text(function(d) { return d.city; })
+		.attr("value", function (d, i) {
+			return i;
+		});
+
+	
+	
+	var index = Math.round(Math.random() * data.length);
+	d3.select("#cityselector").property("selectedIndex", index);
+
+	
+	d3.select("body")
+				.append("p")
+				.data(data)
+				.text(function(d){ 
+					return data[index]['city'] + " - population " + comma(data[index]['population']); 
+				})
+
+	
+	
+	d3.select("#cityselector")
+	.on("change", function(d) {
+		index = this.value;
+		update();
+	})
+
+	
+	function update(){
+		d3.selectAll("p")
+			.data(data)
+			.text(function(d){ 
+				return data[index]['city'] + " - population " + comma(data[index]['population']); 
+			})
+	}
+
+});
+		</script>
+
+
+<script type="text/javascript">
+
+var data = [{"year": "2012", "state": "Alabama", "value": "12"}, 
+     {"year": "2012", "state": "New York", "value": "17"}, 
+     {"year": "2012", "state": "Iowa", "value": "16"}, 
+     {"year": "2012", "state": "Oregon", "value": "10"}, 
+     {"year": "2012", "state": "Montana", "value": "10"}];
+var value = data.filter(function(d) { return d.state === "Iowa" })[0].value;
+
+
+document.write('<p>The population of Iowa is ' + value + '</p>');
+</script>
+
 
 
 
