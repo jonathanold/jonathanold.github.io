@@ -6,14 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jonathan Old | Homepage</title>
+        <script data-goatcounter="https://jonathanold.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
         <link rel=”stylesheet” href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity=”sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T” crossorigin=”anonymous”>
-        <script data-goatcounter="https://jonathanold.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-        <script scr="https://d3js.org/d3.v2.js"></script>
-
-
     </head> 
 
 
@@ -185,76 +183,6 @@
 
 
 
-	<script type="text/javascript">
-
-
-
-var comma = d3.format(",");
-
-d3.json("otherdata/test.json", function(data) {
-
-	
-	var selector = d3.select("body")
-		.append("select")
-		.attr("id", "cityselector")
-		.selectAll("option")
-		.data(data)
-		.enter().append("option")
-		.text(function(d) { return d.city; })
-		.attr("value", function (d, i) {
-			return i;
-		});
-
-	
-	
-	var index = Math.round(Math.random() * data.length);
-	d3.select("#cityselector").property("selectedIndex", index);
-
-	
-	d3.select("body")
-				.append("p")
-				.data(data)
-				.text(function(d){ 
-					return data[index]['city'] + " - population " + comma(data[index]['population']); 
-				})
-
-	
-	
-	d3.select("#cityselector")
-	.on("change", function(d) {
-		index = this.value;
-		update();
-	})
-
-	
-	function update(){
-		d3.selectAll("p")
-			.data(data)
-			.text(function(d){ 
-				return data[index]['city'] + " - population " + comma(data[index]['population']); 
-			})
-	}
-
-});
-		</script>
-
-
-<script type="text/javascript">
-
-var data = [{"year": "2012", "state": "Alabama", "value": "12"}, 
-     {"year": "2012", "state": "New York", "value": "17"}, 
-     {"year": "2012", "state": "Iowa", "value": "16"}, 
-     {"year": "2012", "state": "Oregon", "value": "10"}, 
-     {"year": "2012", "state": "Montana", "value": "10"}];
-var value = data.filter(function(d) { return d.state === "Iowa" })[0].value;
-
-
-document.write('<p>The population of Iowa is ' + value + '</p>');
-</script>
-
-
-
-
 
 
 
@@ -394,13 +322,86 @@ document.write('<p>The population of Iowa is ' + value + '</p>');
 
 <hr>
 <h2 id="resources">Resources</h2>
-<ul>
-<li>Mentoring for donations</li>
-</ul>
+<h3 id="when-will-countries-reach-the-vaccination-goal">When will countries reach the vaccination goal?</h3>
+<script type="text/javascript">
+ var zz = "World" ;
+        var comma = d3.format(",");
+
+		var abc =  d3.csv("/otherdata/covid.csv", function(consdata) {
+	    var filtercitydata = consdata.filter(function(d, i) 
+	    	{ 
+	            if (d["location"] == zz) 
+	            {return d} ;
+	        }) ;
+	        console.log(filtercitydata) ;
+		  var ctry =  filtercitydata.filter(function(d, i){return d})[0].location ;      
+		 var sevendays = comma(filtercitydata.filter(function(d, i){return d})[0].fvl7d)  ;
+		 var date = filtercitydata.filter(function(d, i){return d})[0].date  ;
+		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate  ;
+		 var already_vaccinated = filtercitydata.filter(function(d, i){return d})[0].already_vaccinated  ;
+		 var vaccination_days = comma(filtercitydata.filter(function(d, i){return d})[0].vaccination_days)  ;
+		 d3.select("#p3").insert("p").html("<b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
+		   		}) ;
+</script>
+ <script>
+
+
+ d3.csv("/otherdata/covid.csv", function(error, data) {
+    var select = d3.select("p2")
+      .append("div")
+      .append("select")
+
+
+    select
+      .on("change", function(d) {
+      	// Defining the function
+		// This line of code selects the <tbody> from the html and clears it. If this is not used, then the results would appear on top of the previous result.
+		d3.select("#p3").html("") ;
+		// This code is needed to prevent the page from reloading.
+
+        var location = d3.select(this).property("value");
+        var comma = d3.format(",");
+
+		var abc =  d3.csv("/otherdata/covid.csv", function(consdata) {
+	    var filtercitydata = consdata.filter(function(d, i) 
+	    	{ 
+	            if (d["location"] == location) 
+	            {return d} ;
+	        }) ;
+	        console.log(filtercitydata) ;
+		  var ctry =  filtercitydata.filter(function(d, i){return d})[0].location ;      
+		 var sevendays = comma(filtercitydata.filter(function(d, i){return d})[0].fvl7d)  ;
+		 var date = filtercitydata.filter(function(d, i){return d})[0].date  ;
+		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate  ;
+		 var already_vaccinated = filtercitydata.filter(function(d, i){return d})[0].already_vaccinated  ;
+		 var vaccination_days = comma(filtercitydata.filter(function(d, i){return d})[0].vaccination_days)  ;
+		 d3.select("#p3").insert("p").html("<b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
+		   		}) ;
+
+
+      });
+
+    select.selectAll("option")
+      .data(data)
+      .enter()
+        .append("option")
+        .attr("location", function (d) { return d.location; })
+        .text(function (d) { return d.location; });
+  });
+
+
+
+</script>
+<p2>
+</p2>
+<br>
+<div id="p3">  </div>
+<div> <i>(Data source: Our World in Data. Own calculations)</i> </div>
+<hr>
+<h3 id="mentoring-for-donations">Mentoring for donations</h3>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> <br>I am offering FREE mentoring for anyone interested in applying for masters/predocs/PhD programs in Economics. In return, I request you to donate to an Indian Covid foundation, such as <a href="https://twitter.com/Hemkunt_Fdn?ref_src=twsrc%5Etfw">@Hemkunt_Fdn</a> or <a href="https://twitter.com/Khalsa_Aid?ref_src=twsrc%5Etfw">@Khalsa_Aid</a>. DM me if interested! <a href="https://twitter.com/hashtag/IndiaFightsCOVID19?src=hash&amp;ref_src=twsrc%5Etfw">#IndiaFightsCOVID19</a> 1/3</p>&mdash; Jonathan Old (@Jonathan_Old) <a href="https://twitter.com/Jonathan_Old/status/1392964103174492172?ref_src=twsrc%5Etfw">May 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<ul>
-<li>Covid-19 vaccination progress:</li>
-</ul>
+<hr>
+<h3 id="covid-19-vaccination-progress">Covid-19 vaccination progress:</h3>
 <p>The Hope Index is the number of new vaccinations, divided by the number of new deaths in a country. While every death causes incredible pain and suffering, every vaccination potentially saves lives and nurtures the hope that we can beat this pandemic. Countries with high vaccination rates, such as the UK, have succesfully dried out the pandemic, and their high Hope Index values give reason for optimism. On the other hand, outbreaks such as in India inflict unimaginable suffering, but also slow down vaccination campaigns, worsening an already difficult situation.
 <img src="./pdf/hope_index.png" alt="Covid-19 Hope Index"></p>
 <iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&pickerSort=desc&pickerMetric=population&Metric=Vaccine+doses&Interval=7-day+rolling+average&Relative+to+Population=true&Align+outbreaks=false&country=IND~GBR~USA~DEU&hideControls=true" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
@@ -408,6 +409,14 @@ document.write('<p>The population of Iowa is ' + value + '</p>');
 
 
 <hr>
+
+
+
+
+
+
+
+
 
 
 This website is inspired by <a href="https://gautam-rao.com" target="_blank">Gautam Rao</a> and <a href="https://people.csail.mit.edu/leiy/" target="_blank">Lei Yang</a>. You can find the source code on my  <a href="github.com/jonathanold/jonathanold.github.io" target="_blank">Github repository</a>. Please feel free to copy it for your own website.
