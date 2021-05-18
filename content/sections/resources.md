@@ -11,7 +11,7 @@
 	            {return d} ;
 	        }) ;
 	        console.log(filtercitydata) ;
-		  var ctry =  filtercitydata.filter(function(d, i){return d})[0].location ;      
+		  var ctry =  filtercitydata.filter(function(d, i){return d})[0].location2 ;      
 		 var sevendays = comma(filtercitydata.filter(function(d, i){return d})[0].fvl7d)  ;
 		 var date = filtercitydata.filter(function(d, i){return d})[0].date  ;
 		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate  ;
