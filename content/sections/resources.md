@@ -119,15 +119,14 @@ The Hope Index is the number of new vaccinations, divided by the number of new d
 
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 30, left: 80},
-    width = 650 - margin.left - margin.right,
-    height = 450 - margin.top - margin.bottom;
+    width = 400 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
   .append("svg")
-    .attr("width", "100%")
-    .attr("height", "60%")
-    .attr('preserveAspectRatio','xMinYMin')
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
