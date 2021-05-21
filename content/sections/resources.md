@@ -125,8 +125,8 @@ var margin = {top: 10, right: 30, bottom: 30, left: 80},
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
   .append("svg")
-    .attr("width", "90%")
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", "100%")
+    .attr("height", "60%")
     .attr('preserveAspectRatio','xMinYMin')
   .append("g")
     .attr("transform",
