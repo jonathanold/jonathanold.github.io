@@ -8,6 +8,8 @@ ignorefiles = [ "hugo_travis_ci", ".travis.yml" , "make.sh"]
 [params]
     shortbio = "Predoc at LSE. Interested in political economy and development economics."
     logo = "wald.jpg" 
+    author = "Jonathan Old"
+    sitename = "Personal website of Jonathan Old"
     
 
 [markup]
