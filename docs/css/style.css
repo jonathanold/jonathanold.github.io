@@ -395,6 +395,9 @@ section {
   padding-top: 20px;
 }
 
+.my_dataviz {
+  width: 700px;
+}
 
 @media (max-width: 767px) {
 .headx {
@@ -492,7 +495,11 @@ footer {
     position: static;
     width: auto; }
 
-
+  div.my_dataviz {
+    float: none;
+    position: static;
+  width: auto;
+  }
 
   section {
     border: 1px solid #e5e5e5;

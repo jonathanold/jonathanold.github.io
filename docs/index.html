@@ -412,9 +412,9 @@
 <script>
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 30, bottom: 30, left: 80},
-    width = 400 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+var margin = {top: 10, right: 10, bottom: 30, left: 80},
+    width = my_dataviz.clientWidth - margin.left - margin.right,
+    height = 0.5*window.innerHeight - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -475,7 +475,9 @@ d3.csv("/otherdata/covid_panel.csv",
        .style('font-family', '"Noto Sans"')
       .style('font-size' , '100%')
          .style('color' , '#494949')
-      .call(d3.axisBottom(x).ticks(7));
+      .call(d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat("%b"))
+      	);
+
 
 
 
