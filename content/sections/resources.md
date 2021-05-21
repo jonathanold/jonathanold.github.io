@@ -1,3 +1,8 @@
+
+
+
+
+
 ### When will countries reach the vaccination goal?
 
 <script type="text/javascript">
@@ -95,9 +100,151 @@
 
 ---
 
-### Covid-19 vaccination progress: 
+### Hope Index and Covid-19 vaccination progress: 
 
 The Hope Index is the number of new vaccinations, divided by the number of new deaths in a country. While every death causes incredible pain and suffering, every vaccination potentially saves lives and nurtures the hope that we can beat this pandemic. Countries with high vaccination rates, such as the UK, have succesfully dried out the pandemic, and their high Hope Index values give reason for optimism. On the other hand, outbreaks such as in India inflict unimaginable suffering, but also slow down vaccination campaigns, worsening an already difficult situation.
+
+
+
+<!-- Initialize a select button -->
+<select id="selectButton"></select>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<!-- Color Scale -->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<script>
+
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 30, bottom: 30, left: 80},
+    width = 650 - margin.left - margin.right,
+    height = 450 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+d3.csv("/otherdata/covid_panel.csv", 
+	function(d){
+    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, hope_index_2: d.hope_index_2 }
+  },
+
+  // Now I can use this dataset:
+  function(data) {
+
+    // List of groups (here I have one group per column)
+    var allGroup = d3.map(data, function(d){return(d.location)}).keys()
+
+    // add the options to the button
+    d3.select("#selectButton")
+      .selectAll('myOptions')
+     	.data(allGroup)
+      .enter()
+    	.append('option')
+      .text(function (d) { return d; }) // text showed in the menu
+      .attr("vaccination_days", function (d) { return d; }) // corresponding value returned by the button
+
+
+// text label for the y axis
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .style('font-family', '"Noto Sans"')
+      .style('font-size' , '100%')
+      .style('font-weight' , '700')
+      .style('fill' , '#494949')
+      .text("Hope Index");      
+
+
+    // A color scale: one color for each group
+    var myColor = d3.scaleOrdinal()
+      .domain(allGroup)
+      .range(d3.schemeSet2);
+
+    // Add X axis --> it is a date format
+    var x = d3.scaleTime()
+      .domain(d3.extent(data, function(d) { return d.date; }))
+      .range([ 0, width ]);
+    svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+       .style('font-family', '"Noto Sans"')
+      .style('font-size' , '100%')
+         .style('color' , '#494949')
+      .call(d3.axisBottom(x).ticks(7));
+
+
+
+    // Add Y axis
+    var y = d3.scaleLog()
+      .domain([10, d3.max(data, function(d) { return +d.hope_index_2; })])
+      .range([ height, 10 ])
+      .base(10);
+    svg.append("g")
+      .call(d3.axisLeft(y)
+      		.tickFormat(d3.format(","))
+      		 .tickValues([10, 10E1, 10E2, 10E3, 10E4, 10E5, 10E6]))
+      .style('font-family', '"Noto Sans"')
+       .style('color' , '#494949')
+      .style('font-size' , '100%');
+
+
+    // Initialize line with first group of the list
+    var line = svg
+      .append('g') 
+      .append("path")
+        .datum(data.filter(function(d){return d.location==allGroup[0]}))
+        .attr("d", d3.line()
+          .x(function(d) { return x(d.date) })
+          .y(function(d) { return y(+d.hope_index_2) })
+        )
+        .attr("stroke", function(d){ return myColor("World") })
+        .style("stroke-width", 4)
+        .style("fill", "none")
+
+    // A function that update the chart
+    function update(selectedGroup) {
+
+   
+      // Create new data with the selection?
+      var dataFilter = data.filter(function(d){return d.location==selectedGroup})
+
+      // Give these new data to update line
+      line 
+          .datum(dataFilter)
+          .transition()
+          .duration(200)
+          .attr("d", d3.line()
+            .x(function(d) { return x(d.date) })
+            .y(function(d) { return y(+d.hope_index_2) })
+          )
+          .attr("stroke", function(d){ return myColor(selectedGroup) })
+    }
+
+    // When the button is changed, run the updateChart function
+    d3.select("#selectButton").on("change", function(d) {
+        // recover the option that has been chosen
+        var selectedOption = d3.select(this).property("value")
+        // run the updateChart function with this selected option
+        update(selectedOption)
+    }) 
+
+})
+
+</script>
+
+
+
 ![Covid-19 Hope Index](/pdf/hope_index.png)
 
 
