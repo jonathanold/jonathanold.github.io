@@ -134,7 +134,7 @@ var svg = d3.select("#my_dataviz")
 //Read the data
 d3.csv("/otherdata/covid_panel.csv", 
 	function(d){
-    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, hope_index_2: d.hope_index_2 }
+    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, hope_index_2: d.hope_index_2, vaccination_days: d.vaccination_days}
   },
 
   // Now I can use this dataset:
@@ -186,7 +186,6 @@ d3.csv("/otherdata/covid_panel.csv",
 
 
 
-
     // Add Y axis
     var y = d3.scaleLog()
       .domain([10, d3.max(data, function(d) { return +d.hope_index_2; })])
@@ -201,6 +200,22 @@ d3.csv("/otherdata/covid_panel.csv",
       .style('font-size' , '100%');
 
 
+    // Add Y2 axis
+    var y2 = d3.scaleLog()
+      .domain([10, d3.max(data, function(d) { return +d.vaccination_days; })])
+      .range([ height, 10 ])
+      .base(10);
+
+    svg.append("g")
+      .call(d3.axisRight(y2)
+      		.tickFormat(d3.format(","))
+      		 .tickValues([10, 10E1, 10E2, 10E3]))
+      .style('font-family', '"Noto Sans"')
+       .style('color' , '#494949')
+      .style('font-size' , '100%');
+
+
+
     // Initialize line with first group of the list
     var line = svg
       .append('g') 
@@ -213,6 +228,10 @@ d3.csv("/otherdata/covid_panel.csv",
         .attr("stroke", function(d){ return myColor("World") })
         .style("stroke-width", 4)
         .style("fill", "none")
+        .attr("class", "axisSteelBlue")
+      	.call(d3.axisLeft(y2))
+
+
 
     // A function that update the chart
     function update(selectedGroup) {
@@ -230,7 +249,11 @@ d3.csv("/otherdata/covid_panel.csv",
             .x(function(d) { return x(d.date) })
             .y(function(d) { return y(+d.hope_index_2) })
           )
+          .attr("class", "axisSteelBlue")
+      	.call(d3.axisLeft(y2))
           .attr("stroke", function(d){ return myColor(selectedGroup) })
+
+
     }
 
     // When the button is changed, run the updateChart function
@@ -239,6 +262,8 @@ d3.csv("/otherdata/covid_panel.csv",
         var selectedOption = d3.select(this).property("value")
         // run the updateChart function with this selected option
         update(selectedOption)
+
+
     }) 
 
 })
