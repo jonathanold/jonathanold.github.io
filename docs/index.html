@@ -413,14 +413,14 @@
 <script>
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 10, bottom: 30, left: 40},
+var margin = {top: 10, right: 10, bottom: 30, left: 60},
     width = my_dataviz.clientWidth - margin.left - margin.right ,
     height = 0.5*window.innerHeight - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
   .append("svg")
-    .attr("width", width + margin.left + margin.right +30)
+    .attr("width", width + margin.left + margin.right +40)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
@@ -454,7 +454,7 @@ d3.csv("/otherdata/covid_panel.csv",
       .range(d3.schemeSet2);
 
 
-
+  
 // text label for the y axis
   var lax = svg.append("text")
       .attr("transform", "rotate(-90)")
@@ -472,7 +472,7 @@ d3.csv("/otherdata/covid_panel.csv",
 
   var rax = svg.append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", width + 20)
+      .attr("y", width + 30)
       .attr("x",0 - (height / 2))
       .attr("dy", "1em")
       .style("text-anchor", "middle")
@@ -503,32 +503,32 @@ d3.csv("/otherdata/covid_panel.csv",
 
     // Add Y axis
     var y = d3.scaleLinear()
-      .domain([0, 10])
+      .domain([0, 3])
       .range([ height, 0 ]);
-
-   svg.append("g")
+ 
+      var leftaxis =  svg.append("g")
       .call(d3.axisLeft(y)
       .tickFormat(d3.format(","))
-      .ticks(5)
+      .ticks(5))
       .style('font-family', '"Noto Sans"')
       .style('color' , '#494949')
       .style('font-size' , '100%');
-
+ 
 
     // Add Y2 axis
     var y2 = d3.scaleLinear()
-      .domain([0, function(d){ return myColor("World") }])
+      .domain([0, 5])
       .range([ height, 0 ]);
 
 
-    svg.append("g")
+    var rightaxis = svg.append("g")
       .call(d3.axisRight(y2)
-      .tickFormat(d3.format(","))
-      .ticks(5)
+      		.tickFormat(d3.format(","))
+      		 .ticks(5))
       .style('font-family', '"Noto Sans"')
       .style('color' , '#494949')
       .style('font-size' , '100%')
-       .attr("transform", "translate( " + width  + ", 0 )");
+       .attr("transform", "translate( " + 1.00*width  + ", 0 )");
 
 
 
@@ -557,7 +557,7 @@ d3.csv("/otherdata/covid_panel.csv",
         .style("stroke-width", 4)
         .style("stroke-opacity", 0.6)
         .style("fill", "none");
- 
+  
     // A function that update the chart
     function update(selectedGroup) {
 
@@ -565,12 +565,44 @@ d3.csv("/otherdata/covid_panel.csv",
       // Create new data with the selection?
       var dataFilter = data.filter(function(d){return d.location==selectedGroup})
 
+      y .domain([0, 1.2*d3.max(dataFilter, function(d) { return +d.new_deaths_smoothed_per_million; })]);
+      y2 .domain([0, 1.2*d3.max(dataFilter, function(d) { return +d.vaccination_rate; })]);
+
+
+ leftaxis
+ 		.transition()
+        .duration(500)
+      .call(d3.axisLeft(y)
+      .tickFormat(d3.format(","))
+      .ticks(5));
+ 
+
+
+   rightaxis 
+    		.transition()
+        .duration(500)
+      .call(d3.axisRight(y2)
+      		.tickFormat(d3.format(","))
+      		 .ticks(5))
+      .style('font-family', '"Noto Sans"')
+      .style('color' , '#494949')
+      .style('font-size' , '100%')
+       .attr("transform", "translate( " + 1.00*width  + ", 0 )");
+
+
+
+
+  
 		rax 
+		.transition()
+          .duration(500)
  		.style('fill' , function(d){ return myColor(selectedGroup)})
  		;
 
 
 		lax 
+		 .transition()
+          .duration(500)
 		 .style('fill' , function(d){ return myColor(selectedGroup)})
 		 ;
 
