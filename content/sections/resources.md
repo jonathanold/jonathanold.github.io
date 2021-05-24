@@ -118,14 +118,14 @@ The Hope Index is the number of new vaccinations, divided by the number of new d
 <script>
 
 // set the dimensions and margins of the graph
-var margin = {top: 10, right: 10, bottom: 30, left: 80},
-    width = my_dataviz.clientWidth - margin.left - margin.right,
+var margin = {top: 10, right: 10, bottom: 30, left: 40},
+    width = my_dataviz.clientWidth - margin.left - margin.right ,
     height = 0.5*window.innerHeight - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
+    .attr("width", width + margin.left + margin.right +30)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
@@ -134,7 +134,7 @@ var svg = d3.select("#my_dataviz")
 //Read the data
 d3.csv("/otherdata/covid_panel.csv", 
 	function(d){
-    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, hope_index_2: d.hope_index_2, vaccination_days: d.vaccination_days}
+    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, new_deaths_smoothed_per_million: d.new_deaths_smoothed_per_million, vaccination_days: d.vaccination_days, vaccination_rate: d.vaccination_rate}
   },
 
   // Now I can use this dataset:
@@ -150,11 +150,18 @@ d3.csv("/otherdata/covid_panel.csv",
       .enter()
     	.append('option')
       .text(function (d) { return d; }) // text showed in the menu
-      .attr("vaccination_days", function (d) { return d; }) // corresponding value returned by the button
+      .attr("vaccination_rate", function (d) { return d; }) // corresponding value returned by the button
+
+
+    // A color scale: one color for each group
+    var myColor = d3.scaleOrdinal()
+      .domain(allGroup)
+      .range(d3.schemeSet2);
+
 
 
 // text label for the y axis
-  svg.append("text")
+  var lax = svg.append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 0 - margin.left)
       .attr("x",0 - (height / 2))
@@ -163,14 +170,27 @@ d3.csv("/otherdata/covid_panel.csv",
       .style('font-family', '"Noto Sans"')
       .style('font-size' , '100%')
       .style('font-weight' , '700')
-      .style('fill' , '#494949')
-      .text("Hope Index");      
+        .style('fill' , function(d){ return myColor("World")})
+      .style("fill-opacity", 1.0)
+      .text("New Deaths per million per day");      
 
 
-    // A color scale: one color for each group
-    var myColor = d3.scaleOrdinal()
-      .domain(allGroup)
-      .range(d3.schemeSet2);
+  var rax = svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", width + 20)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .style('font-family', '"Noto Sans"')
+      .style('font-size' , '100%')
+      .style('font-weight' , '700')
+        .style('fill' , function(d){ return myColor("World")})
+      .style("fill-opacity", 0.6)
+          .text("New vaccinations per 100 per week");  
+
+
+
+
 
     // Add X axis --> it is a date format
     var x = d3.scaleTime()
@@ -187,32 +207,33 @@ d3.csv("/otherdata/covid_panel.csv",
 
 
     // Add Y axis
-    var y = d3.scaleLog()
-      .domain([10, d3.max(data, function(d) { return +d.hope_index_2; })])
-      .range([ height, 10 ])
-      .base(10);
-    svg.append("g")
+    var y = d3.scaleLinear()
+      .domain([0, 10])
+      .range([ height, 0 ]);
+
+   svg.append("g")
       .call(d3.axisLeft(y)
-      		.tickFormat(d3.format(","))
-      		 .tickValues([10, 10E1, 10E2, 10E3, 10E4, 10E5, 10E6, 10E7]))
+      .tickFormat(d3.format(","))
+      .ticks(5)
       .style('font-family', '"Noto Sans"')
-       .style('color' , '#494949')
+      .style('color' , '#494949')
       .style('font-size' , '100%');
 
 
     // Add Y2 axis
-    var y2 = d3.scaleLog()
-      .domain([10, d3.max(data, function(d) { return +d.vaccination_days; })])
-      .range([ height, 10 ])
-      .base(10);
+    var y2 = d3.scaleLinear()
+      .domain([0, function(d){ return myColor("World") }])
+      .range([ height, 0 ]);
+
 
     svg.append("g")
       .call(d3.axisRight(y2)
-      		.tickFormat(d3.format(","))
-      		 .tickValues([10, 10E1, 10E2, 10E3]))
+      .tickFormat(d3.format(","))
+      .ticks(5)
       .style('font-family', '"Noto Sans"')
-       .style('color' , '#494949')
-      .style('font-size' , '100%');
+      .style('color' , '#494949')
+      .style('font-size' , '100%')
+       .attr("transform", "translate( " + width  + ", 0 )");
 
 
 
@@ -223,22 +244,40 @@ d3.csv("/otherdata/covid_panel.csv",
         .datum(data.filter(function(d){return d.location==allGroup[0]}))
         .attr("d", d3.line()
           .x(function(d) { return x(d.date) })
-          .y(function(d) { return y(+d.hope_index_2) })
+          .y(function(d) { return y(+d.new_deaths_smoothed_per_million) })
         )
         .attr("stroke", function(d){ return myColor("World") })
         .style("stroke-width", 4)
         .style("fill", "none")
-        .attr("class", "axisSteelBlue")
-      	.call(d3.axisLeft(y2))
 
-
-
+    var line2 = svg
+      .append('g') 
+      .append("path")
+        .datum(data.filter(function(d){return d.location==allGroup[0]}))
+        .attr("d", d3.line()
+          .x(function(d) { return x(d.date) })
+          .y(function(d) { return y2(+d.vaccination_rate) })
+        )
+        .attr("stroke", function(d){ return myColor("World") })
+        .style("stroke-width", 4)
+        .style("stroke-opacity", 0.6)
+        .style("fill", "none");
+ 
     // A function that update the chart
     function update(selectedGroup) {
 
    
       // Create new data with the selection?
       var dataFilter = data.filter(function(d){return d.location==selectedGroup})
+
+		rax 
+ 		.style('fill' , function(d){ return myColor(selectedGroup)})
+ 		;
+
+
+		lax 
+		 .style('fill' , function(d){ return myColor(selectedGroup)})
+		 ;
 
       // Give these new data to update line
       line 
@@ -247,11 +286,26 @@ d3.csv("/otherdata/covid_panel.csv",
           .duration(200)
           .attr("d", d3.line()
             .x(function(d) { return x(d.date) })
-            .y(function(d) { return y(+d.hope_index_2) })
+            .y(function(d) { return y(+d.new_deaths_smoothed_per_million) })
           )
-          .attr("class", "axisSteelBlue")
-      	.call(d3.axisLeft(y2))
           .attr("stroke", function(d){ return myColor(selectedGroup) })
+          .style("stroke-width", 4)
+        .style("fill", "none")
+          ;
+
+
+    line2 
+      .datum(dataFilter)
+          .transition()
+          .duration(200)
+        .attr("d", d3.line()
+          .x(function(d) { return x(d.date) })
+          .y(function(d) { return y2(+d.vaccination_rate) })
+        )
+        .attr("stroke", function(d){ return myColor(selectedGroup) })
+        .style("stroke-width", 4)
+        .style("fill", "none")
+        .style("stroke-opacity", 0.6);
 
 
     }
