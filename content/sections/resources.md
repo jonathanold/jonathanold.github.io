@@ -100,9 +100,8 @@
 
 ---
 
-### Hope Index and Covid-19 vaccination progress: 
+### Covid-19 vaccination progress: 
 
-The Hope Index is the number of new vaccinations, divided by the number of new deaths in a country. While every death causes incredible pain and suffering, every vaccination potentially saves lives and nurtures the hope that we can beat this pandemic. Countries with high vaccination rates, such as the UK, have succesfully dried out the pandemic, and their high Hope Index values give reason for optimism. On the other hand, outbreaks such as in India inflict unimaginable suffering, but also slow down vaccination campaigns, worsening an already difficult situation.
 
 
 
@@ -356,13 +355,11 @@ d3.csv("/otherdata/covid_panel.csv",
 
 </script>
 
+### Hope Index
 
+The Hope Index is the number of new vaccinations, divided by the number of new deaths in a country. While every death causes incredible pain and suffering, every vaccination potentially saves lives and nurtures the hope that we can beat this pandemic. Countries with high vaccination rates, such as the UK, have succesfully dried out the pandemic, and their high Hope Index values give reason for optimism. On the other hand, outbreaks such as in India inflict unimaginable suffering, but also slow down vaccination campaigns, worsening an already difficult situation.
 
 ![Covid-19 Hope Index](/pdf/hope_index.png)
-
-
-<iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&pickerSort=desc&pickerMetric=population&Metric=Vaccine+doses&Interval=7-day+rolling+average&Relative+to+Population=true&Align+outbreaks=false&country=IND~GBR~USA~DEU&hideControls=true" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
-
 
 
 
