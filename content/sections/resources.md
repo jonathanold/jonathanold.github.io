@@ -20,7 +20,8 @@
 		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate  ;
 		 var already_vaccinated = filtercitydata.filter(function(d, i){return d})[0].already_vaccinated  ;
 		 var vaccination_days = comma(filtercitydata.filter(function(d, i){return d})[0].vaccination_days)  ;
-		 d3.select("#p3").insert("p").html("<b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
+     d3.select("#p3").insert("p").html("As of <b>" + month + " " 
+    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
 		   		}) ;
 </script>
 
