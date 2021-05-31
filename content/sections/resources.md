@@ -349,6 +349,7 @@ d3.csv("/otherdata/covid_panel.csv",
 </script>
 
 
+---
 
 
 ### Mentoring for donations
