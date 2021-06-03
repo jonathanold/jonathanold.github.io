@@ -1,0 +1,1662 @@
+[
+  {
+    "city": "Aa en Hunze",
+    "population": 25784
+  },
+  {
+    "city": "Aalburg",
+    "population": 12674
+  },
+  {
+    "city": "Aalsmeer",
+    "population": 30139
+  },
+  {
+    "city": "Aalten",
+    "population": 27442
+  },
+  {
+    "city": "Achtkarspelen",
+    "population": 28106
+  },
+  {
+    "city": "Alblasserdam",
+    "population": 19193
+  },
+  {
+    "city": "Albrandswaard",
+    "population": 24656
+  },
+  {
+    "city": "Alkmaar",
+    "population": 94004
+  },
+  {
+    "city": "Almelo",
+    "population": 72599
+  },
+  {
+    "city": "Almere",
+    "population": 190442
+  },
+  {
+    "city": "Alphen aan den Rijn",
+    "population": 72641
+  },
+  {
+    "city": "Alphen-Chaam",
+    "population": 9457
+  },
+  {
+    "city": "Ameland",
+    "population": 3514
+  },
+  {
+    "city": "Amersfoort",
+    "population": 146486
+  },
+  {
+    "city": "Amstelveen",
+    "population": 81845
+  },
+  {
+    "city": "Amsterdam",
+    "population": 790044
+  },
+  {
+    "city": "Apeldoorn",
+    "population": 156221
+  },
+  {
+    "city": "Appingedam",
+    "population": 12108
+  },
+  {
+    "city": "Arnhem",
+    "population": 148173
+  },
+  {
+    "city": "Assen",
+    "population": 67174
+  },
+  {
+    "city": "Asten",
+    "population": 16292
+  },
+  {
+    "city": "Baarle-Nassau",
+    "population": 6705
+  },
+  {
+    "city": "Baarn",
+    "population": 24371
+  },
+  {
+    "city": "Barendrecht",
+    "population": 46775
+  },
+  {
+    "city": "Barneveld",
+    "population": 52962
+  },
+  {
+    "city": "Bedum",
+    "population": 10481
+  },
+  {
+    "city": "Beek",
+    "population": 16543
+  },
+  {
+    "city": "Beemster",
+    "population": 8573
+  },
+  {
+    "city": "Beesel",
+    "population": 13846
+  },
+  {
+    "city": "Bellingwedde",
+    "population": 9391
+  },
+  {
+    "city": "Bergambacht",
+    "population": 9783
+  },
+  {
+    "city": "Bergeijk",
+    "population": 18066
+  },
+  {
+    "city": "Bergen (L.)",
+    "population": 13346
+  },
+  {
+    "city": "Bergen (NH.)",
+    "population": 30897
+  },
+  {
+    "city": "Bergen op Zoom",
+    "population": 66027
+  },
+  {
+    "city": "Berkelland",
+    "population": 44800
+  },
+  {
+    "city": "Bernheze",
+    "population": 29731
+  },
+  {
+    "city": "Bernisse",
+    "population": 12404
+  },
+  {
+    "city": "Best",
+    "population": 28821
+  },
+  {
+    "city": "Beuningen",
+    "population": 25492
+  },
+  {
+    "city": "Beverwijk",
+    "population": 39263
+  },
+  {
+    "city": "Binnenmaas",
+    "population": 28947
+  },
+  {
+    "city": "Bladel",
+    "population": 19349
+  },
+  {
+    "city": "Blaricum",
+    "population": 8954
+  },
+  {
+    "city": "Bloemendaal",
+    "population": 22025
+  },
+  {
+    "city": "Boarnsterhim",
+    "population": 19299
+  },
+  {
+    "city": "Bodegraven-Reeuwijk",
+    "population": 32691
+  },
+  {
+    "city": "Boekel",
+    "population": 9859
+  },
+  {
+    "city": "Borger-Odoorn",
+    "population": 25969
+  },
+  {
+    "city": "Borne",
+    "population": 21494
+  },
+  {
+    "city": "Borsele",
+    "population": 22733
+  },
+  {
+    "city": "Boskoop",
+    "population": 15055
+  },
+  {
+    "city": "Boxmeer",
+    "population": 28589
+  },
+  {
+    "city": "Boxtel",
+    "population": 30268
+  },
+  {
+    "city": "Breda",
+    "population": 174499
+  },
+  {
+    "city": "Brielle",
+    "population": 15969
+  },
+  {
+    "city": "Bronckhorst",
+    "population": 37697
+  },
+  {
+    "city": "Brummen",
+    "population": 21204
+  },
+  {
+    "city": "Brunssum",
+    "population": 29379
+  },
+  {
+    "city": "Bunnik",
+    "population": 14434
+  },
+  {
+    "city": "Bunschoten",
+    "population": 20105
+  },
+  {
+    "city": "Buren",
+    "population": 25994
+  },
+  {
+    "city": "Bussum",
+    "population": 32414
+  },
+  {
+    "city": "Capelle aan den IJssel",
+    "population": 66006
+  },
+  {
+    "city": "Castricum",
+    "population": 34611
+  },
+  {
+    "city": "Coevorden",
+    "population": 36078
+  },
+  {
+    "city": "Cranendonck",
+    "population": 20395
+  },
+  {
+    "city": "Cromstrijen",
+    "population": 12807
+  },
+  {
+    "city": "Cuijk",
+    "population": 24632
+  },
+  {
+    "city": "Culemborg",
+    "population": 27607
+  },
+  {
+    "city": "Dalfsen",
+    "population": 27324
+  },
+  {
+    "city": "Dantumadiel",
+    "population": 19321
+  },
+  {
+    "city": "De Bilt",
+    "population": 42043
+  },
+  {
+    "city": "De Marne",
+    "population": 10505
+  },
+  {
+    "city": "De Ronde Venen",
+    "population": 43041
+  },
+  {
+    "city": "De Wolden",
+    "population": 23619
+  },
+  {
+    "city": "Delft",
+    "population": 97685
+  },
+  {
+    "city": "Delfzijl",
+    "population": 26518
+  },
+  {
+    "city": "Den Haag",
+    "population": 494879
+  },
+  {
+    "city": "Den Helder",
+    "population": 57243
+  },
+  {
+    "city": "Deurne",
+    "population": 31679
+  },
+  {
+    "city": "Deventer",
+    "population": 98827
+  },
+  {
+    "city": "Diemen",
+    "population": 25013
+  },
+  {
+    "city": "Dinkelland",
+    "population": 26068
+  },
+  {
+    "city": "Dirksland",
+    "population": 8410
+  },
+  {
+    "city": "Doesburg",
+    "population": 11634
+  },
+  {
+    "city": "Doetinchem",
+    "population": 56073
+  },
+  {
+    "city": "Dongen",
+    "population": 25097
+  },
+  {
+    "city": "Dongeradeel",
+    "population": 24293
+  },
+  {
+    "city": "Dordrecht",
+    "population": 118824
+  },
+  {
+    "city": "Drechterland",
+    "population": 19342
+  },
+  {
+    "city": "Drimmelen",
+    "population": 26483
+  },
+  {
+    "city": "Dronten",
+    "population": 40115
+  },
+  {
+    "city": "Druten",
+    "population": 18085
+  },
+  {
+    "city": "Duiven",
+    "population": 25527
+  },
+  {
+    "city": "Echt-Susteren",
+    "population": 32244
+  },
+  {
+    "city": "Edam-Volendam",
+    "population": 28583
+  },
+  {
+    "city": "Ede",
+    "population": 108226
+  },
+  {
+    "city": "Eemnes",
+    "population": 8855
+  },
+  {
+    "city": "Eemsmond",
+    "population": 16355
+  },
+  {
+    "city": "Eersel",
+    "population": 18152
+  },
+  {
+    "city": "Eijsden-Margraten",
+    "population": 24900
+  },
+  {
+    "city": "Eindhoven",
+    "population": 216069
+  },
+  {
+    "city": "Elburg",
+    "population": 22285
+  },
+  {
+    "city": "Emmen",
+    "population": 109278
+  },
+  {
+    "city": "Enkhuizen",
+    "population": 18172
+  },
+  {
+    "city": "Enschede",
+    "population": 157982
+  },
+  {
+    "city": "Epe",
+    "population": 32833
+  },
+  {
+    "city": "Ermelo",
+    "population": 26151
+  },
+  {
+    "city": "Etten-Leur",
+    "population": 41733
+  },
+  {
+    "city": "Ferwerderadiel",
+    "population": 8865
+  },
+  {
+    "city": "Franekeradeel",
+    "population": 20755
+  },
+  {
+    "city": "Gaasterlan-Sleat",
+    "population": 10246
+  },
+  {
+    "city": "Geertruidenberg",
+    "population": 21315
+  },
+  {
+    "city": "Geldermalsen",
+    "population": 26214
+  },
+  {
+    "city": "Geldrop-Mierlo",
+    "population": 38339
+  },
+  {
+    "city": "Gemert-Bakel",
+    "population": 28905
+  },
+  {
+    "city": "Gennep",
+    "population": 17328
+  },
+  {
+    "city": "Giessenlanden",
+    "population": 14447
+  },
+  {
+    "city": "Gilze en Rijen",
+    "population": 25799
+  },
+  {
+    "city": "Goedereede",
+    "population": 11408
+  },
+  {
+    "city": "Goes",
+    "population": 36643
+  },
+  {
+    "city": "Goirle",
+    "population": 22808
+  },
+  {
+    "city": "Gorinchem",
+    "population": 34835
+  },
+  {
+    "city": "Gouda",
+    "population": 71085
+  },
+  {
+    "city": "Graafstroom",
+    "population": 9825
+  },
+  {
+    "city": "Graft-De Rijp",
+    "population": 6478
+  },
+  {
+    "city": "Grave",
+    "population": 13003
+  },
+  {
+    "city": "Groesbeek",
+    "population": 18836
+  },
+  {
+    "city": "Groningen",
+    "population": 190166
+  },
+  {
+    "city": "Grootegast",
+    "population": 12203
+  },
+  {
+    "city": "Gulpen-Wittem",
+    "population": 14520
+  },
+  {
+    "city": "Haaksbergen",
+    "population": 24456
+  },
+  {
+    "city": "Haaren",
+    "population": 13644
+  },
+  {
+    "city": "Haarlem",
+    "population": 150728
+  },
+  {
+    "city": "Haarlemmerliede en Spaarnwoude",
+    "population": 5432
+  },
+  {
+    "city": "Haarlemmermeer",
+    "population": 143335
+  },
+  {
+    "city": "Halderberge",
+    "population": 29248
+  },
+  {
+    "city": "Hardenberg",
+    "population": 59260
+  },
+  {
+    "city": "Harderwijk",
+    "population": 44871
+  },
+  {
+    "city": "Hardinxveld-Giessendam",
+    "population": 17547
+  },
+  {
+    "city": "Haren",
+    "population": 18539
+  },
+  {
+    "city": "Harenkarspel",
+    "population": 16157
+  },
+  {
+    "city": "Harlingen",
+    "population": 15861
+  },
+  {
+    "city": "Hattem",
+    "population": 11761
+  },
+  {
+    "city": "Heemskerk",
+    "population": 39142
+  },
+  {
+    "city": "Heemstede",
+    "population": 26272
+  },
+  {
+    "city": "Heerde",
+    "population": 18276
+  },
+  {
+    "city": "Heerenveen",
+    "population": 43448
+  },
+  {
+    "city": "Heerhugowaard",
+    "population": 51846
+  },
+  {
+    "city": "Heerlen",
+    "population": 89286
+  },
+  {
+    "city": "Heeze-Leende",
+    "population": 15288
+  },
+  {
+    "city": "Heiloo",
+    "population": 22597
+  },
+  {
+    "city": "Hellendoorn",
+    "population": 35746
+  },
+  {
+    "city": "Hellevoetsluis",
+    "population": 39786
+  },
+  {
+    "city": "Helmond",
+    "population": 88590
+  },
+  {
+    "city": "Hendrik-Ido-Ambacht",
+    "population": 27565
+  },
+  {
+    "city": "Hengelo",
+    "population": 80753
+  },
+  {
+    "city": "het Bildt",
+    "population": 10890
+  },
+  {
+    "city": "Heumen",
+    "population": 16491
+  },
+  {
+    "city": "Heusden",
+    "population": 43127
+  },
+  {
+    "city": "Hillegom",
+    "population": 20637
+  },
+  {
+    "city": "Hilvarenbeek",
+    "population": 15042
+  },
+  {
+    "city": "Hilversum",
+    "population": 85033
+  },
+  {
+    "city": "Hof van Twente",
+    "population": 35554
+  },
+  {
+    "city": "Hollands Kroon",
+    "population": 47633
+  },
+  {
+    "city": "Hoogeveen",
+    "population": 54809
+  },
+  {
+    "city": "Hoogezand-Sappemeer",
+    "population": 34780
+  },
+  {
+    "city": "Hoorn",
+    "population": 70681
+  },
+  {
+    "city": "Horst aan de Maas",
+    "population": 41713
+  },
+  {
+    "city": "Houten",
+    "population": 47952
+  },
+  {
+    "city": "Huizen",
+    "population": 41708
+  },
+  {
+    "city": "Hulst",
+    "population": 27709
+  },
+  {
+    "city": "IJsselstein",
+    "population": 34325
+  },
+  {
+    "city": "Kaag en Braassem",
+    "population": 25743
+  },
+  {
+    "city": "Kampen",
+    "population": 50379
+  },
+  {
+    "city": "Kapelle",
+    "population": 12354
+  },
+  {
+    "city": "Katwijk",
+    "population": 61964
+  },
+  {
+    "city": "Kerkrade",
+    "population": 47445
+  },
+  {
+    "city": "Koggenland",
+    "population": 22082
+  },
+  {
+    "city": "Kollumerland c.a.",
+    "population": 12959
+  },
+  {
+    "city": "Korendijk",
+    "population": 10827
+  },
+  {
+    "city": "Krimpen aan den IJssel",
+    "population": 28638
+  },
+  {
+    "city": "Laarbeek",
+    "population": 21500
+  },
+  {
+    "city": "Landerd",
+    "population": 12600
+  },
+  {
+    "city": "Landgraaf",
+    "population": 38218
+  },
+  {
+    "city": "Landsmeer",
+    "population": 10238
+  },
+  {
+    "city": "Langedijk",
+    "population": 26975
+  },
+  {
+    "city": "Lansingerland",
+    "population": 56134
+  },
+  {
+    "city": "Laren",
+    "population": 11383
+  },
+  {
+    "city": "Leek",
+    "population": 19327
+  },
+  {
+    "city": "Leerdam",
+    "population": 20718
+  },
+  {
+    "city": "Leeuwarden",
+    "population": 94835
+  },
+  {
+    "city": "Leeuwarderadeel",
+    "population": 10400
+  },
+  {
+    "city": "Leiden",
+    "population": 118004
+  },
+  {
+    "city": "Leiderdorp",
+    "population": 26599
+  },
+  {
+    "city": "Leidschendam-Voorburg",
+    "population": 72064
+  },
+  {
+    "city": "Lelystad",
+    "population": 74994
+  },
+  {
+    "city": "Lemsterland",
+    "population": 13630
+  },
+  {
+    "city": "Leudal",
+    "population": 36640
+  },
+  {
+    "city": "Leusden",
+    "population": 28559
+  },
+  {
+    "city": "Liesveld",
+    "population": 9741
+  },
+  {
+    "city": "Lingewaal",
+    "population": 10889
+  },
+  {
+    "city": "Lingewaard",
+    "population": 45524
+  },
+  {
+    "city": "Lisse",
+    "population": 22704
+  },
+  {
+    "city": "Littenseradiel",
+    "population": 10994
+  },
+  {
+    "city": "Lochem",
+    "population": 33291
+  },
+  {
+    "city": "Loon op Zand",
+    "population": 22973
+  },
+  {
+    "city": "Lopik",
+    "population": 14114
+  },
+  {
+    "city": "Loppersum",
+    "population": 10508
+  },
+  {
+    "city": "Losser",
+    "population": 22676
+  },
+  {
+    "city": "Maasdonk",
+    "population": 11241
+  },
+  {
+    "city": "Maasdriel",
+    "population": 23941
+  },
+  {
+    "city": "Maasgouw",
+    "population": 24271
+  },
+  {
+    "city": "Maassluis",
+    "population": 31931
+  },
+  {
+    "city": "Maastricht",
+    "population": 119770
+  },
+  {
+    "city": "Marum",
+    "population": 10489
+  },
+  {
+    "city": "Medemblik",
+    "population": 42847
+  },
+  {
+    "city": "Meerssen",
+    "population": 19478
+  },
+  {
+    "city": "Menameradiel",
+    "population": 13775
+  },
+  {
+    "city": "Menterwolde",
+    "population": 12388
+  },
+  {
+    "city": "Meppel",
+    "population": 32488
+  },
+  {
+    "city": "Middelburg",
+    "population": 48060
+  },
+  {
+    "city": "Middelharnis",
+    "population": 18026
+  },
+  {
+    "city": "Midden-Delfland",
+    "population": 18171
+  },
+  {
+    "city": "Midden-Drenthe",
+    "population": 33558
+  },
+  {
+    "city": "Mill en Sint Hubert",
+    "population": 10999
+  },
+  {
+    "city": "Millingen aan de Rijn",
+    "population": 5931
+  },
+  {
+    "city": "Moerdijk",
+    "population": 36539
+  },
+  {
+    "city": "Montferland",
+    "population": 34995
+  },
+  {
+    "city": "Montfoort",
+    "population": 13509
+  },
+  {
+    "city": "Mook en Middelaar",
+    "population": 7971
+  },
+  {
+    "city": "Muiden",
+    "population": 6498
+  },
+  {
+    "city": "Naarden",
+    "population": 17195
+  },
+  {
+    "city": "Neder-Betuwe",
+    "population": 22591
+  },
+  {
+    "city": "Nederlek",
+    "population": 13998
+  },
+  {
+    "city": "Nederweert",
+    "population": 16666
+  },
+  {
+    "city": "Neerijnen",
+    "population": 11843
+  },
+  {
+    "city": "Nieuwegein",
+    "population": 60968
+  },
+  {
+    "city": "Nieuwkoop",
+    "population": 26997
+  },
+  {
+    "city": "Nieuw-Lekkerland",
+    "population": 9537
+  },
+  {
+    "city": "Nijkerk",
+    "population": 39755
+  },
+  {
+    "city": "Nijmegen",
+    "population": 164172
+  },
+  {
+    "city": "Noord-Beveland",
+    "population": 7483
+  },
+  {
+    "city": "Noordenveld",
+    "population": 30810
+  },
+  {
+    "city": "Noordoostpolder",
+    "population": 46235
+  },
+  {
+    "city": "Noordwijk",
+    "population": 25405
+  },
+  {
+    "city": "Noordwijkerhout",
+    "population": 15634
+  },
+  {
+    "city": "Nuenen a.c.",
+    "population": 22239
+  },
+  {
+    "city": "Nunspeet",
+    "population": 26645
+  },
+  {
+    "city": "Nuth",
+    "population": 15590
+  },
+  {
+    "city": "Oegstgeest",
+    "population": 22765
+  },
+  {
+    "city": "Oirschot",
+    "population": 17835
+  },
+  {
+    "city": "Oisterwijk",
+    "population": 25673
+  },
+  {
+    "city": "Oldambt",
+    "population": 39362
+  },
+  {
+    "city": "Oldebroek",
+    "population": 22678
+  },
+  {
+    "city": "Oldenzaal",
+    "population": 32169
+  },
+  {
+    "city": "Olst-Wijhe",
+    "population": 17502
+  },
+  {
+    "city": "Ommen",
+    "population": 17326
+  },
+  {
+    "city": "Onderbanken",
+    "population": 8028
+  },
+  {
+    "city": "Oost Gelre",
+    "population": 30096
+  },
+  {
+    "city": "Oosterhout",
+    "population": 54077
+  },
+  {
+    "city": "Oostflakkee",
+    "population": 10390
+  },
+  {
+    "city": "Ooststellingwerf",
+    "population": 26082
+  },
+  {
+    "city": "Oostzaan",
+    "population": 9097
+  },
+  {
+    "city": "Opmeer",
+    "population": 11435
+  },
+  {
+    "city": "Opsterland",
+    "population": 30002
+  },
+  {
+    "city": "Oss",
+    "population": 84175
+  },
+  {
+    "city": "Oud-Beijerland",
+    "population": 23514
+  },
+  {
+    "city": "Oude IJsselstreek",
+    "population": 39887
+  },
+  {
+    "city": "Ouder-Amstel",
+    "population": 13119
+  },
+  {
+    "city": "Ouderkerk",
+    "population": 8141
+  },
+  {
+    "city": "Oudewater",
+    "population": 9813
+  },
+  {
+    "city": "Overbetuwe",
+    "population": 45924
+  },
+  {
+    "city": "Papendrecht",
+    "population": 31904
+  },
+  {
+    "city": "Peel en Maas",
+    "population": 43202
+  },
+  {
+    "city": "Pekela",
+    "population": 12917
+  },
+  {
+    "city": "Pijnacker-Nootdorp",
+    "population": 49213
+  },
+  {
+    "city": "Purmerend",
+    "population": 79179
+  },
+  {
+    "city": "Putten",
+    "population": 23715
+  },
+  {
+    "city": "Raalte",
+    "population": 36696
+  },
+  {
+    "city": "Reimerswaal",
+    "population": 21668
+  },
+  {
+    "city": "Renkum",
+    "population": 31518
+  },
+  {
+    "city": "Renswoude",
+    "population": 4744
+  },
+  {
+    "city": "Reusel-De Mierden",
+    "population": 12600
+  },
+  {
+    "city": "Rheden",
+    "population": 43970
+  },
+  {
+    "city": "Rhenen",
+    "population": 18950
+  },
+  {
+    "city": "Ridderkerk",
+    "population": 44908
+  },
+  {
+    "city": "Rijnwaarden",
+    "population": 11040
+  },
+  {
+    "city": "Rijnwoude",
+    "population": 18456
+  },
+  {
+    "city": "Rijssen-Holten",
+    "population": 37386
+  },
+  {
+    "city": "Rijswijk",
+    "population": 46646
+  },
+  {
+    "city": "Roerdalen",
+    "population": 21261
+  },
+  {
+    "city": "Roermond",
+    "population": 55615
+  },
+  {
+    "city": "Roosendaal",
+    "population": 77562
+  },
+  {
+    "city": "Rotterdam",
+    "population": 609235
+  },
+  {
+    "city": "Rozendaal",
+    "population": 1510
+  },
+  {
+    "city": "Rucphen",
+    "population": 22435
+  },
+  {
+    "city": "Schagen",
+    "population": 18672
+  },
+  {
+    "city": "Schermer",
+    "population": 5360
+  },
+  {
+    "city": "Scherpenzeel",
+    "population": 9314
+  },
+  {
+    "city": "Schiedam",
+    "population": 75713
+  },
+  {
+    "city": "Schiermonnikoog",
+    "population": 945
+  },
+  {
+    "city": "Schijndel",
+    "population": 23022
+  },
+  {
+    "city": "Schinnen",
+    "population": 13428
+  },
+  {
+    "city": "Schoonhoven",
+    "population": 11926
+  },
+  {
+    "city": "Schouwen-Duiveland",
+    "population": 34180
+  },
+  {
+    "city": "'s-Hertogenbosch",
+    "population": 140761
+  },
+  {
+    "city": "Simpelveld",
+    "population": 10958
+  },
+  {
+    "city": "Sint Anthonis",
+    "population": 11804
+  },
+  {
+    "city": "Sint-Michielsgestel",
+    "population": 28098
+  },
+  {
+    "city": "Sint-Oedenrode",
+    "population": 17792
+  },
+  {
+    "city": "Sittard-Geleen",
+    "population": 94920
+  },
+  {
+    "city": "Skarsterlan",
+    "population": 27361
+  },
+  {
+    "city": "Sliedrecht",
+    "population": 24043
+  },
+  {
+    "city": "Slochteren",
+    "population": 15569
+  },
+  {
+    "city": "Sluis",
+    "population": 24000
+  },
+  {
+    "city": "Smallingerland",
+    "population": 55463
+  },
+  {
+    "city": "Soest",
+    "population": 45601
+  },
+  {
+    "city": "Someren",
+    "population": 18279
+  },
+  {
+    "city": "Son en Breugel",
+    "population": 15656
+  },
+  {
+    "city": "Spijkenisse",
+    "population": 72214
+  },
+  {
+    "city": "Stadskanaal",
+    "population": 33151
+  },
+  {
+    "city": "Staphorst",
+    "population": 16187
+  },
+  {
+    "city": "Stede Broec",
+    "population": 21394
+  },
+  {
+    "city": "Steenbergen",
+    "population": 23296
+  },
+  {
+    "city": "Steenwijkerland",
+    "population": 43276
+  },
+  {
+    "city": "Stein",
+    "population": 25707
+  },
+  {
+    "city": "Stichtse Vecht",
+    "population": 62979
+  },
+  {
+    "city": "Strijen",
+    "population": 8874
+  },
+  {
+    "city": "Sudwest Fryslan",
+    "population": 82410
+  },
+  {
+    "city": "Ten Boer",
+    "population": 7445
+  },
+  {
+    "city": "Terneuzen",
+    "population": 54808
+  },
+  {
+    "city": "Terschelling",
+    "population": 4728
+  },
+  {
+    "city": "Texel",
+    "population": 13733
+  },
+  {
+    "city": "Teylingen",
+    "population": 35816
+  },
+  {
+    "city": "Tholen",
+    "population": 25460
+  },
+  {
+    "city": "Tiel",
+    "population": 41174
+  },
+  {
+    "city": "Tilburg",
+    "population": 206141
+  },
+  {
+    "city": "Tubbergen",
+    "population": 21160
+  },
+  {
+    "city": "Twenterand",
+    "population": 33707
+  },
+  {
+    "city": "Tynaarlo",
+    "population": 32385
+  },
+  {
+    "city": "Tytsjerksteradiel",
+    "population": 32189
+  },
+  {
+    "city": "Ubbergen",
+    "population": 9361
+  },
+  {
+    "city": "Uden",
+    "population": 40698
+  },
+  {
+    "city": "Uitgeest",
+    "population": 12808
+  },
+  {
+    "city": "Uithoorn",
+    "population": 28096
+  },
+  {
+    "city": "Urk",
+    "population": 18635
+  },
+  {
+    "city": "Utrecht",
+    "population": 310894
+  },
+  {
+    "city": "Utrechtse Heuvelrug",
+    "population": 48793
+  },
+  {
+    "city": "Vaals",
+    "population": 9797
+  },
+  {
+    "city": "Valkenburg aan de Geul",
+    "population": 17041
+  },
+  {
+    "city": "Valkenswaard",
+    "population": 30667
+  },
+  {
+    "city": "Veendam",
+    "population": 27962
+  },
+  {
+    "city": "Veenendaal",
+    "population": 62250
+  },
+  {
+    "city": "Veere",
+    "population": 21920
+  },
+  {
+    "city": "Veghel",
+    "population": 37463
+  },
+  {
+    "city": "Veldhoven",
+    "population": 43616
+  },
+  {
+    "city": "Velsen",
+    "population": 67278
+  },
+  {
+    "city": "Venlo",
+    "population": 99792
+  },
+  {
+    "city": "Venray",
+    "population": 42796
+  },
+  {
+    "city": "Vianen",
+    "population": 19659
+  },
+  {
+    "city": "Vlaardingen",
+    "population": 71229
+  },
+  {
+    "city": "Vlagtwedde",
+    "population": 16280
+  },
+  {
+    "city": "Vlieland",
+    "population": 1151
+  },
+  {
+    "city": "Vlissingen",
+    "population": 44617
+  },
+  {
+    "city": "Vlist",
+    "population": 9798
+  },
+  {
+    "city": "Voerendaal",
+    "population": 12672
+  },
+  {
+    "city": "Voorschoten",
+    "population": 23778
+  },
+  {
+    "city": "Voorst",
+    "population": 23709
+  },
+  {
+    "city": "Vught",
+    "population": 25605
+  },
+  {
+    "city": "Waalre",
+    "population": 16504
+  },
+  {
+    "city": "Waalwijk",
+    "population": 46154
+  },
+  {
+    "city": "Waddinxveen",
+    "population": 25325
+  },
+  {
+    "city": "Wageningen",
+    "population": 37796
+  },
+  {
+    "city": "Wassenaar",
+    "population": 25785
+  },
+  {
+    "city": "Waterland",
+    "population": 17133
+  },
+  {
+    "city": "Weert",
+    "population": 48548
+  },
+  {
+    "city": "Weesp",
+    "population": 17981
+  },
+  {
+    "city": "Werkendam",
+    "population": 26359
+  },
+  {
+    "city": "West Maas en Waal",
+    "population": 18309
+  },
+  {
+    "city": "Westerveld",
+    "population": 19371
+  },
+  {
+    "city": "Westervoort",
+    "population": 15326
+  },
+  {
+    "city": "Westland",
+    "population": 102001
+  },
+  {
+    "city": "Weststellingwerf",
+    "population": 25848
+  },
+  {
+    "city": "Westvoorne",
+    "population": 14013
+  },
+  {
+    "city": "Wierden",
+    "population": 23602
+  },
+  {
+    "city": "Wijchen",
+    "population": 40499
+  },
+  {
+    "city": "Wijdemeren",
+    "population": 23347
+  },
+  {
+    "city": "Wijk bij Duurstede",
+    "population": 23108
+  },
+  {
+    "city": "Winsum",
+    "population": 14064
+  },
+  {
+    "city": "Winterswijk",
+    "population": 28992
+  },
+  {
+    "city": "Woensdrecht",
+    "population": 21666
+  },
+  {
+    "city": "Woerden",
+    "population": 49759
+  },
+  {
+    "city": "Wormerland",
+    "population": 15781
+  },
+  {
+    "city": "Woudenberg",
+    "population": 12002
+  },
+  {
+    "city": "Woudrichem",
+    "population": 14424
+  },
+  {
+    "city": "Zaanstad",
+    "population": 146803
+  },
+  {
+    "city": "Zaltbommel",
+    "population": 26645
+  },
+  {
+    "city": "Zandvoort",
+    "population": 16668
+  },
+  {
+    "city": "Zederik",
+    "population": 13351
+  },
+  {
+    "city": "Zeevang",
+    "population": 6359
+  },
+  {
+    "city": "Zeewolde",
+    "population": 21092
+  },
+  {
+    "city": "Zeist",
+    "population": 60828
+  },
+  {
+    "city": "Zevenaar",
+    "population": 32167
+  },
+  {
+    "city": "Zijpe",
+    "population": 11577
+  },
+  {
+    "city": "Zoetermeer",
+    "population": 121788
+  },
+  {
+    "city": "Zoeterwoude",
+    "population": 8134
+  },
+  {
+    "city": "Zuidhorn",
+    "population": 18616
+  },
+  {
+    "city": "Zuidplas",
+    "population": 40508
+  },
+  {
+    "city": "Zundert",
+    "population": 21167
+  },
+  {
+    "city": "Zutphen",
+    "population": 46994
+  },
+  {
+    "city": "Zwartewaterland",
+    "population": 22015
+  },
+  {
+    "city": "Zwijndrecht",
+    "population": 44455
+  },
+  {
+    "city": "Zwolle",
+    "population": 120274
+  }
+]
