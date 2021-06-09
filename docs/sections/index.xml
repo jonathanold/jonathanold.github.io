@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sections on Jonathan Old</title>
+    <link>/sections/</link>
+    <description>Recent content in Sections on Jonathan Old</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/sections/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/sections/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sections/aboutme/</guid>
+      <description>Welcome to my website. I am an Predoc with STICERD at the LSE, working with Robin Burgess and Oriana Bandiera. I am interested in political economy and development economics, and have previously worked on conflict and political reservations in India, democratic transitions and state repression, and longevity.
+I plan to start a PhD in Economics in Fall 2021.
+                               Democratizations and state repression</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/sections/policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sections/policy/</guid>
+      <description>The Interaction Between Covid-19 and an Ageing Society”. With Andrew J. Scott. In: VoxEU / CEPR Policy Portal (2020). Link to article
+  Sparprojekt oder Milchmädchenrechnung? Die finanziellen Effekte eines Bundeslandes „Mitteldeutschland [Fiscal aspects of a &amp;lsquo;Länder&amp;rsquo; merger]. With Felix Rösel. In: ifo Dresden berichtet 25/02 (2018). 12–17. Link to pdf
+  Die Preisentwicklung für Kaufimmobilien in Sachsen– Ein Überblick über die aktuellen Daten [Recent data on housing prices in Saxony].</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/sections/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sections/resources/</guid>
+      <description>Covid-19 vaccination progress var zz = &#34;World&#34; ; var comma = d3.format(&#34;,&#34;); var abc = d3.csv(&#34;/otherdata/covid.csv&#34;, function(consdata) { var filtercitydata = consdata.filter(function(d, i) { if (d[&#34;location&#34;] == zz) {return d} ; }) ; console.log(filtercitydata) ; var ctry = filtercitydata.filter(function(d, i){return d})[0].location2 ; var sevendays = comma(filtercitydata.filter(function(d, i){return d})[0].fvl7d) ; var date = filtercitydata.filter(function(d, i){return d})[0].date ; var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate ; var already_vaccinated = filtercitydata.filter(function(d, i){return d})[0].already_vaccinated ; var vaccination_days = comma(filtercitydata.</description>
+    </item>
+    
+  </channel>
+</rss>
