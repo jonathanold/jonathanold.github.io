@@ -1,10 +1,10 @@
 iso_code,location,date,new_deaths_smoothed_per_million,population,hope_index_2,fvl7d,vaccination_rate,already_vaccinated,not_vaccinated,vaccination_days,location2,year,month,day
-"OWID_WRL","World","2021-06-13",1.387,7.795e+09,3058.275,231441120,3.0,19.2,1.01e+10,305,"The World","2021","June","13"
+"OWID_WRL","World","2021-06-13",1.387,7.795e+09,3058.68,231441120,3.0,19.2,1.01e+10,305,"The World","2021","June","13"
 "OWID_AFR","Africa","2021-06-13",.252,1.341e+09,1619.31,3824815,0.3,1.9,2.10e+09,3850,"Africa","2021","June","13"
 "OWID_ASI","Asia","2021-06-13",1.027,4.640e+09,5004.815,166950656,3.6,18.6,6.04e+09,253,"Asia","2021","June","13"
 "OWID_EUR","Europe","2021-06-13",1.419,7.487e+08,4212.699,31325634,4.2,35.2,7.76e+08,173,"Europe","2021","June","13"
 "OWID_EUN","European Union","2021-06-13",1.261,4.449e+08,6324.065,24840936,5.6,41.9,4.14e+08,117,"The European Union","2021","June","13"
-"OWID_NAM","North America","2021-06-13",1.187,5.921e+08,3168.908,15587856,2.6,41.5,5.54e+08,249,"North America","2021","June","13"
+"OWID_NAM","North America","2021-06-13",1.184,5.921e+08,3175.361,15587856,2.6,41.5,5.54e+08,249,"North America","2021","June","13"
 "OWID_OCE","Oceania","2021-06-13",.003,42677809,974678.3,975650,2.3,10.5,6.11e+07,438,"Oceania","2021","June","13"
 "OWID_SAM","South America","2021-06-13",9.154,4.308e+08,462.8998,12776496,3.0,20.7,5.46e+08,299,"South America","2021","June","13"
 "AFG","Afghanistan","2021-06-08",1.02,38928341,85.30997,28105,0.1,1.0,6.16e+07,15353,"Afghanistan","2021","June","08"
