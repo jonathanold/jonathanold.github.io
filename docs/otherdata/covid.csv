@@ -1,6 +1,6 @@
 iso_code,location,date,new_deaths_smoothed_per_million,population,hope_index_2,fvl7d,vaccination_rate,already_vaccinated,not_vaccinated,vaccination_days,location2,year,month,day
-"OWID_WRL","World","2021-08-23",1.279,7794798729,3365.064,234911712,3.0,40.1,7.47e+09,223,"The World","2021","August","23"
-"OWID_AFR","Africa","2021-08-23",.587,1340598113,1962.693,10814440,0.8,4.3,2.05e+09,1329,"Africa","2021","August","23"
+"OWID_WRL","World","2021-08-23",1.28,7794798729,3363.907,234911712,3.0,40.1,7.47e+09,223,"The World","2021","August","23"
+"OWID_AFR","Africa","2021-08-23",.59,1340598113,1954.182,10814440,0.8,4.3,2.05e+09,1329,"Africa","2021","August","23"
 "OWID_ASI","Asia","2021-08-23",.979,4639847425,5394.313,171603856,3.7,44.3,4.14e+09,169,"Asia","2021","August","23"
 "OWID_EUR","Europe","2021-08-23",1.859,748680069,1766.521,17205918,2.3,60.3,4.75e+08,193,"Europe","2021","August","23"
 "OWID_EUN","European Union","2021-08-23",.914,444919060,3868.739,11010418,2.5,72.6,1.95e+08,124,"The European Union","2021","August","23"
@@ -144,7 +144,7 @@ iso_code,location,date,new_deaths_smoothed_per_million,population,hope_index_2,f
 "SDN","Sudan","2021-06-29",.02,43849269,6306.885,45738,0.1,1.0,6.95e+07,10634,"Sudan","2021","June","29"
 "SUR","Suriname","2021-08-23",3.653,586634,1867.009,28004,4.8,32.9,630157.4,158,"Suriname","2021","August","23"
 "SWE","Sweden","2021-08-20",.141,10099270,56624.91,700380,6.9,73.8,4234638,42,"Sweden","2021","August","20"
-"CHE","Switzerland","2021-08-22",.281,8654618,8077.398,137341,1.6,67.9,4447670,227,"Switzerland","2021","August","22"
+"CHE","Switzerland","2021-08-22",.165,8654618,13729.88,137341,1.6,67.9,4447670,227,"Switzerland","2021","August","22"
 "TWN","Taiwan","2021-08-23",.042,23816775,51383,489385,2.1,26.9,2.79e+07,398,"Taiwan","2021","August","23"
 "TJK","Tajikistan","2021-07-11",.15,9537642,7476.557,80360,0.8,2.6,1.49e+07,1295,"Tajikistan","2021","July","11"
 "THA","Thailand","2021-08-19",3.365,69799978,2013.387,4074379,5.8,23.1,8.59e+07,148,"Thailand","2021","August","19"
