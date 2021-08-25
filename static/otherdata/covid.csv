@@ -1,6 +1,6 @@
 iso_code,location,date,new_deaths_smoothed_per_million,population,hope_index_2,fvl7d,vaccination_rate,already_vaccinated,not_vaccinated,vaccination_days,location2,year,month,day
-"OWID_WRL","World","2021-08-24",1.286,7794798729,3359.369,235726912,3.0,40.4,7.43e+09,221,"The World","2021","August","24"
-"OWID_AFR","Africa","2021-08-24",.564,1340598113,2107.722,11158290,0.8,4.3,2.05e+09,1287,"Africa","2021","August","24"
+"OWID_WRL","World","2021-08-24",1.286,7794798729,3361.282,235861184,3.0,40.4,7.43e+09,221,"The World","2021","August","24"
+"OWID_AFR","Africa","2021-08-24",.564,1340598113,2133.087,11292565,0.8,4.3,2.05e+09,1272,"Africa","2021","August","24"
 "OWID_ASI","Asia","2021-08-24",.988,4639847425,5435.479,174489728,3.8,44.7,4.11e+09,165,"Asia","2021","August","24"
 "OWID_EUR","Europe","2021-08-24",1.895,748680069,1756.159,17436910,2.3,60.6,4.72e+08,189,"Europe","2021","August","24"
 "OWID_EUN","European Union","2021-08-24",.965,444919060,3722.256,11181663,2.5,73.0,1.92e+08,120,"The European Union","2021","August","24"
@@ -151,7 +151,7 @@ iso_code,location,date,new_deaths_smoothed_per_million,population,hope_index_2,f
 "TTO","Trinidad and Tobago","2021-08-24",4.9,1399491,1580.137,75844,5.4,38.6,1375614,127,"Trinidad and Tobago","2021","August","24"
 "TUN","Tunisia","2021-08-24",8.328,11818618,461.0227,325107,2.8,26.7,1.39e+07,298,"Tunisia","2021","August","24"
 "TUR","Turkey","2021-08-24",2.52,84339067,3630.025,5401467,6.4,67.0,4.45e+07,58,"Turkey","2021","August","24"
-"UGA","Uganda","2021-07-28",.562,45741000,157.074,28735,0.1,1.6,7.21e+07,17552,"Uganda","2021","July","28"
+"UGA","Uganda","2021-08-21",.212,45741000,2036.957,939925,2.1,1.8,7.19e+07,535,"Uganda","2021","August","21"
 "UKR","Ukraine","2021-08-24",1.098,43733759,1777.396,597203,1.4,11.9,6.17e+07,723,"Ukraine","2021","August","24"
 "ARE","United Arab Emirates","2021-08-24",.289,9890400,16130.91,401158,4.1,112.3,-1952213,-34,"The United Arab Emirates","2021","August","24"
 "GBR","United Kingdom","2021-08-23",1.481,67886004,2084.935,1467789,2.2,82.6,1.89e+07,90,"The United Kingdom","2021","August","23"
