@@ -1,7 +1,6 @@
-Welcome to my website. I am an Predoc with STICERD at the LSE, working with <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.net" target="_blank">Oriana Bandiera</a>. I am interested in political economy and development economics, and have previously worked on conflict and political reservations in India, democratic transitions and state repression, and longevity.
+Welcome to my website. I am a first year Ph.D. student in economics at the University of California, Berkeley. Before my PhD, I was a Predoc at the LSE, working with <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.net" target="_blank">Oriana Bandiera</a>. I am interested in political economy and development economics, and have previously worked on conflict and political reservations in India, democratic transitions and state repression, and longevity.
 
 
-I plan to start a PhD in Economics in Fall 2021.
 
 
 {{< load-photoswipe >}}
