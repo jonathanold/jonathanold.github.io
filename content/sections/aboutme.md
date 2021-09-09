@@ -1,11 +1,11 @@
 Welcome to my website. I am a first year Ph.D. student in economics at the University of California, Berkeley. I am interested in political economy and development economics, and have previously worked on conflict and political reservations in India, democratic transitions and state repression, and longevity.
 
-Before my Ph.D., I was a Predoc at the LSE, working with <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.net" target="_blank">Oriana Bandiera</a>. 
+Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.net" target="_blank">Oriana Bandiera</a> at the LSE, where I also did a masters in economics. 
 
 
 <div style="text-align: center">
-<a href="jonathanold.github.io/pdf/2021_Mandated_Representation_and_Low-Level_Conflict.pdf">
-<button class="button button1">Download paper on reservations in India</button>
+<a href="/pdf/2021_Mandated_Representation_and_Low-Level_Conflict.pdf">
+<button class="button1">Download paper on reservations in India</button>
 </a>
 </div> 
 

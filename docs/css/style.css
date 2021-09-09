@@ -541,13 +541,4 @@ footer {
     font-size: 12pt;
     color: #444; } }
     
-  .button1 {
-  background-color: white; 
-  color: #267CB9; 
-  border: 2px solid #267CB9;
-}
 
-.button1:hover {
-  background-color: #267CB9;
-  color: white;
-}
