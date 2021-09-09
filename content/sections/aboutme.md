@@ -5,13 +5,18 @@ Before my Ph.D., I was a Predoc at the LSE, working with <a href="https://robinb
 
 <div style="text-align: center">
 <a href="jonathanold.github.io/pdf/2021_Mandated_Representation_and_Low-Level_Conflict.pdf">
+<button class="button button1">Download paper on reservations in India</button>
+</a>
+</div> 
+
+
+<div style="text-align: center">
+<a href="jonathanold.github.io/pdf/2021_Mandated_Representation_and_Low-Level_Conflict.pdf">
 <button style="background-color:#ffffff;margin-top:6px;margin-bottom:6px;border-radius:20px; border-color:#ffffff; shadow-color:#ffffff; color:#267CB9; padding:8px 20px;  ">
 Download paper on reservations in India
 </button>
 </a>
 </div> 
-
-<button class="button button1">Green</button>
 
 
 
