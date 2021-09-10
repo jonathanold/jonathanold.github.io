@@ -365,12 +365,4 @@ d3.csv("/otherdata/covid_panel.csv",
 
 
 
-### Hope Index
-
-The Hope Index is the number of new vaccinations, divided by the number of new deaths in a country. While every death causes incredible pain and suffering, every vaccination potentially saves lives and nurtures the hope that we can beat this pandemic. Countries with high vaccination rates, such as the UK, have succesfully dried out the pandemic, and their high Hope Index values give reason for optimism. On the other hand, outbreaks such as in India inflict unimaginable suffering, but also slow down vaccination campaigns, worsening an already difficult situation.
-
-![Covid-19 Hope Index](/pdf/hope_index.png)
-
-
-
 
