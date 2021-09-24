@@ -411,7 +411,7 @@ section {
 .wrapper {
   max-width: 767px;
   width: 90%;
-  padding-right: 20px;
+  padding-right: 36px;
   display: grid;
 }
 
