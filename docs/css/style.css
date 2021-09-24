@@ -354,7 +354,7 @@ th {
   color: #444; }
 
 img {
-  max-width: 100%; }
+  max-width: 90%; }
 
 .wrapper {
   max-width: 1060px;
@@ -409,9 +409,9 @@ section {
 }
 
 .wrapper {
-  max-width: 1060px;
+  max-width: 767px;
   width: 100%;
-  margin: 0 auto;
+  padding-right: 100px;
   display: grid;
 }
 

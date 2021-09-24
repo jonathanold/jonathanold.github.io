@@ -3,12 +3,6 @@ Welcome to my website. I am a first year Ph.D. student in economics at the Unive
 Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.net" target="_blank">Oriana Bandiera</a> at the LSE, where I also did a masters in economics. 
 
 
-<div style="text-align: center">
-<a href="/pdf/2021_Mandated_Representation_and_Low-Level_Conflict.pdf">
-<button class="button1">Download paper on reservations in India</button>
-</a>
-</div> 
-
 
 
 
