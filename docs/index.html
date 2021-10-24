@@ -338,7 +338,8 @@
 		  var ctry =  filtercitydata.filter(function(d, i){return d})[0].location2 ;      
 		 var sevendays = comma(filtercitydata.filter(function(d, i){return d})[0].fvl7d)  ;
 		 var date = filtercitydata.filter(function(d, i){return d})[0].date  ;
-		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate2  ;
+		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate  ;
+    var vaccination_rate2 = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate2  ;
 		 var already_vaccinated = filtercitydata.filter(function(d, i){return d})[0].already_vaccinated  ;
 		 var vaccination_days = comma(filtercitydata.filter(function(d, i){return d})[0].vaccination_days)  ;
      var day = filtercitydata.filter(function(d, i){return d})[0].day ;
@@ -346,7 +347,7 @@
      var year = filtercitydata.filter(function(d, i){return d})[0].year ;
 
      d3.select("#p3").insert("p").html("As of <b>" + month + " " 
-    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate2 + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
+    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
 		   		}) ;
 </script>
  <script>
@@ -379,6 +380,7 @@
 		 var sevendays = comma(filtercitydata.filter(function(d, i){return d})[0].fvl7d)  ;
 		 var date = filtercitydata.filter(function(d, i){return d})[0].date  ;
 		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate  ;
+    var vaccination_rate2 = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate2  ;
 		 var already_vaccinated = filtercitydata.filter(function(d, i){return d})[0].already_vaccinated  ;
 		 var vaccination_days = comma(filtercitydata.filter(function(d, i){return d})[0].vaccination_days)  ;
      var day = filtercitydata.filter(function(d, i){return d})[0].day ;
@@ -434,7 +436,7 @@ var svg = d3.select("#my_dataviz")
 //Read the data
 d3.csv("/otherdata/covid_panel.csv", 
 	function(d){
-    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, new_deaths_smoothed_per_million: d.new_deaths_smoothed_per_million, vaccination_days: d.vaccination_days, vaccination_rate2: d.vaccination_rate2}
+    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, new_deaths_smoothed_per_million: d.new_deaths_smoothed_per_million, vaccination_days: d.vaccination_days, vaccination_rate2: d.vaccination_rate2, vaccination_rate: d.vaccination_rate}
   },
 
   // Now I can use this dataset:
@@ -486,7 +488,7 @@ d3.csv("/otherdata/covid_panel.csv",
       .style('font-weight' , '700')
         .style('fill' , function(d){ return myColor("World")})
       .style("fill-opacity", 0.6)
-          .text("New vaccinations per 100 per week");  
+          .text("Total vaccinations per 100 people");  
 
 
 
