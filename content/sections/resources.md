@@ -200,7 +200,7 @@ d3.csv("/otherdata/covid_panel.csv",
        .style('font-family', '"Noto Sans"')
       .style('font-size' , '100%')
          .style('color' , '#494949')
-      .call(d3.axisBottom(x).ticks(5).tickFormat(d3.timeFormat("%b"))
+      .call(d3.axisBottom(x).ticks(6).tickFormat(d3.timeFormat("%b"))
       	);
 
 
@@ -246,7 +246,7 @@ d3.csv("/otherdata/covid_panel.csv",
           .y(function(d) { return y(+d.new_deaths_smoothed_per_million) })
         )
         .attr("stroke", function(d){ return myColor("World") })
-        .style("stroke-width", 4)
+        .style("stroke-width", 3)
         .style("fill", "none")
 
     var line2 = svg
@@ -258,7 +258,7 @@ d3.csv("/otherdata/covid_panel.csv",
           .y(function(d) { return y2(+d.vaccination_rate2) })
         )
         .attr("stroke", function(d){ return myColor("World") })
-        .style("stroke-width", 4)
+        .style("stroke-width", 3)
         .style("stroke-opacity", 0.6)
         .style("fill", "none");
   
