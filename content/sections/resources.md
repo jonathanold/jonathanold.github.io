@@ -150,7 +150,6 @@ d3.csv("/otherdata/covid_panel.csv",
      	.data(allGroup)
       .enter()
     	.append('option')
-      .style("font-size","34px")
       .text(function (d) { return d; }) // text showed in the menu
       .attr("vaccination_rate", function (d) { return d; }) // corresponding value returned by the button
 
@@ -188,7 +187,7 @@ d3.csv("/otherdata/covid_panel.csv",
       .style('font-weight' , '700')
         .style('fill' , function(d){ return myColor("World")})
       .style("fill-opacity", 0.6)
-          .text("Total vaccinations per 100 people");  
+          .text("New vaccinations per week per 100");  
 
 
 
