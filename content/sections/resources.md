@@ -200,7 +200,7 @@ d3.csv("/otherdata/covid_panel.csv",
        .style('font-family', '"Noto Sans"')
       .style('font-size' , '100%')
          .style('color' , '#494949')
-      .call(d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat("%b"))
+      .call(d3.axisBottom(x).ticks(5).tickFormat(d3.timeFormat("%b"))
       	);
 
 
