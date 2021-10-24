@@ -348,7 +348,7 @@
      var year = filtercitydata.filter(function(d, i){return d})[0].year ;
 
      d3.select("#p3").insert("p").html("As of <b>" + month + " " 
-    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last two weeks. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days. Given the current death rate, sadly, around <b>" +death_days "</b> humans will have passed away until the vaccination goal is reached.");
+    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last two weeks. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days. Given the current death rate, sadly, around <b>" +death_days + "</b> humans will have passed away until the vaccination goal is reached.");
 		   		}) ;
 </script>
  <script>
@@ -390,7 +390,7 @@
      var year = filtercitydata.filter(function(d, i){return d})[0].year ;
 
 		 d3.select("#p3").insert("p").html("As of <b>" + month + " " 
-    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last two weeks. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days. Given the current death rate, sadly, around <b>" +death_days "</b> humans will have passed away until the vaccination goal is reached.");
+    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last two weeks. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days. Given the current death rate, sadly, around <b>" + death_days +"</b> humans will have passed away until the vaccination goal is reached.");
 		   		}) ;
 
 
@@ -401,6 +401,7 @@
       .enter()
         .append("option")
         .attr("location", function (d) { return d.location; })
+        .style("text-size", "34px")
         .text(function (d) { return d.location; });
   });
 
