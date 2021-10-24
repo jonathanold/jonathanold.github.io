@@ -17,7 +17,7 @@
 		  var ctry =  filtercitydata.filter(function(d, i){return d})[0].location2 ;      
 		 var sevendays = comma(filtercitydata.filter(function(d, i){return d})[0].fvl7d)  ;
 		 var date = filtercitydata.filter(function(d, i){return d})[0].date  ;
-		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate  ;
+		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate2  ;
 		 var already_vaccinated = filtercitydata.filter(function(d, i){return d})[0].already_vaccinated  ;
 		 var vaccination_days = comma(filtercitydata.filter(function(d, i){return d})[0].vaccination_days)  ;
      var day = filtercitydata.filter(function(d, i){return d})[0].day ;
@@ -25,7 +25,7 @@
      var year = filtercitydata.filter(function(d, i){return d})[0].year ;
 
      d3.select("#p3").insert("p").html("As of <b>" + month + " " 
-    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
+    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate2 + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
 		   		}) ;
 </script>
 
@@ -131,7 +131,7 @@ var svg = d3.select("#my_dataviz")
 //Read the data
 d3.csv("/otherdata/covid_panel.csv", 
 	function(d){
-    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, new_deaths_smoothed_per_million: d.new_deaths_smoothed_per_million, vaccination_days: d.vaccination_days, vaccination_rate: d.vaccination_rate}
+    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, new_deaths_smoothed_per_million: d.new_deaths_smoothed_per_million, vaccination_days: d.vaccination_days, vaccination_rate2: d.vaccination_rate2}
   },
 
   // Now I can use this dataset:
@@ -147,7 +147,7 @@ d3.csv("/otherdata/covid_panel.csv",
       .enter()
     	.append('option')
       .text(function (d) { return d; }) // text showed in the menu
-      .attr("vaccination_rate", function (d) { return d; }) // corresponding value returned by the button
+      .attr("vaccination_rate2", function (d) { return d; }) // corresponding value returned by the button
 
 
     // A color scale: one color for each group
@@ -253,7 +253,7 @@ d3.csv("/otherdata/covid_panel.csv",
         .datum(data.filter(function(d){return d.location==allGroup[0]}))
         .attr("d", d3.line()
           .x(function(d) { return x(d.date) })
-          .y(function(d) { return y2(+d.vaccination_rate) })
+          .y(function(d) { return y2(+d.vaccination_rate2) })
         )
         .attr("stroke", function(d){ return myColor("World") })
         .style("stroke-width", 4)
@@ -268,7 +268,7 @@ d3.csv("/otherdata/covid_panel.csv",
       var dataFilter = data.filter(function(d){return d.location==selectedGroup})
 
       y .domain([0, 1.2*d3.max(dataFilter, function(d) { return +d.new_deaths_smoothed_per_million; })]);
-      y2 .domain([0, 1.2*d3.max(dataFilter, function(d) { return +d.vaccination_rate; })]);
+      y2 .domain([0, 1.2*d3.max(dataFilter, function(d) { return +d.vaccination_rate2; })]);
 
 
  leftaxis
@@ -329,7 +329,7 @@ d3.csv("/otherdata/covid_panel.csv",
           .duration(200)
         .attr("d", d3.line()
           .x(function(d) { return x(d.date) })
-          .y(function(d) { return y2(+d.vaccination_rate) })
+          .y(function(d) { return y2(+d.vaccination_rate2) })
         )
         .attr("stroke", function(d){ return myColor(selectedGroup) })
         .style("stroke-width", 4)
