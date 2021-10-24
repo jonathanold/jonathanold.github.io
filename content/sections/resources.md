@@ -150,8 +150,9 @@ d3.csv("/otherdata/covid_panel.csv",
      	.data(allGroup)
       .enter()
     	.append('option')
+      .style("font-size","34px")
       .text(function (d) { return d; }) // text showed in the menu
-      .attr("vaccination_rate2", function (d) { return d; }) // corresponding value returned by the button
+      .attr("vaccination_rate", function (d) { return d; }) // corresponding value returned by the button
 
 
     // A color scale: one color for each group
@@ -257,7 +258,7 @@ d3.csv("/otherdata/covid_panel.csv",
         .datum(data.filter(function(d){return d.location==allGroup[0]}))
         .attr("d", d3.line()
           .x(function(d) { return x(d.date) })
-          .y(function(d) { return y2(+d.vaccination_rate2) })
+          .y(function(d) { return y2(+d.vaccination_rate) })
         )
         .attr("stroke", function(d){ return myColor("World") })
         .style("stroke-width", 3)
@@ -272,7 +273,7 @@ d3.csv("/otherdata/covid_panel.csv",
       var dataFilter = data.filter(function(d){return d.location==selectedGroup})
 
       y .domain([0, 1.2*d3.max(dataFilter, function(d) { return +d.new_deaths_smoothed_per_million; })]);
-      y2 .domain([0, 1.2*d3.max(dataFilter, function(d) { return +d.vaccination_rate2; })]);
+      y2 .domain([0, 1.2*d3.max(dataFilter, function(d) { return +d.vaccination_rate; })]);
 
 
  leftaxis
@@ -333,7 +334,7 @@ d3.csv("/otherdata/covid_panel.csv",
           .duration(200)
         .attr("d", d3.line()
           .x(function(d) { return x(d.date) })
-          .y(function(d) { return y2(+d.vaccination_rate2) })
+          .y(function(d) { return y2(+d.vaccination_rate) })
         )
         .attr("stroke", function(d){ return myColor(selectedGroup) })
         .style("stroke-width", 4)
