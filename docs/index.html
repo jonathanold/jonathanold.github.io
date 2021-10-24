@@ -453,6 +453,7 @@ d3.csv("/otherdata/covid_panel.csv",
      	.data(allGroup)
       .enter()
     	.append('option')
+      .attr("font-size","34px")
       .text(function (d) { return d; }) // text showed in the menu
       .attr("vaccination_rate2", function (d) { return d; }) // corresponding value returned by the button
 
