@@ -18,16 +18,14 @@
 		 var sevendays = comma(filtercitydata.filter(function(d, i){return d})[0].fvl7d)  ;
 		 var date = filtercitydata.filter(function(d, i){return d})[0].date  ;
 		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate  ;
-    var vaccination_rate2 = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate2  ;
 		 var already_vaccinated = filtercitydata.filter(function(d, i){return d})[0].already_vaccinated  ;
 		 var vaccination_days = comma(filtercitydata.filter(function(d, i){return d})[0].vaccination_days)  ;
-         var death_days = comma(filtercitydata.filter(function(d, i){return d})[0].death_days)  ;
      var day = filtercitydata.filter(function(d, i){return d})[0].day ;
     var month = filtercitydata.filter(function(d, i){return d})[0].month ;
      var year = filtercitydata.filter(function(d, i){return d})[0].year ;
 
      d3.select("#p3").insert("p").html("As of <b>" + month + " " 
-    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last two weeks. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days. Given the current death rate, sadly, around <b>" +death_days + "</b> humans will have passed away until the vaccination goal is reached.");
+    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
 		   		}) ;
 </script>
 
@@ -61,16 +59,14 @@
 		 var sevendays = comma(filtercitydata.filter(function(d, i){return d})[0].fvl7d)  ;
 		 var date = filtercitydata.filter(function(d, i){return d})[0].date  ;
 		 var vaccination_rate = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate  ;
-    var vaccination_rate2 = filtercitydata.filter(function(d, i){return d})[0].vaccination_rate2  ;
 		 var already_vaccinated = filtercitydata.filter(function(d, i){return d})[0].already_vaccinated  ;
 		 var vaccination_days = comma(filtercitydata.filter(function(d, i){return d})[0].vaccination_days)  ;
-              var death_days = comma(filtercitydata.filter(function(d, i){return d})[0].death_days)  ;
      var day = filtercitydata.filter(function(d, i){return d})[0].day ;
     var month = filtercitydata.filter(function(d, i){return d})[0].month ;
      var year = filtercitydata.filter(function(d, i){return d})[0].year ;
 
 		 d3.select("#p3").insert("p").html("As of <b>" + month + " " 
-    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last two weeks. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days. Given the current death rate, sadly, around <b>" + death_days +"</b> humans will have passed away until the vaccination goal is reached.");
+    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has administered <b>" + sevendays + "</b> vaccine doses over the last seven days. This corresponds to a single dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has reached <b>" + already_vaccinated + "%</b> of the vaccination goal (i.e., full immunization for 80% of the population). At the current speed, <b>" + ctry + "</b> will have reached the vaccination goal in <b>" + vaccination_days + "</b> days.");
 		   		}) ;
 
 
@@ -81,7 +77,6 @@
       .enter()
         .append("option")
         .attr("location", function (d) { return d.location; })
-        .style("text-size", "34px")
         .text(function (d) { return d.location; });
   });
 
@@ -136,7 +131,7 @@ var svg = d3.select("#my_dataviz")
 //Read the data
 d3.csv("/otherdata/covid_panel.csv", 
 	function(d){
-    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, new_deaths_smoothed_per_million: d.new_deaths_smoothed_per_million, vaccination_days: d.vaccination_days, vaccination_rate2: d.vaccination_rate2, vaccination_rate: d.vaccination_rate}
+    return { date : d3.timeParse("%Y-%m-%d")(d.date), location: d.location, new_deaths_smoothed_per_million: d.new_deaths_smoothed_per_million, vaccination_days: d.vaccination_days, vaccination_rate: d.vaccination_rate}
   },
 
   // Now I can use this dataset:
@@ -188,7 +183,7 @@ d3.csv("/otherdata/covid_panel.csv",
       .style('font-weight' , '700')
         .style('fill' , function(d){ return myColor("World")})
       .style("fill-opacity", 0.6)
-          .text("New vaccinations per week per 100");  
+          .text("New vaccinations per 100 per week");  
 
 
 
@@ -203,7 +198,7 @@ d3.csv("/otherdata/covid_panel.csv",
        .style('font-family', '"Noto Sans"')
       .style('font-size' , '100%')
          .style('color' , '#494949')
-      .call(d3.axisBottom(x).ticks(4).tickFormat(d3.timeFormat("%b"))
+      .call(d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat("%b"))
       	);
 
 
@@ -249,7 +244,7 @@ d3.csv("/otherdata/covid_panel.csv",
           .y(function(d) { return y(+d.new_deaths_smoothed_per_million) })
         )
         .attr("stroke", function(d){ return myColor("World") })
-        .style("stroke-width", 3)
+        .style("stroke-width", 4)
         .style("fill", "none")
 
     var line2 = svg
@@ -261,7 +256,7 @@ d3.csv("/otherdata/covid_panel.csv",
           .y(function(d) { return y2(+d.vaccination_rate) })
         )
         .attr("stroke", function(d){ return myColor("World") })
-        .style("stroke-width", 3)
+        .style("stroke-width", 4)
         .style("stroke-opacity", 0.6)
         .style("fill", "none");
   
@@ -323,7 +318,7 @@ d3.csv("/otherdata/covid_panel.csv",
             .y(function(d) { return y(+d.new_deaths_smoothed_per_million) })
           )
           .attr("stroke", function(d){ return myColor(selectedGroup) })
-          .style("stroke-width", 3)
+          .style("stroke-width", 4)
         .style("fill", "none")
           ;
 
@@ -337,7 +332,7 @@ d3.csv("/otherdata/covid_panel.csv",
           .y(function(d) { return y2(+d.vaccination_rate) })
         )
         .attr("stroke", function(d){ return myColor(selectedGroup) })
-        .style("stroke-width", 3)
+        .style("stroke-width", 4)
         .style("fill", "none")
         .style("stroke-opacity", 0.6);
 
@@ -367,6 +362,14 @@ d3.csv("/otherdata/covid_panel.csv",
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> <br>I am offering FREE mentoring for anyone interested in applying for masters/predocs/PhD programs in Economics. In return, I request you to donate to an Indian Covid foundation, such as <a href="https://twitter.com/Hemkunt_Fdn?ref_src=twsrc%5Etfw">@Hemkunt_Fdn</a> or <a href="https://twitter.com/Khalsa_Aid?ref_src=twsrc%5Etfw">@Khalsa_Aid</a>. DM me if interested! <a href="https://twitter.com/hashtag/IndiaFightsCOVID19?src=hash&amp;ref_src=twsrc%5Etfw">#IndiaFightsCOVID19</a> 1/3</p>&mdash; Jonathan Old (@Jonathan_Old) <a href="https://twitter.com/Jonathan_Old/status/1392964103174492172?ref_src=twsrc%5Etfw">May 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ---
+
+
+
+### Hope Index
+
+The Hope Index is the number of new vaccinations, divided by the number of new deaths in a country. While every death causes incredible pain and suffering, every vaccination potentially saves lives and nurtures the hope that we can beat this pandemic. Countries with high vaccination rates, such as the UK, have succesfully dried out the pandemic, and their high Hope Index values give reason for optimism. On the other hand, outbreaks such as in India inflict unimaginable suffering, but also slow down vaccination campaigns, worsening an already difficult situation.
+
+![Covid-19 Hope Index](/pdf/hope_index.png)
 
 
 

@@ -25,6 +25,14 @@
 .highlight table td {
   padding: 5px; }
 
+
+
+.axis text {
+fill: #2b2929;
+font-family: 'Noto Sans';
+font-size: 150%;
+}
+
 .highlight table pre {
   margin: 0; }
 
@@ -234,6 +242,7 @@
 
 .highlight {
   background-color: #f8f8f8; }
+  
 
 body {
   background-color: #fff;
@@ -306,6 +315,7 @@ a small {
 a:hover small {
   color: #777; }
 
+
 .wrapper {
   width: 1060px;
   margin: 0 auto; }
@@ -336,7 +346,7 @@ th, td {
   padding: 5px 10px;
   border-bottom: 1px solid #e5e5e5; }
 
-dt {
+dt { 
   color: #444;
   font-weight: 700; }
 
@@ -346,15 +356,71 @@ th {
 img {
   max-width: 100%; }
 
+.wrapper {
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+
 header {
   width: 270px;
   float: left;
-  position: fixed;
-  -webkit-font-smoothing: subpixel-antialiased; }
+  padding-right: 5.5rem;
+}
+
+
+
+.headx {
+  position: sticky;
+  background-color: white;
+  top: 0px;
+  z-index: 10;
+}
+
+#header01 {
+  padding-bottom: 0.2rem;
+    padding-top: 20px;
+}
+
+#header02 {
+  top: 75px;
+  z-index: 9 /*!important*/;
+}
+
+section {
+  width: 700px;
+  padding-bottom: 0px;
+  padding-top: 20px;
+}
+
+.my_dataviz {
+  width: 700px;
+}
+
+@media (max-width: 767px) {
+.headx {
+  position: relative !important;
+}
+
+#header02 {
+  top: 0px;
+}
+
+.wrapper {
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+}
+
+}
+
 
 header ul {
   list-style: none;
-  height: 40px;
+  height: 20px;
   padding: 0;
   background: #f4f4f4;
   border-radius: 5px;
@@ -402,10 +468,6 @@ header ul a strong {
   display: block;
   color: #222; }
 
-section {
-  width: 700px;
-  float: right;
-  padding-bottom: 50px; }
 
 small {
   font-size: 11px; }
@@ -433,8 +495,11 @@ footer {
     position: static;
     width: auto; }
 
-  header {
-    padding-right: 320px; }
+  div.my_dataviz {
+    float: none;
+    position: static;
+  width: auto;
+  }
 
   section {
     border: 1px solid #e5e5e5;
