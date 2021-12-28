@@ -27,7 +27,7 @@
      var year = filtercitydata.filter(function(d, i){return d})[0].year ;
 
      d3.select("#p3").insert("p").html("As of <b>" + month + " " 
-    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has vaccinated <b>" + sevendays + "</b> new people over the last two weeks. This corresponds to a first dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has given the first dose of the vaccine to <b>" + already_vaccinated + "%</b> of the population. At the current speed, <b>" + ctry + "</b> it will take <b>" + vaccination_days + "</b> days to give at least one dose to 80% of the population. Given the current death rate, sadly, around <b>" +death_days + "</b> people will have died from Covid-19 until then.");
+    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has vaccinated <b>" + sevendays + "</b> new people over the last two weeks. This means that <b>" + vaccination_rate + "%</b> of the population received their first dose over the last two weeks. <b>"  + ctry  + "</b> has given the first dose of the vaccine to <b>" + already_vaccinated + "%</b> of the population. At the current speed, <b>" + ctry + "</b> it will take <b>" + vaccination_days + "</b> days to give at least one dose to 80% of the population. Given the current death rate, sadly, around <b>" +death_days + "</b> people will have died from Covid-19 until then.");
 		   		}) ;
 </script>
 
@@ -70,7 +70,7 @@
      var year = filtercitydata.filter(function(d, i){return d})[0].year ;
 
 		 d3.select("#p3").insert("p").html("As of <b>" + month + " " 
-    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has vaccinated <b>" + sevendays + "</b> new people over the last two weeks. This corresponds to a first dose for <b>" + vaccination_rate + "%</b> of the population. <b>"  + ctry  + "</b> has given the first dose of the vaccine to <b>" + already_vaccinated + "%</b> of the population. At the current speed, <b>" + ctry + "</b> it will take <b>" + vaccination_days + "</b> days to give at least one dose to 80% of the population. Given the current death rate, sadly, around <b>" +death_days + "</b> people will have died from Covid-19 until then.");
+    + day + ", " + year +  "</b>, <b>" + ctry + "</b> has vaccinated <b>" + sevendays + "</b> new people over the last two weeks. This means that <b>" + vaccination_rate + "%</b> of the population received their first dose over the last two weeks. <b>"  + ctry  + "</b> has given the first dose of the vaccine to <b>" + already_vaccinated + "%</b> of the population. At the current speed, <b>" + ctry + "</b> it will take <b>" + vaccination_days + "</b> days to give at least one dose to 80% of the population. Given the current death rate, sadly, around <b>" +death_days + "</b> people will have died from Covid-19 until then.");
 		   		}) ;
 
 
