@@ -1,5 +1,5 @@
 iso_code,location,date,new_deaths_smoothed_per_million,population,hope_index_2,fvl7d,vaccination_rate,already_vaccinated,not_vaccinated,vaccination_days,death_days,vaccination_rate2,location2,year,month,day
-"OWID_WRL","World","2022-01-13",.851,7.875e+09,5146.186,139078144,1.8,59.7,1.60e+09,161,1081111,59.65,"The World","2022","January","13"
+"OWID_WRL","World","2022-01-13",.853,7.875e+09,5135.459,139078144,1.8,59.7,1.60e+09,161,1083369,59.65,"The World","2022","January","13"
 "OWID_AFR","Africa","2022-01-13",.242,1.373e+09,4588.601,15874324,1.2,15.3,8.89e+08,784,260626,15.28,"Africa","2022","January","13"
 "OWID_ASI","Asia","2022-01-13",.227,4.678e+09,24179.97,107637448,2.3,68.9,5.20e+08,68,71868,68.89,"Asia","2022","January","13"
 "OWID_EUR","Europe","2022-01-13",3.92,7.490e+08,1299.352,8125619,1.1,66.1,1.04e+08,179,526485,66.10,"Europe","2022","January","13"
@@ -9,8 +9,8 @@ iso_code,location,date,new_deaths_smoothed_per_million,population,hope_index_2,f
 "OWID_LMC","Lower middle income","2022-01-13",.314,3.331e+09,17653.63,112108624,3.4,51.7,9.43e+08,118,123342,51.67,"Lower middle income","2022","January","13"
 "OWID_NAM","North America","2022-01-13",3.259,5.966e+08,721.559,3853456,0.6,68.8,6.69e+07,243,472379,68.79,"North America","2022","January","13"
 "OWID_OCE","Oceania","2022-01-13",.902,43219954,7841.59,383605,0.9,61.8,7884482,288,11222,61.76,"Oceania","2022","January","13"
-"OWID_SAM","South America","2022-01-13",.894,4.343e+08,4496.477,3203688,0.7,76.7,1.45e+07,64,24693,76.65,"South America","2022","January","13"
-"OWID_UMC","Upper middle income","2022-01-13",.742,2.514e+09,5084.995,10435497,0.4,78.6,3.42e+07,46,85612,78.64,"Upper middle income","2022","January","13"
+"OWID_SAM","South America","2022-01-13",.927,4.343e+08,4340.05,3203688,0.7,76.7,1.45e+07,64,25583,76.65,"South America","2022","January","13"
+"OWID_UMC","Upper middle income","2022-01-13",.748,2.514e+09,5047.119,10435497,0.4,78.6,3.42e+07,46,86254,78.64,"Upper middle income","2022","January","13"
 "AFG","Afghanistan","2021-06-14",1.524,39835428,53.89202,1540,0.0,1.2,3.14e+07,285306,17322120,1.22,"Afghanistan","2021","June","14"
 "ALB","Albania","2022-01-11",1.144,2872934,2758.064,57596,2.0,41.2,1115217,271,891,41.18,"Albania","2022","January","11"
 "DZA","Algeria","2021-11-30",.131,44616626,5994.537,987280,2.2,15.4,2.88e+07,409,2394,15.41,"Algeria","2021","November","30"
