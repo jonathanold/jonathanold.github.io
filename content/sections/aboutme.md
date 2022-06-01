@@ -1,4 +1,4 @@
-Welcome to my website. I am a first year Ph.D. student in economics at the University of California, Berkeley. I am interested in political economy and development economics, and have previously worked on conflict and political reservations in India, democratic transitions and state repression, and longevity.
+Welcome to my website. I am a second year Ph.D. student in economics at the University of California, Berkeley. I am interested in political economy and development economics, and have previously worked on conflict and political reservations in India, democratic transitions and state repression, and longevity.
 
 Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.net" target="_blank">Oriana Bandiera</a> at the LSE, where I also did a masters in economics. 
 
