@@ -1,4 +1,4 @@
-## Hot to get your website running
+## How to get your website running
 - Clone/fork my code
 - Put it into a Github pages repository, which MUST have the name yourusername.github.io
 - On Settings > Pages, set Source to /docs
