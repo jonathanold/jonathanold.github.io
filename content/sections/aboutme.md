@@ -2,6 +2,8 @@ Welcome to my website! I am a second year Ph.D. student in economics at the Univ
 
 Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.net" target="_blank">Oriana Bandiera</a> at the LSE, where I also did a masters in economics. 
 
+See about my teaching <a href="./another_page.html">here</a>
+
 
 
 
