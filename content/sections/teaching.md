@@ -1,1 +1,1 @@
- <a href="/teaching.html">See on dedicated page.</a>
+See my teaching materials on <a href="/teaching.html">dedicated page.</a>
