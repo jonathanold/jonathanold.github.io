@@ -52,7 +52,7 @@ iso_code,location,date,new_deaths_smoothed_per_million,population,hope_index_2,f
 "CZE","Czechia","2023-01-08",.898,10493990,72.75427,164,0.0,66.5,1419005,121135,1142126,66.48,"Czechia","2023","January","08"
 "COD","Democratic Republic of Congo","2022-01-05",.029,99010216,346.1673,432306,0.4,0.3,7.89e+07,2556,7304,0.27,"Democratic Republic of Congo","2022","January","05"
 "DNK","Denmark","2023-01-05",2.866,5882259,3.97461,79,0.0,81.5,-89686.02,-15827,-266797,81.52,"Denmark","2023","January","05"
-"DOM","Dominican Republic","2023-01-02",0,11228821,672,2404,0.0,65.0,1682420,9796,0,65.02,"The Dominican Republic","2023","January","02"
+"DOM","Dominican Republic","2023-01-05",0,11228821,1010,2856,0.0,65.0,1681707,8244,0,65.02,"The Dominican Republic","2023","January","05"
 "ECU","Ecuador","2022-12-22",0,18001002,9922,11620,0.1,85.1,-915107.4,-1103,0,85.08,"Ecuador","2022","December","22"
 "EGY","Egypt","2022-05-15",.036,110990096,18961.25,335090,0.3,42.0,4.21e+07,1761,7044,42.03,"Egypt","2022","May","15"
 "SLV","El Salvador","2022-04-04",.068,6336393,22009.32,26572,0.4,72.4,481579.3,254,109,72.40,"El Salvador","2022","April","04"
