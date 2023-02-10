@@ -1,3 +1,4 @@
+ A few examples of the visualizations I use to teach undergraduate applied econometrics:
  
 <p>
 {{< gallery >}}
