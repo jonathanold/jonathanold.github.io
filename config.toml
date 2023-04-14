@@ -7,7 +7,7 @@ ignorefiles = [ "hugo_travis_ci", ".travis.yml" , "make.sh"]
 
 [params]
     shortbio = "Economics Ph.D. student at UC Berkeley. Interested in political economy and development economics."
-    logo = "wald.jpg" 
+    logo = "jold_portrait_ucv.jpg" 
     author = "Jonathan Old"
     sitename = "Personal website of Jonathan Old"
     
