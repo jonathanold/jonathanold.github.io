@@ -1,4 +1,16 @@
 works:
+
+- title: "Healthy ageing trends in England between 2002 to 2018 : Improving but slowing and unequal"
+  pdflink: "/pdf/2023_Healthy_Ageing_England.pdf"
+  book: "The Journal of the Economics of Ageing, July 2023, 100470"
+  coauthors: "Andrew Scott"
+  links:
+    - url: "/pdf/2023_Healthy_Ageing_England_Appendix.pdf"
+      text: "Online Appendix"
+  abstract: >
+    Growing life expectancy and a rising proportion of older people make the issue of whether cohorts are ageing better a key individual, social and economic issue. Using data from the English Longitudinal Study of Ageing we characterise how frailty develops with age, how this differs across demographic groups, whether more recent cohorts are ageing better and what the key areas of focus for health policy should be. We find cohort effects such that frailty at each age has been decreasing over time but that this trend shows modest signs of slowing and is less pronounced for those with lower wealth. Improvements across cohorts reflect improvements in ADLs, cognitive function, and mobility but limited progress in reducing the incidence of diseases such as cancer, cardiovascular disease, etc. We find mobility and ADLs the main driver of average differences across regions but cross-regional differences are driven more by within than between group inequality.
+
+
 - title: "Cycles of Fire: Politics and Forest Burning in Indonesia"
   pdflink: "/pdf/2021_Cycles_of_Fire.pdf"
   book: "AEA Papers and Proceedings, May 2021, Vol. 111, 415–419"
