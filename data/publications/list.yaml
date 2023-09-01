@@ -4,7 +4,6 @@ works:
   pdflink: "/pdf/2023_Healthy_Ageing_England.pdf"
   book: "The Journal of the Economics of Ageing, Volume 26 (2023), 100470"
   coauthors: <a href="google.com">link text</a>
-  {{{coauthors}}}
   links:
     - url: "/pdf/2023_Healthy_Ageing_England_Appendix.pdf"
       text: "Online Appendix"
