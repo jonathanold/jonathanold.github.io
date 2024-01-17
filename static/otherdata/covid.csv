@@ -1,4 +1,4 @@
 iso_code,location,date,new_deaths_smoothed_per_million,population,hope_index_2,fvl7d,vaccination_rate,already_vaccinated,not_vaccinated,vaccination_days,death_days,vaccination_rate2,location2,year,month,day
-"OWID_WRL","World","2024-01-07",.106,7975105024,6.3833,42,0.0,70.6,7.49e+08,249829840,3.62e+09,70.60,"The World","2024","January","07"
+"OWID_WRL","World","2024-01-07",.106,7975105024,6.388053,42,0.0,70.6,7.49e+08,249829712,3.62e+09,70.60,"The World","2024","January","07"
 "OWID_ASI","Asia","2024-01-07",.013,4721383370,2.557377,42,0.0,78.1,8.87e+07,29580990,414133856,78.12,"Asia","2024","January","07"
-"OWID_UMC","Upper middle income","2024-01-07",.054,2525921300,12.39814,42,0.0,83.5,-8.81e+07,-29363926,0,83.49,"Upper middle income","2024","January","07"
+"OWID_UMC","Upper middle income","2024-01-07",.054,2525921300,12.4274,42,0.0,83.5,-8.81e+07,-29363926,0,83.49,"Upper middle income","2024","January","07"
