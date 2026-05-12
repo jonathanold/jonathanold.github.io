@@ -1,6 +1,6 @@
-### The Census Archive
+### India Census Explorer
 
-A searchable catalog of the Indian Census (1951–2011): filter by state, year, table series, and topic, with direct download links. [Open the app →](https://jonathanold-india-census-archive-app-PLACEHOLDER.streamlit.app)
+A tool to search and download Indian Census tables (1951–2011): filter by state, year, table series, and topic. [Open the app →](https://indiacensusarchive-uomyw9qrwaz4c5ta8ekj2g.streamlit.app/)
 
 ### Mentoring for donations
 
