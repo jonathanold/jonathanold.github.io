@@ -102,3 +102,12 @@ figure.postfig figcaption {
 figure.postfig a {
   display: block;
   cursor: zoom-in; }
+
+/* Site title in the top-left corner: a link back to the homepage, in the same
+   blue as every other link on the site. */
+
+h1.site-title a {
+  color: #267CB9; }
+
+h1.site-title a:hover, h1.site-title a:focus {
+  color: #046; }

@@ -1,5 +1,6 @@
 {{- /* Site-level override of themes/academimal/layouts/partials/header.html.
-     Identical to the theme's copy except for the extra posts.css link. */ -}}
+     Two changes from the theme's copy: the extra posts.css link, and the site
+     title, which links back to the homepage. */ -}}
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
     <head>
@@ -24,7 +25,7 @@
     <header>
       <!--<div class="header">-->
         <div class="headx" id="header01">
-          <h1>{{ .Site.Title }}</h1>
+          <h1 class="site-title"><a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></h1>
 
       {{ .Site.Params.shortbio }} 
 
