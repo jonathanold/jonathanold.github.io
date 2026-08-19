@@ -4,7 +4,17 @@
     <title>Homepage on Jonathan Old</title>
     <link>/</link>
     <description>Recent content in Homepage on Jonathan Old</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What you compare is what you get: Did Modi cost Indians $1,000 a year?</title>
+      <link>/posts/what-you-compare-is-what-you-get/</link>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/what-you-compare-is-what-you-get/</guid>
+      <description>Grier and Grier report that Indian income per head ended 2023 about $1,000 below its synthetic counterfactual. Widening the pool of comparison countries, switching to the GDP series the Penn World Table recommends for growth comparisons, or fitting growth rates rather than levels each flips the sign.</description>
+    </item>
+    
     <item>
       <title></title>
       <link>/sections/aboutme/</link>

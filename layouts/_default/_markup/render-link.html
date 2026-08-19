@@ -1,0 +1,11 @@
+{{- /* Open external links in a new tab.
+
+     The theme ships this same hook, but under `_default/_markdown/`; Hugo only
+     looks in `_markup/`, so the theme's copy never fires.  Site-level hooks win
+     over theme ones anyway, so this is the live version.
+
+     Only http(s) destinations get target="_blank" -- footnote anchors (#fn:1)
+     and internal links must stay in the tab.  rel="noopener" is there because a
+     new-tab link without it hands the opened page a handle on this one. */ -}}
+{{- $external := or (strings.HasPrefix .Destination "http://") (strings.HasPrefix .Destination "https://") -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>

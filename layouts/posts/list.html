@@ -1,0 +1,22 @@
+{{ define "main" -}}
+<h2 id="posts">Posts</h2>
+
+{{ with .Content }}{{ . }}{{ end }}
+
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ with $posts.ByDate.Reverse }}
+<ul class="postlist">
+  {{ range . }}
+  <li class="postlist-item">
+    <a class="postlist-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <p class="postlist-meta">{{ .Date.Format "2 January 2006" }}</p>
+    {{ with .Params.summary | default (.Summary | plainify | truncate 280) }}
+    <p class="postlist-summary">{{ . }}</p>
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ else }}
+<p>Nothing here yet.</p>
+{{ end }}
+{{- end }}

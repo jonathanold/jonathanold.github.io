@@ -1,0 +1,41 @@
+{{- /* Site-level override of themes/academimal/layouts/partials/header.html.
+     Identical to the theme's copy except for the extra posts.css link. */ -}}
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ .Site.Title }} | {{ .Title }}</title>
+        <meta name="google-site-verification" content="rJxuCnVXgv8JZDRzXe2CljnrgkfEYAgvyNE_b0NPZ2s" />
+        <script data-goatcounter="https://jonathanold.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
+        <link rel="stylesheet" href="{{ "/css/posts.css" | relURL }}">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel=”stylesheet” href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity=”sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T” crossorigin=”anonymous”>
+    </head> 
+
+
+    <body>
+        <div class="wrapper">
+
+    <header>
+      <!--<div class="header">-->
+        <div class="headx" id="header01">
+          <h1>{{ .Site.Title }}</h1>
+
+      {{ .Site.Params.shortbio }} 
+
+             <hr/>
+      {{ partial "sidebar.html" . }} 
+                <!-- begin photo -->
+                {{ with .Site.Params.logo }}
+                <img src="{{ . | relURL }}" alt="Logo" />
+                {{ end }}
+
+        </div>
+      <!-- </div> -->
+    </header>
+

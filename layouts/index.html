@@ -1,0 +1,109 @@
+{{ define "main" -}}
+{{- /* Site-level override of themes/academimal/layouts/index.html.
+     Identical to the theme's copy except for the "Posts" block, which
+     lists the five most recent pages in content/posts/ and disappears
+     when there are none.  NB: this file must open with `{{ define }}`,
+     or Hugo will not wrap it in baseof.html and the page renders blank. */ -}}
+<h2 id="bio">Bio</h2>
+{{ with .GetPage "/sections/aboutme.md" }}
+{{ .Content }}
+{{ end }}
+
+
+
+{{ with .GetPage "/sections/contact.md" }}
+<hr>
+<h2 id="contact">Contact</h2>
+{{ .Content }}
+{{ end }}
+
+
+{{ $scratch := newScratch }}
+{{ $scratch.Set "pubcnt" 0 }}
+
+{{ with .Site.Data.publications }}
+<hr>
+<h2 id="publications">Publications</h2>
+{{ range . }}
+{{ range .works }}
+{{ partial "publication.html" (dict "context" . "pid" ($scratch.Get "pubcnt")) }}
+{{ $scratch.Add "pubcnt" 1 }}   
+{{ end }}
+{{ end }}
+{{ end }}
+
+
+{{ with .Site.Data.working_papers }}
+<hr>
+<h2 id="workingpapers">Working Papers</h2>
+{{ range . }}
+{{ range .works }}
+{{ partial "publication.html" (dict "context" . "pid" ($scratch.Get "pubcnt")) }}
+{{ $scratch.Add "pubcnt" 1 }}   
+{{ end }}
+{{ end }}
+{{ end }}
+
+
+
+{{ $recent := first 5 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+{{ with $recent }}
+<hr>
+<h2 id="posts">Posts</h2>
+<ul class="postlist">
+  {{ range . }}
+  <li class="postlist-item">
+    <a class="postlist-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <p class="postlist-meta">{{ .Date.Format "2 January 2006" }}</p>
+    {{ with .Params.summary | default (.Summary | plainify | truncate 280) }}
+    <p class="postlist-summary">{{ . }}</p>
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ with $.GetPage "/posts" }}<p class="postlist-meta"><a href="{{ .RelPermalink }}">All posts &rarr;</a></p>{{ end }}
+{{ end }}
+
+{{ with .GetPage "/sections/policy.md" }}
+<hr>
+<h2 id="policy">Policy</h2>
+{{ .Content }}
+{{ end }}
+
+
+{{ with .GetPage "/sections/teaching.md" }}
+<hr>
+<h2 id="teaching">Teaching</h2>
+{{ .Content }}
+{{ end }}
+
+
+{{ with .GetPage "/sections/resources.md" }}
+<hr>
+<h2 id="resources">Resources</h2>
+{{ .Content }}
+{{ end }}
+
+
+{{ with .GetPage "/sections/archive.md" }}
+<hr>
+<h2 id="archive">Archive</h2>
+{{ .Content }}
+{{ end }}
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+This website is inspired by <a href="https://gautam-rao.com" target="_blank">Gautam Rao</a> and <a href="https://people.csail.mit.edu/leiy/" target="_blank">Lei Yang</a>. You can find the source code on my  <a href="github.com/jonathanold/jonathanold.github.io" target="_blank">Github repository</a>. Please feel free to copy it for your own website. 
+
+{{- end }}
+

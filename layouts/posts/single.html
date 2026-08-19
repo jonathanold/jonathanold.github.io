@@ -1,0 +1,13 @@
+{{ define "main" -}}
+<article class="post">
+  <h2 class="post-title">{{ .Title }}</h2>
+  {{ with .Params.subtitle }}<p class="post-subtitle">{{ . }}</p>{{ end }}
+  <p class="postlist-meta">{{ .Date.Format "2 January 2006" }}{{ if gt .ReadingTime 0 }} &middot; {{ .ReadingTime }} min read{{ end }}</p>
+  <hr>
+  <div class="postbody">
+  {{ .Content }}
+  </div>
+  <hr>
+  <p class="postlist-meta"><a href="{{ "/posts/" | relURL }}">&larr; All posts</a></p>
+</article>
+{{- end }}

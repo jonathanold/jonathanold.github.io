@@ -1,0 +1,21 @@
+{{- /* Figure with a caption, for blog posts.
+
+     {{< fig src="/images/posts/foo.png" alt="..." caption="..." width="88%" >}}
+
+     The theme's own `figure` shortcode is the hugo-easy-gallery one and comes
+     with that project's box/gallery markup; this is the plain version.  It does
+     hook into the same PhotoSwipe machinery the homepage gallery uses, though:
+     load-photoswipe.js binds a click handler to every <figure> on the page and
+     reads the full-size source off the child <a>, so the <a> below is what makes
+     the figure open large.  data-size saves the script from having to poll the
+     image for its natural dimensions. */ -}}
+{{- $src := .Get "src" -}}
+{{- $file := printf "static%s" $src -}}
+{{- $alt := .Get "alt" | default (.Get "caption") -}}
+{{ partial "photoswipe.html" .Page }}
+<figure class="postfig"{{ with .Get "width" }} style="max-width:{{ . }}"{{ end }}>
+  <a href="{{ $src | relURL }}"{{ if fileExists $file }}{{ $cfg := imageConfig $file }} data-size="{{ $cfg.Width }}x{{ $cfg.Height }}"{{ end }} aria-label="Open the full-size figure">
+    <img src="{{ $src | relURL }}" alt="{{ $alt }}">
+  </a>
+  {{- with .Get "caption" }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

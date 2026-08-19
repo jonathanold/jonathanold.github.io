@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jonathan Old | What you compare is what you get: Did Modi cost Indians $1,000 a year?</title>
+        <meta name="google-site-verification" content="rJxuCnVXgv8JZDRzXe2CljnrgkfEYAgvyNE_b0NPZ2s" />
+        <script data-goatcounter="https://jonathanold.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/posts.css">
+        <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+        <link rel=”stylesheet” href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity=”sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T” crossorigin=”anonymous”>
+    </head> 
+
+
+    <body>
+        <div class="wrapper">
+
+    <header>
+      
+        <div class="headx" id="header01">
+          <h1>Jonathan Old</h1>
+
+      Economics Ph.D. student at UC Berkeley. Interested in political economy, development economics, and international trade. 
+
+             <hr/>
+      <p style="line-height:1.07" class="contactinfo"> <img src="../../icons/mail_outline.svg" class="octicons">  <a href="mailto:jonathan_old@berkeley.edu" target="_blank">E-Mail</a></p>
+<p style="line-height:1.07" class="contactinfo"> <img src="../../icons/twitter2.svg" class="octicons">  <a href="https://twitter.com/Jonathan_Old" target="_blank">Twitter</a></p>
+<p style="line-height:1.07" class="contactinfo"> <img src="../../icons/github.svg" class="octicons">  <a href="http://github.com/jonathanold" target="_blank">GitHub</a></p>
+<p style="line-height:1.07" class="contactinfo"> <img src="../../icons/cv.png" class="octicons">  <a href="../../pdf/JOld_CV_public.pdf" target="_blank">Curriculum Vitae</a></p>
+
+<hr style="margin: 15px 0 15px" />
+
+<p style="line-height:1.07" class="contactinfo"><a href="../../#bio">Bio</a></p>
+
+<p style="line-height:1.07" class="contactinfo"><a href="../../#publications">Publications</a></p>
+
+
+<p style="line-height:1.07" class="contactinfo"><a href="../../#workingpapers">Working Papers</a></p>
+
+
+<p style="line-height:1.07" class="contactinfo"><a href="../../posts/">Posts</a></p>
+
+
+<p style="line-height:1.07" class="contactinfo"><a href="../../#policy">Policy</a></p>
+
+<p style="line-height:1.07" class="contactinfo"><a href="../../teaching.html">Teaching</a></p>
+
+
+<p style="line-height:1.07" class="contactinfo"><a href="../../#resources">Resources</a></p>
+
+<p style="line-height:1.07" class="contactinfo"><a href="../../archive.html">Archive</a></p>
+
+ 
+                
+                
+                <img src="../../jold_portrait_ucv.jpg" alt="Logo" />
+                
+
+        </div>
+      
+    </header>
+
+
+<section>
+    <article class="post">
+  <h2 class="post-title">What you compare is what you get: Did Modi cost Indians $1,000 a year?</h2>
+  <p class="post-subtitle">On the growth results in Grier and Grier (2026)</p>
+  <p class="postlist-meta">19 August 2026 &middot; 16 min read</p>
+  <hr>
+  <div class="postbody">
+  <aside class="tldr">
+  <p class="tldr-label">The short version</p>
+  <div class="tldr-body">Grier and Grier report that Modi cost the average Indian $1,000 a year. That number comes from comparing India to a Frankenstein India composed of Ethiopia, China, and Bangladesh. The result is driven by three questionable design choices &mdash; fixing any one of them reverses the estimated effect. The synthetic control method is inappropriate to estimate the effect of a new government on growth.</div>
+</aside>
+
+<p>Grier and Grier just published a <a href="https://rgrier88.github.io/modi-promises/" target="_blank" rel="noopener">working paper</a>
+ on India&rsquo;s performance under Modi. They use the synthetic control method to compare India to a weighted mix of other developing countries, and they report two findings: India&rsquo;s governance indicators deteriorated sharply after 2014, and India&rsquo;s income per capita ended 2023 roughly $1,000 below where the comparison case says it should have been.</p>
+<p>I personally sympathise with the authors’ conclusions, but I do not think that their method convincingly shows that India grew more slowly under Modi than it would have grown without him. I show that fixing any one of three design issues in the paper is enough to make India grow faster than its comparison group. However, the main issue is that the results of the paper are extremely sensitive to the choice of comparison countries and to the choice of GDP series, and are thus always arbitrary.</p>
+<p>I should start by praising the authors for posting their full replication package publicly, before the paper was even published, which made this critique possible.</p>
+<h2 id="introducing-frankenstein-india">Introducing Frankenstein India</h2>
+<p>When we want to make a statement about the effect of something (such as Modi&rsquo;s government) on another thing (such as economic growth), we always implicitly make a comparison. India&rsquo;s real GDP per capita grew at 4.8% a year in the decade after Modi was elected in 2014. How do we conclude whether that is good or bad? Someone might say: India grew at 7.4% a year in the decade before he took office, so Modi cut the growth rate by two and a half percentage points. Someone else might say: Pakistan grew at 1.5% a year over the same ten years, so Modi added three points. Whether we compare India to itself in the past or to a similar country, the choice of comparison leads to vastly different answers.</p>
+<p>If we really want to know what Modi did to India&rsquo;s growth, we need to compare India to what would have happened without Modi. That counterfactual is never observed, so empirical researchers use a range of methods to construct something as close to it as they can.</p>
+<p>In this paper, the authors use the synthetic control method to construct a counterfactual India. The idea is to take a bunch of countries similar to India and combine them in a weighted mix, called the &ldquo;synthetic control group&rdquo;. Let us just call it &ldquo;Frankenstein India&rdquo;. We are mixing a bunch of other countries to create an artificial entity that tracks India&rsquo;s economic indicators as closely as possible until 2014. The authors give the algorithm a set of 14 candidate countries, and the algorithm builds Frankenstein India as, roughly speaking, 40% Ethiopia, 30% China, 20% Bangladesh, and a pinch of Pakistan and the Philippines.</p>
+<p>By design, Frankenstein India behaves very similarly to India until 2014. The trick is then to compare actual India to Frankenstein India <strong>after</strong> 2014, and actual India grew more slowly. If we assume that without Modi, India would have continued along Frankenstein India&rsquo;s path, we conclude that Modi caused India to grow more slowly.</p>
+<p>Here is the whole paper in one picture. Frankenstein India, the red dashed line, tracks actual India, the black line, very closely until 2014. In 2014, Modi gets elected, and India starts to fall behind. By 2023, the gap is about $1,000 per person, or 11% of income &mdash; on the authors’ reading, the average Indian is $1,000 poorer today because of Modi.</p>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="../../js/load-photoswipe.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="pswp__bg"></div>
+<div class="pswp__scroll-wrap">
+  <div class="pswp__container">
+    <div class="pswp__item"></div>
+    <div class="pswp__item"></div>
+    <div class="pswp__item"></div>
+  </div>
+  <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<figure class="postfig">
+  <a href="../../images/posts/modi-01-headline.png" data-size="1466x865" aria-label="Open the full-size figure">
+    <img src="../../images/posts/modi-01-headline.png" alt="India&#39;s real income per capita and Frankenstein India&#39;s, 1984 to 2023. The two lines track each other closely until 2014, after which India falls about $1,000 below.">
+  </a><figcaption>India&rsquo;s real income per capita (black) and Frankenstein India&rsquo;s (red dashed), 1984&ndash;2023, in 2021 US dollars, on the authors’ own 14 candidate countries. Everything after 2014 is the estimate. Source: Penn World Table 11.0.</figcaption>
+</figure>
+
+<h2 id="1-who-goes-into-frankenstein-india">1. Who goes into Frankenstein India</h2>
+<p>So, how do we decide which countries make up Frankenstein India? There are two steps. The first step is to select a set of candidates, and in the second step an algorithm finds the combination of these candidates that best fits the data until 2014. Both of these steps, it turns out, matter a great deal for the results of the paper.</p>
+<p>For the first step, the authors state that they picked 14 large developing economies. They do not justify why they picked these 14 candidates when many more countries could have been included. To show how this choice matters, I use two alternative criteria. The first is to use all 53 countries with a population above 20 million in 2013. The second is to use all 129 countries with available data in the Penn World Table. Both of these contain every single one of the authors’ 14 countries, so the algorithm is still free to build exactly the Frankenstein India the paper builds, if that really is the best fit. Everything else stays exactly as the authors wrote it.</p>
+<p>If we allow the algorithm to choose among every country with more than 20 million people, the authors’ code would tell us that the average Indian today earns $39 <em>more</em> than they would have without Modi. If we allow every country with data, the average Indian earns $641 more than Frankenstein India. In the picture, Frankenstein India before 2014 looks basically the same in all three cases &mdash; in fact, the fit is <em>better</em> when we allow more candidate countries. After 2014 the trends diverge: India looks much worse than its synthetic twin (the paper), about the same (53 countries), or much better (129 countries).</p>
+
+
+<figure class="postfig">
+  <a href="../../images/posts/modi-02-pools-levels.png" data-size="1866x625" aria-label="Open the full-size figure">
+    <img src="../../images/posts/modi-02-pools-levels.png" alt="Three panels, one per pool of candidate countries. The 2023 gap is minus $996 with the authors’ 14 countries, plus $39 with 53 countries, and plus $641 with 129 countries.">
+  </a><figcaption>India&rsquo;s real income per capita (black) and Frankenstein India&rsquo;s (red dashed), 1984&ndash;2023, in 2021 US dollars. Each panel widens the pool of candidate countries; the left panel is the paper. Source: Penn World Table 11.0.</figcaption>
+</figure>
+
+<p>Why does the answer change so much? The reason for this is that the algorithm builds a different Frankenstein India depending on which countries it is allowed to choose from. The original Frankenstein India is made up mostly of Ethiopia, China and Bangladesh. Once we widen the pool, a few new countries walk in &mdash; Nepal, Mozambique and Cambodia &mdash; and the weights get redistributed among the rest. China and Bangladesh stay in, at quite different weights; Ethiopia, which was the single biggest ingredient at 42%, drops out entirely. Crucially, in all three cases, at least 80% of Frankenstein India is made up of three or four countries.</p>
+<p>This has a big impact on the results. <strong>The assumption that is needed for us to get the causal effect of Modi is that the Frankenstein India we pick is exactly how India would have grown without Modi</strong>. But every country has its own shocks &ndash; institutional changes, natural disasters, growth stories &ndash; over the same time period. For each of these countries, we could tell its own growth narrative after 2014. We are basically comparing India to three of the fastest-growing countries in the world over exactly this period. Ethiopia, for example, had a state-led infrastructure build-out. China initially grew very fast, but then slowed down. Bangladesh grew steadily and saw considerable political upheaval. Nepal suffered from a devastating earthquake in 2015, and then had a decade of political instability. For some average of these countries to be a good counterfactual for India, we would need to assume that these shocks would have happened in India as well. But there is no reason to believe that this is the case &mdash; especially with so few countries making up Frankenstein India.</p>
+
+
+<figure class="postfig">
+  <a href="../../images/posts/modi-03-weights.png" data-size="1386x676" aria-label="Open the full-size figure">
+    <img src="../../images/posts/modi-03-weights.png" alt="Stacked bars showing the country weights behind Frankenstein India for each of the three pools. Ethiopia is the largest ingredient at 42 percent in the authors’ pool and disappears in both wider pools.">
+  </a><figcaption>Each bar shows the countries that make up Frankenstein India, for each of the three pools of candidate countries. Segments below 9% are too narrow to label and are shaded grey. Source: Penn World Table 11.0.</figcaption>
+</figure>
+
+<p>In short: the comparison group matters a lot. We can reasonably pick Ethiopia, China, and Bangladesh and claim that Indians today are $1,000 poorer than they would have been without Modi. But we can also reasonably pick Nepal, China, Cambodia, and Bangladesh, and claim that Indians today are $641 richer than they would have been without Modi. How big the difference looks does not only depend on what Modi did in India. It depends on Xi Jinping&rsquo;s policies in China, on how Ethiopia&rsquo;s government spent its money, on whether Nepal had an earthquake, and on how changes in the fashion industry affected garment exports from Bangladesh.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="2-growth-rates-instead-of-levels">2. Growth rates instead of levels</h2>
+<p>Which of the three Frankenstein Indias is the right one? By the authors’ argument, it is the one whose weights best fit the data until 2014. But that fit is worth much less than it looks. It is very easy to fit a bunch of countries’ average GDP per capita to India&rsquo;s GDP per capita, because most middle-income countries have relatively similar growth paths, and because any two series that trend upwards will correlate whether or not they have anything to do with each other: over 1984&ndash;2013, India&rsquo;s income per head correlates above 0.9 with twelve of the 14 candidate countries, at a median of 0.96. That is simply what trending series do. A close fit before 2014 is therefore very weak evidence that we have found the counterfactual we need.</p>
+<p>So let us fit something that does not trend: growth rates. If a country grows at about 5% per year, overall GDP will follow a trend, but the growth rate in a given year &ndash; sometimes 3%, sometimes 7% &ndash; does not trend and is much harder to predict from the previous year&rsquo;s growth rate. So, instead of India&rsquo;s income level, let the algorithm match India&rsquo;s annual growth <em>rate</em>, everything else exactly as the authors set it. The fit is far worse than the level fit, which is what we would expect.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> The Modi effect flips: after 2014 India grows 0.44 percentage points a year faster than Frankenstein India, so that compounding forward from India&rsquo;s 2013 income, the average Indian ends 2023 $309 richer than Frankenstein India rather than $996 poorer.</p>
+
+
+<figure class="postfig">
+  <a href="../../images/posts/modi-04-growth.png" data-size="1566x566" aria-label="Open the full-size figure">
+    <img src="../../images/posts/modi-04-growth.png" alt="Left panel: India&#39;s annual growth rate and that of a Frankenstein India fitted to growth rates. Right panel: the income path those growth rates imply, with India ending 2023 above its synthetic twin.">
+  </a><figcaption>Frankenstein India built to match India&rsquo;s annual growth rate rather than its income level, on the authors’ own 14 candidate countries. Left: the growth rates the algorithm is asked to fit. Right: what those growth rates imply for income &mdash; Frankenstein India starts at India&rsquo;s own 2013 income and is compounded forward with its synthetic growth rates. Black is India, red dashed Frankenstein India; shading marks the years after 2014. Source: Penn World Table 11.0, expenditure-side GDP per capita.</figcaption>
+</figure>
+
+<h2 id="3-measuring-and-comparing-gdp-across-countries">3. Measuring and comparing GDP across countries</h2>
+<p>There is a second issue that matters a lot for the results of the paper: how we measure and compare GDP, or gross domestic product, across countries. GDP is the total value of all final goods and services produced in a country in a given year. Add up all cars built, all eyebrows threaded, and all software sold, and you get GDP.</p>
+<p>When we want to compare GDP across countries and over time, we need to make two adjustments. The first is <em>across time</em>: prices rise, so we deflate each country&rsquo;s GDP by its own price index, leaving the change in the volume of things produced. The second is <em>across space</em>: a dollar changed into rupees buys far more in India than in the United States, because whatever cannot be shipped across a border &ndash; a haircut, a bus ride, a month&rsquo;s rent &ndash; is cheap wherever wages are low. Converting at market exchange rates would make India look far poorer than it is, so statisticians adjust for this using purchasing power parity, or PPP.</p>
+<p>We need to adjust for both, but this is complicated because relative prices between countries move every year. Suppose India produces exactly the same things next year as this year &ndash; the same tonnes of rice, the same cars, the same hours of software &ndash; and the only thing that changes is that oil, which India imports, triples in price (for example because of an oil supply shock, or because the Indian rupee has devalued). What happened to India&rsquo;s real GDP?</p>
+<p>There are two defensible answers, and the Penn World Table publishes both. The first says that India&rsquo;s GDP is the same as last year: the same rice, the same cars, the same software, so real output is flat. That is <strong>GDP at constant national prices</strong>, which values each year&rsquo;s output at one fixed set of that country&rsquo;s own prices. If you produce 5% more, the number goes up 5%. The second answer says India is poorer, because Indians can afford fewer things, as the price of oil in Indians’ consumption basket has increased. That is <strong>expenditure-side GDP at chained PPPs</strong>, which values output at the relative PPP prices of each year. This measure will record that India has become poorer, but that is unrelated to what the Indian economy produces.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>Which measure we want depends on the question. The authors ask whether the Indian <em>economy</em> grew more or less than under a different government. This is a question about production. Feenstra, Inklaar and Timmer (2015), who built the Penn World Table, are explicit about which series that calls for: <a href="https://pure.rug.nl/ws/portalfiles/portal/24100910/Feenstra_Inklaar_Timmer_AER_2015_.pdf" target="_blank" rel="noopener">“If the sole object is to compare the growth performance of economies, we would recommend using the [<strong>GDP at constant national prices</strong>] series.”</a>
+ However, the authors use the expenditure-side series in their paper.</p>
+<p>It turns out that it makes a difference. I re-run the authors’ code, but change the GDP series to the one that Feenstra, Inklaar and Timmer recommend for growth comparisons. The fit in 2012 and 2013 is much better than in the published version, and even with the original 14 candidate countries for Frankenstein India, <strong>the 2023 gap goes from −$996 to +$471</strong>.</p>
+
+
+<figure class="postfig">
+  <a href="../../images/posts/modi-05-gaps-both-series.png" data-size="1586x686" aria-label="Open the full-size figure">
+    <img src="../../images/posts/modi-05-gaps-both-series.png" alt="India minus Frankenstein India for each pool of candidate countries, under the two GDP concepts. Only the paper&#39;s own specification, on the expenditure-side series with 14 countries, ends up negative.">
+  </a><figcaption>India minus Frankenstein India, 1984&ndash;2023, for each pool of candidate countries. Left: expenditure-side GDP at chained PPPs, the paper&rsquo;s measure; navy is the paper&rsquo;s specification. Right: GDP at constant national prices. Source: Penn World Table 11.0.</figcaption>
+</figure>
+
+<p>Just like before, if we allow the algorithm to build Frankenstein India from more candidate countries, India comes out even better. In these six specifications (two GDP series crossed with three pools of candidate countries), the paper&rsquo;s headline number is the only one that is negative &ndash; in all other cases, India comes out at least as good as Frankenstein India, and in some cases much better.</p>
+<p>We can see that at least part of the apparent negative trend under Modi is an artefact by just looking at what happened before Modi came to power: under the paper&rsquo;s series, a good chunk of the &ldquo;Modi effect&rdquo; is already there before Modi. The gap opens in 2012, and by the end of 2013, India is already $195 below Frankenstein India, a fifth of the eventual effect. On national accounts those same years show essentially nothing. So, what happened in 2012 and 2013? The rupee devalued a lot following an announcement by the Federal Reserve in May of 2013 &mdash; the <a href="https://www.tandfonline.com/doi/full/10.1080/00074918.2017.1392922" target="_blank" rel="noopener">&ldquo;Taper Tantrum&rdquo;</a>
+. Rupees per dollar went from 46.7 to 58.6 in two years.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> Over 2011&ndash;13 Indian income per head grew 7.0% on the paper&rsquo;s measure and 9.2% on national accounts; in 2013 alone, 1.7% against 5.0%.</p>
+<h2 id="minor-issues">Minor issues</h2>
+<p>There are many other issues with the synthetic control design in the paper.</p>
+<p><strong>Rounding moves the answer by $189</strong>. The authors’ main result depends on which data format is used in Stata. The replication output of the authors gives an effect of about negative $807 but when I rebuild it from the raw data, the effect is negative $996. The reason is that the authors’ panel is stored in Stata&rsquo;s <code>float</code> format, which carries about seven significant digits, while my rebuild kept full precision. This minor perturbation to the data changes the weights, swaps Egypt out of the recipe for the Philippines, and changes the answer by one fifth of the full effect.</p>
+<p><strong>We can get the same result using 2008&ndash;2014.</strong> The authors do a placebo treatment for the year 2001 and find no negative effect. Let us instead pretend that Modi was elected in 2008 and create a Frankenstein India until then. By 2013, the last year before Modi took office, actual India is already $446 below Frankenstein India and by the end of 2014 the gap is $673.</p>
+<p><strong>The Modi treatment also works for other countries.</strong> If we run the same design on Pakistan, and pretend it was &ldquo;treated&rdquo; in 2014, we get a similar (and in fact a bigger) result &ndash; it looks like Modi hurt Pakistan, too. Pakistan ends 2023 $1,313 below its synthetic twin, 24% of Pakistani income, against 11% for India.</p>
+
+
+<figure class="postfig">
+  <a href="../../images/posts/modi-06-placebos.png" data-size="1541x556" aria-label="Open the full-size figure">
+    <img src="../../images/posts/modi-06-placebos.png" alt="Left: India with the treatment date moved to 2008, showing a gap that opens before Modi. Right: Pakistan treated in 2014, showing a larger gap than India&#39;s.">
+  </a><figcaption>Left: India, with the treatment date moved from 2014 to 2008 and everything else held fixed; the gap is read at 2013, the last post-treatment year still pre-Modi. Right: Pakistan, treated in 2014, built from every country with a population above 20 million, India excluded. Black is the real country, red dashed its synthetic counterpart; shading marks the post-treatment window. Source: Penn World Table 11.0, expenditure-side GDP per capita.</figcaption>
+</figure>
+
+<p><strong>The method gets even weirder when we look at institutions instead of economic growth.</strong> The authors also use the synthetic control method to look at governance indicators, and find that India under Modi is worse than Frankenstein India. But here, Frankenstein India makes even less sense: Why would we expect any weighted average of countries to have the same governance trajectory as India? The results are vacuous. Of course, if Modi&rsquo;s government is less democratic, we will find that the causal impact of Modi on democracy is negative. I think that saying that Indian institutions had a worse trend under Modi than Argentina, Brazil, and Sri Lanka does not add anything at all. Here is an example: Clearly, the impact of German reunification on democracy in East Germany was that it became more democratic. But if we compare East Germany to a synthetic control group of Poland, the Czech Republic, and Slovakia (all of which democratized at around the same time), the synthetic control method would tell us there was no effect. That Indian institutions worsened after Modi came into power is an important finding in itself; anchoring it to other countries does not add anything.</p>
+<h2 id="bottom-line">Bottom line</h2>
+<p>The synthetic control method simply does not work for this question. What it does here is take one country and compare it to a weighted average of three or four others. Because national income series all trend upwards, and any two trending series correlate, it is easy to make that average track the treated country closely before the treatment year &mdash; and a close pre-treatment fit is also all the method offers as evidence that it has found the right counterfactual. What happens after the treatment year is arbitrary. It depends on whatever shocks hit the treated country over the following decade, and equally on whatever shocks hit each of the three or four countries that carry the weight, none of which have anything to do with the treatment. Whichever way those shocks happen to fall is what gets reported as the causal effect. That is why the answer here flips when we change the pool of candidate countries, the GDP series, or whether we fit levels or growth rates. The paper does not show that Modi cost Indians $1,000 a year.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Nepal and Bangladesh raise an even more direct issue: they are neighbours of India with substantial trade links, so changes in the Indian economy propagate to them. Suppose Modi&rsquo;s government banned all exports. India would get poorer &mdash; but so would Bangladesh and Nepal, and India would look fine relative to Frankenstein India.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>The ingredients of the growth-rate Frankenstein India also look different: Vietnam becomes the largest single ingredient at 41%, Pakistan at 33%, China at 13% and Bangladesh at 11%; Ethiopia falls to 2%.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>This is not just a technicality. Over a decade or more, the two measures can look quite different. For example, at current prices and market exchange rates the EU economy went from roughly America&rsquo;s size in 2000 to a third smaller by 2022; at PPP, from the same size to <a href="https://www.bruegel.org/analysis/european-unions-remarkable-growth-performance-relative-united-states" target="_blank" rel="noopener">4% smaller</a>
+.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Which, <a href="https://www.ft.com/content/c3a28628-5b92-4db7-a8c2-0f41bea05969" target="_blank" rel="noopener">some argue</a>
+, would be positive for growth because it makes Indian exports more competitive.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+  </div>
+  <hr>
+  <p class="postlist-meta"><a href="../../posts/">&larr; All posts</a></p>
+</article>
+</section>
+      <footer>
+      </footer>
+    </div>
+    <script src="../../js/scale.fix.js"></script>
+    
+    <script>
+		function toggle(pid) {
+            objid = "pubabs_" + pid.toString();
+            linkid = "pubabslink_" + pid.toString();
+            absobj = document.getElementById(objid);
+            linkobj = document.getElementById(linkid);
+			if (absobj.style.display === "none") {
+				absobj.style.display = "inline";
+                linkobj.style.display = "none";
+			}
+			else {
+				absobj.style.display = "none";
+                linkobj.style.display = "inline";
+            }
+		}
+	</script>
+  </body>
+</html>
+

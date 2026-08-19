@@ -1,0 +1,24 @@
+{{- /* Site-level copy of the theme partial.  Only change: the paper and link
+     anchors said target="blank" (a *named* window called "blank", and in two
+     places with no space before the attribute), so they did not open in a new
+     tab.  They now say target="_blank" rel="noopener".  Re-merge if the
+     academimal submodule is ever updated. */ -}}
+<h3 style="margin:20px 0 5px;">{{ with .context.pdflink }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .context.title }}{{ with .context.pdflink }}</a>{{ end }}</h3>
+
+{{ with .context.coauthors }}<p style="margin:0 0 5px;">(with {{ . }})</p>{{ end }}
+
+{{ with .context.note }}<p style="margin:0 0 5px;">{{ . }}</p>{{ end }}
+{{ with .context.book }}<p style="margin:0 0 5px;"><em>{{ . }}</em></p>{{ end }}
+{{ $pid := .pid }}
+{{ $pids := .pid }}
+
+
+{{ with .context.abstract }}<p style="margin:0 0 5px;"><a href="javascript:toggle({{ $pid }})">Abstract<span id="pubabslink_{{ $pid }}"> [+]</span></a><span id="pubabs_{{ $pid }}" style="display:none;"> [–] {{ . }}</span></p>{{ end }}
+
+
+{{ with .context.links }}
+        {{ range first 1 . }}<a href="{{.url}}" target="_blank" rel="noopener">{{.text}}</a>{{ with .note }}{{ . }}{{ end }}{{end}}{{range after 1 .}}, <a href="{{.url}}" target="_blank" rel="noopener">{{.text}}</a>{{ with .note }} {{ . }}{{ end }}{{ end }}
+
+
+{{ end }}
+

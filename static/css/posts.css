@@ -1,0 +1,104 @@
+/* Styles for the /posts/ section. Loaded on top of the theme's style.css, which
+   lives in the academimal submodule and is therefore left untouched. */
+
+ul.postlist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px; }
+
+li.postlist-item {
+  margin: 0 0 22px;
+  padding: 0; }
+
+a.postlist-title {
+  font-size: 17px;
+  font-weight: 700; }
+
+p.postlist-meta {
+  margin: 2px 0 4px;
+  font-size: 12px;
+  color: #999; }
+
+p.postlist-summary {
+  margin: 0; }
+
+.post-title {
+  margin-bottom: 4px; }
+
+.post-subtitle {
+  margin: 0 0 4px;
+  font-size: 17px;
+  color: #666; }
+
+/* The post title is an h2 so it matches the section headings on the homepage;
+   headings inside the body therefore have to be stepped down, or `##` in a post
+   would look identical to the title. */
+.post-title {
+  font-size: 22px; }
+
+.postbody h2 {
+  font-size: 17px;
+  margin: 30px 0 10px; }
+
+.postbody h3 {
+  font-size: 15px;
+  color: #494949;
+  margin: 24px 0 8px; }
+
+/* Goldmark wraps footnotes in a <section>, which would otherwise inherit the
+   theme's 700px-wide page <section> rule. */
+.postbody section.footnotes {
+  width: auto;
+  padding: 0;
+  font-size: 13px;
+  color: #666; }
+
+.postbody blockquote {
+  color: #555; }
+
+figure.postfig {
+  margin: 24px 0;
+  padding: 0; }
+
+figure.postfig img {
+  width: 100%;
+  display: block; }
+
+figure.postfig figcaption {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #777; }
+
+/* The one-sentence summary that opens a post: a tinted slab with a rule down
+   the left, so it reads as an epigraph rather than as a quotation from someone
+   else, which is what the plain <blockquote> looked like. */
+.tldr {
+  margin: 0 0 26px;
+  padding: 14px 18px;
+  background: #f6f8fa;
+  border-left: 3px solid #267CB9; }
+
+.tldr-label {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #267CB9; }
+
+.tldr-body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; }
+
+.tldr-body p {
+  margin: 0; }
+
+.tldr-body p + p {
+  margin-top: 8px; }
+
+/* Figures open full size in photoswipe on click, so say so with the cursor. */
+figure.postfig a {
+  display: block;
+  cursor: zoom-in; }

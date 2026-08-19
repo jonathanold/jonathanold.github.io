@@ -1,0 +1,9 @@
+{{- /* The one-sentence summary that opens a post.
+
+     {{< tldr >}}
+     Body text, markdown.
+     {{< /tldr >}} */ -}}
+<aside class="tldr">
+  <p class="tldr-label">The short version</p>
+  <div class="tldr-body">{{ .Inner | markdownify }}</div>
+</aside>
