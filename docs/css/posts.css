@@ -103,11 +103,40 @@ figure.postfig a {
   display: block;
   cursor: zoom-in; }
 
-/* Site title in the top-left corner: a link back to the homepage, in the same
-   blue as every other link on the site. */
+/* Site title in the top-left corner: a link back to the homepage.  Blue in
+   every state, including visited and hover, so it never changes colour. */
 
-h1.site-title a {
+h1.site-title a,
+h1.site-title a:link,
+h1.site-title a:visited,
+h1.site-title a:hover,
+h1.site-title a:focus,
+h1.site-title a:active {
+  color: #267CB9 !important; }
+
+/* The replication-code box that closes a post. */
+
+.repo {
+  margin: 30px 0 26px;
+  padding: 14px 18px;
+  background: #f6f8fa;
+  border-left: 3px solid #267CB9; }
+
+.repo-label {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
   color: #267CB9; }
 
-h1.site-title a:hover, h1.site-title a:focus {
-  color: #046; }
+.repo-body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; }
+
+.repo-body p {
+  margin: 0; }
+
+.repo-body a {
+  font-weight: 700; }

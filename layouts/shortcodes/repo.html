@@ -1,0 +1,9 @@
+{{- /* The replication-code box that closes a post.
+
+     {{< repo >}}
+     Body text, markdown.
+     {{< /repo >}} */ -}}
+<aside class="repo">
+  <p class="repo-label">Replication code</p>
+  <div class="repo-body">{{ .Page.RenderString .Inner }}</div>
+</aside>

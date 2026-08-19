@@ -14,7 +14,7 @@ Grier and Grier just published a [working paper](https://rgrier88.github.io/modi
 
 I personally sympathise with the authors’ conclusions, but I do not think that their method convincingly shows that India grew more slowly under Modi than it would have grown without him. I show that fixing any one of three design issues in the paper is enough to make India grow faster than its comparison group. However, the main issue is that the results of the paper are extremely sensitive to the choice of comparison countries and to the choice of GDP series, and are thus always arbitrary.
 
-I should start by praising the authors for posting their full replication package publicly, before the paper was even published, which made this critique possible. In the same spirit, everything behind this post is in a [replication repository](https://github.com/jonathanold/modi-synthetic-control): five Stata do-files that download the raw data, rebuild the authors' specification from it, run every alternative reported below, and check each number in the text against the estimate it comes from.
+I should start by praising the authors for posting their full replication package publicly, before the paper was even published, which made this critique possible. In the same spirit, everything behind this post is in a [replication repository](https://github.com/jonathanold/modi-synthetic-control).
 
 ## Introducing Frankenstein India
 
@@ -93,6 +93,10 @@ There are many other issues with the synthetic control design in the paper.
 ## Bottom line
 
 The synthetic control method simply does not work for this question. What it does here is take one country and compare it to a weighted average of three or four others. Because national income series all trend upwards, and any two trending series correlate, it is easy to make that average track the treated country closely before the treatment year --- and a close pre-treatment fit is also all the method offers as evidence that it has found the right counterfactual. What happens after the treatment year is arbitrary. It depends on whatever shocks hit the treated country over the following decade, and equally on whatever shocks hit each of the three or four countries that carry the weight, none of which have anything to do with the treatment. Whichever way those shocks happen to fall is what gets reported as the causal effect. That is why the answer here flips when we change the pool of candidate countries, the GDP series, or whether we fit levels or growth rates. The paper does not show that Modi cost Indians $1,000 a year.
+
+{{< repo >}}
+All the code behind this post is at [github.com/jonathanold/modi-synthetic-control](https://github.com/jonathanold/modi-synthetic-control) --- five Stata do-files that download the raw data, rebuild the paper's specification from it, run every alternative reported above, and check each number in the text against the estimate it comes from.
+{{< /repo >}}
 
 [^growthweights]: The ingredients of the growth-rate Frankenstein India also look different: Vietnam becomes the largest single ingredient at 41%, Pakistan at 33%, China at 13% and Bangladesh at 11%; Ethiopia falls to 2%.
 
