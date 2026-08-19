@@ -14,7 +14,7 @@ Grier and Grier just published a [working paper](https://rgrier88.github.io/modi
 
 I personally sympathise with the authors’ conclusions, but I do not think that their method convincingly shows that India grew more slowly under Modi than it would have grown without him. I show that fixing any one of three design issues in the paper is enough to make India grow faster than its comparison group. However, the main issue is that the results of the paper are extremely sensitive to the choice of comparison countries and to the choice of GDP series, and are thus always arbitrary.
 
-I should start by praising the authors for posting their full replication package publicly, before the paper was even published, which made this critique possible.
+I should start by praising the authors for posting their full replication package publicly, before the paper was even published, which made this critique possible. In the same spirit, everything behind this post is in a [replication repository](https://github.com/jonathanold/modi-synthetic-control): five Stata do-files that download the raw data, rebuild the authors' specification from it, run every alternative reported below, and check each number in the text against the estimate it comes from.
 
 ## Introducing Frankenstein India
 
