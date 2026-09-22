@@ -58,6 +58,13 @@
 
 
 
+{{ with .GetPage "/sections/teaching.md" }}
+<hr>
+<h2 id="teaching">Teaching</h2>
+{{ .Content }}
+{{ end }}
+
+
 {{ $recent := first 5 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
 {{ with $recent }}
 <hr>
@@ -79,13 +86,6 @@
 {{ with .GetPage "/sections/policy.md" }}
 <hr>
 <h2 id="policy">Policy</h2>
-{{ .Content }}
-{{ end }}
-
-
-{{ with .GetPage "/sections/teaching.md" }}
-<hr>
-<h2 id="teaching">Teaching</h2>
 {{ .Content }}
 {{ end }}
 
