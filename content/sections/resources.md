@@ -3,7 +3,3 @@
 A tool to search and download Indian Census tables (1951–2011): filter by state, year, table series, and topic. <a href="https://indiacensusarchive-uomyw9qrwaz4c5ta8ekj2g.streamlit.app/" target="_blank">Open the app →</a>
 
 <a href="https://indiacensusarchive-uomyw9qrwaz4c5ta8ekj2g.streamlit.app/" target="_blank"><img src="/census_explorer_screenshot.png" alt="India Census Explorer" style="width:100%;max-width:700px;border-radius:6px;margin-top:0.5rem;box-shadow:0 2px 12px rgba(0,0,0,0.18);cursor:pointer;"></a>
-
-### Mentoring for donations
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> <br>I am offering FREE mentoring for anyone interested in applying for masters/predocs/PhD programs in Economics. In return, I request you to donate to an Indian Covid foundation, such as <a href="https://twitter.com/Hemkunt_Fdn?ref_src=twsrc%5Etfw">@Hemkunt_Fdn</a> or <a href="https://twitter.com/Khalsa_Aid?ref_src=twsrc%5Etfw">@Khalsa_Aid</a>. DM me if interested! <a href="https://twitter.com/hashtag/IndiaFightsCOVID19?src=hash&amp;ref_src=twsrc%5Etfw">#IndiaFightsCOVID19</a> 1/3</p>&mdash; Jonathan Old (@Jonathan_Old) <a href="https://twitter.com/Jonathan_Old/status/1392964103174492172?ref_src=twsrc%5Etfw">May 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

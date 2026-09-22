@@ -5,7 +5,7 @@ title = "Bio"
 <aside class="jobmarket">
   <p class="jobmarket-label">Job market</p>
   <div class="jobmarket-body">
-    <p>I am on the economics job market in 2026&ndash;27 and will be available for interviews at the ASSA and EEA meetings.</p>
+    <p>I am on the economics job market in 2026&ndash;27.</p>
   </div>
 </aside>
 
