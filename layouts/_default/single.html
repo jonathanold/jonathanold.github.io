@@ -1,0 +1,9 @@
+{{ define "main" -}}
+{{- /* The theme ships an empty _default/single.html, which is why the teaching
+     and archive pages were originally written as standalone HTML documents:
+     without a template, an ordinary content page rendered blank.  Content
+     files carry their own <h2>, so this deliberately prints no title.
+     NB: as in layouts/index.html, this file must open with `{{ define }}`,
+     or Hugo will not wrap it in baseof.html and the page renders blank. */ -}}
+{{ .Content }}
+{{- end }}

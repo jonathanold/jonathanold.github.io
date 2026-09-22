@@ -58,6 +58,15 @@
     </item>
     
     <item>
+      <title>Archive</title>
+      <link>https://jonathanold.github.io/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jonathanold.github.io/archive/</guid>
+      <description>Mentoring for donations  During the 2021 Covid wave in India, I offered free mentoring on applications to masters, predoc, and Ph.D. programmes in economics, in exchange for a donation to an Indian Covid relief fund such as the Hemkunt Foundation or Khalsa Aid. The original offer is still on Twitter. I am no longer running it, but I am always happy to answer questions about applications &amp;mdash; just write to me.</description>
+    </item>
+    
+    <item>
       <title>Bio</title>
       <link>https://jonathanold.github.io/sections/aboutme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -67,6 +76,17 @@
 I am on the economics job market in 2026&amp;ndash;27.
   Welcome to my website! I am a Ph.D. candidate in economics at the University of California, Berkeley, with a Designated Emphasis in Political Economy.
 I work in political economy and development economics. My job market paper studies collusion and prices in public procurement in India. I have also worked on political reservations and conflict in India, democratic transitions and state repression, electoral cycles in deforestation, and healthy ageing.</description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://jonathanold.github.io/teaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jonathanold.github.io/teaching/</guid>
+      <description>Teaching materials  Here you can find teaching slides, code, and course evaluations for courses I am teaching. A few examples of the visualizations I use to teach undergraduate applied econometrics:
+                               Measurement error
+      Omitted variable bias visualized</description>
     </item>
     
   </channel>

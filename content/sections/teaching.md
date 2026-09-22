@@ -11,4 +11,4 @@
 
 
 
-See my teaching materials on the <a href="/teaching.html">dedicated page.</a>
+See my teaching materials on the <a href="/teaching/">dedicated page.</a>

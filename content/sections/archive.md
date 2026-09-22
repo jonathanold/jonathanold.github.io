@@ -1,1 +1,1 @@
-Some old projects are on the <a href="/archive.html">dedicated page.</a>
+Some old projects are on the <a href="/archive/">dedicated page.</a>
