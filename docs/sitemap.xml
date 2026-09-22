@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://jonathanold.github.io/</loc>
     <lastmod>2026-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://jonathanold.github.io/posts/</loc>
     <lastmod>2026-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/what-you-compare-is-what-you-get/</loc>
+    <loc>https://jonathanold.github.io/posts/what-you-compare-is-what-you-get/</loc>
     <lastmod>2026-08-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/sections/aboutme/</loc>
+    <loc>https://jonathanold.github.io/sections/archive/</loc>
   </url><url>
-    <loc>/sections/archive/</loc>
+    <loc>https://jonathanold.github.io/sections/policy/</loc>
   </url><url>
-    <loc>/sections/policy/</loc>
+    <loc>https://jonathanold.github.io/sections/resources/</loc>
   </url><url>
-    <loc>/sections/resources/</loc>
+    <loc>https://jonathanold.github.io/sections/teaching/</loc>
   </url><url>
-    <loc>/sections/teaching/</loc>
+    <loc>https://jonathanold.github.io/sections/aboutme/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://jonathanold.github.io/categories/</loc>
   </url><url>
-    <loc>/sections/</loc>
+    <loc>https://jonathanold.github.io/sections/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://jonathanold.github.io/tags/</loc>
   </url>
 </urlset>

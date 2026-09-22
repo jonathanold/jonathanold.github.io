@@ -140,3 +140,26 @@ h1.site-title a:active {
 
 .repo-body a {
   font-weight: 700; }
+
+/* Job-market banner at the top of the homepage bio.  Same slab as .tldr in a
+   post, so the two read as one family, but tinted rather than grey so it is
+   the first thing a recruiting committee's eye lands on. */
+.jobmarket {
+  margin: 0 0 22px;
+  padding: 12px 16px;
+  background: #eef5fb;
+  border-left: 3px solid #267CB9; }
+
+.jobmarket-label {
+  margin: 0 0 3px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #267CB9; }
+
+.jobmarket-body p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333; }

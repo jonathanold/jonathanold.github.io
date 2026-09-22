@@ -1,6 +1,19 @@
-Welcome to my website! I am a second year Ph.D. student in economics at the University of California, Berkeley. I am interested in political economy and development economics, and have previously worked on conflict and political reservations in India, democratic transitions and state repression, and longevity.
++++
+title = "Bio"
++++
 
-Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.net" target="_blank">Oriana Bandiera</a> at the LSE, where I also did a masters in economics. 
+<aside class="jobmarket">
+  <p class="jobmarket-label">Job market</p>
+  <div class="jobmarket-body">
+    <p>I am on the economics job market in 2026&ndash;27 and will be available for interviews at the ASSA and EEA meetings.</p>
+  </div>
+</aside>
+
+Welcome to my website! I am a Ph.D. candidate in economics at the University of California, Berkeley, with a Designated Emphasis in Political Economy.
+
+I work in political economy and development economics. My job market paper studies collusion and prices in public procurement in India. I have also worked on political reservations and conflict in India, democratic transitions and state repression, electoral cycles in deforestation, and healthy ageing.
+
+Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.net" target="_blank">Oriana Bandiera</a> at the LSE, where I also did a masters in economics.
 
 
 

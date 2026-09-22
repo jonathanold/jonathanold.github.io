@@ -1,3 +1,4 @@
+baseURL = "https://jonathanold.github.io/"
 relativeURLs = true
 title = "Jonathan Old"
 theme = ["academimal"]
@@ -6,7 +7,7 @@ defaultContentLanguage = "en"
 ignorefiles = [ "hugo_travis_ci", ".travis.yml" , "make.sh"]
 
 [params]
-    shortbio = "Economics Ph.D. student at UC Berkeley. Interested in political economy, development economics, and international trade."
+    shortbio = "Ph.D. candidate in economics at UC Berkeley, on the job market in 2026–27. Political economy and development economics."
     logo = "jold_portrait_ucv.jpg" 
     author = "Jonathan Old"
     sitename = "Personal website of Jonathan Old"

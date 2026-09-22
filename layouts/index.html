@@ -21,6 +21,18 @@
 {{ $scratch := newScratch }}
 {{ $scratch.Set "pubcnt" 0 }}
 
+{{ with .Site.Data.job_market_paper }}
+<hr>
+<h2 id="jobmarketpaper">Job Market Paper</h2>
+{{ range . }}
+{{ range .works }}
+{{ partial "publication.html" (dict "context" . "pid" ($scratch.Get "pubcnt")) }}
+{{ $scratch.Add "pubcnt" 1 }}
+{{ end }}
+{{ end }}
+{{ end }}
+
+
 {{ with .Site.Data.publications }}
 <hr>
 <h2 id="publications">Publications</h2>
@@ -103,7 +115,7 @@
 
 
 
-This website is inspired by <a href="https://gautam-rao.com" target="_blank">Gautam Rao</a> and <a href="https://people.csail.mit.edu/leiy/" target="_blank">Lei Yang</a>. You can find the source code on my  <a href="github.com/jonathanold/jonathanold.github.io" target="_blank">Github repository</a>. Please feel free to copy it for your own website. 
+This website is inspired by <a href="https://gautam-rao.com" target="_blank">Gautam Rao</a> and <a href="https://people.csail.mit.edu/leiy/" target="_blank">Lei Yang</a>. You can find the source code on my  <a href="https://github.com/jonathanold/jonathanold.github.io" target="_blank">Github repository</a>. Please feel free to copy it for your own website. 
 
 {{- end }}
 
