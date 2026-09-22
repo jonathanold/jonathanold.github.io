@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jonathan Old | India Census Explorer</title>
+    <meta name="description" content="Search and download the 40,214 tables in the Indian Census archive, 1951 to 2011.">
+    <meta property="og:description" content="Search and download the 40,214 tables in the Indian Census archive, 1951 to 2011.">
+    <meta name="author" content="Jonathan Old">
+    <meta property="og:site_name" content="Jonathan Old">
+    <meta property="og:title" content="India Census Explorer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jonathanold.github.io/census/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Jonathan_Old">
+    <script data-goatcounter="https://jonathanold.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/census.css">
+  </head>
+  <body class="appbody">
+    <nav class="appnav">
+      <a href="../">&larr; Jonathan Old</a>
+    </nav>
+    
+<header class="cx-head">
+  <h1>India Census Explorer</h1>
+  <p class="cx-sub">Search and download Indian Census tables (1951&ndash;2011)</p>
+</header>
+
+<main class="cx" id="cx" hidden>
+  <form class="cx-controls" id="cx-controls" autocomplete="off">
+    <div class="cx-search">
+      <label for="cx-q">Free text search</label>
+      <input type="search" id="cx-q" placeholder="e.g. migration bihar">
+    </div>
+    <div class="cx-filters" id="cx-filters"></div>
+    <div class="cx-actions">
+      <button type="button" id="cx-reset">Reset all</button>
+      <button type="button" id="cx-csv">Download results as CSV</button>
+    </div>
+  </form>
+
+  <p class="cx-count" id="cx-count"></p>
+
+  <div class="cx-tablewrap">
+    <table class="cx-table">
+      <thead>
+        <tr id="cx-headrow"></tr>
+      </thead>
+      <tbody id="cx-body"></tbody>
+    </table>
+    <p class="cx-more" id="cx-more" hidden></p>
+  </div>
+</main>
+
+<p class="cx-status" id="cx-status">Loading the catalogue&hellip;</p>
+
+<footer class="cx-foot">
+  <p>Developed by Jonathan Old. Data from the
+     <a href="https://censusindia.gov.in/nada/index.php/catalog" target="_blank" rel="noopener">Census of India catalogue</a>;
+     every file is served by censusindia.gov.in.</p>
+</footer>
+
+    <script src="../js/census.js" defer></script>
+  </body>
+</html>

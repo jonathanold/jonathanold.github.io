@@ -1,0 +1,39 @@
+{{- /* A standalone, full-width page for a tool that needs the whole window:
+     no sidebar, no bio, just a thin bar linking back to the site.  Unlike
+     the other layouts this one is a complete document rather than a
+     `{{ define "main" }}` block, so Hugo does not wrap it in baseof.html. */ -}}
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Site.Title }} | {{ .Title }}</title>
+    {{- with .Params.summary }}
+    <meta name="description" content="{{ . }}">
+    <meta property="og:description" content="{{ . }}">
+    {{- end }}
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Jonathan_Old">
+    <script data-goatcounter="https://jonathanold.goatcounter.com/count"
+      async src="//gc.zgo.at/count.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico" | relURL }}">
+    {{- range .Params.styles }}
+    <link rel="stylesheet" href="{{ . | relURL }}">
+    {{- end }}
+  </head>
+  <body class="appbody">
+    <nav class="appnav">
+      <a href="{{ .Site.Home.RelPermalink }}">&larr; Jonathan Old</a>
+    </nav>
+    {{ .Content }}
+    {{- range .Params.scripts }}
+    <script src="{{ . | relURL }}" defer></script>
+    {{- end }}
+  </body>
+</html>

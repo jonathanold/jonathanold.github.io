@@ -1,0 +1,190 @@
+/* The site's own Noto Sans, served from this domain: this page does not load
+   the theme's style.css, and the whole point of the rewrite is that the tool
+   keeps working without anything else being up. */
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Noto-Sans-regular/Noto-Sans-regular.woff2") format("woff2"),
+       url("/fonts/Noto-Sans-regular/Noto-Sans-regular.woff") format("woff"); }
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/Noto-Sans-700/Noto-Sans-700.woff2") format("woff2"),
+       url("/fonts/Noto-Sans-700/Noto-Sans-700.woff") format("woff"); }
+
+/* India Census Explorer.  A standalone full-width page, so it does not inherit
+   the site's style.css; the family and the blue are the site's, and the
+   Playfair title keeps the look the Streamlit version had. */
+
+:root {
+  --ink: #2b2929;
+  --muted: #777;
+  --line: #e2e2e2;
+  --blue: #267CB9;
+  --tint: #f6f8fa;
+}
+
+* { box-sizing: border-box; }
+
+body.appbody {
+  margin: 0;
+  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #fff; }
+
+.appnav {
+  padding: 10px 24px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px; }
+
+.appnav a { color: var(--blue); text-decoration: none; }
+.appnav a:hover { text-decoration: underline; }
+
+.cx-head { padding: 34px 24px 18px; text-align: center; }
+
+.cx-head h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 52px);
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin: 0 0 6px; }
+
+.cx-sub {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 auto;
+  padding-bottom: 16px;
+  max-width: 800px;
+  border-bottom: 2px solid var(--line); }
+
+.cx { padding: 0 24px 40px; }
+
+/* --- controls ------------------------------------------------------- */
+
+.cx-controls { margin: 22px 0 14px; }
+
+.cx-search { margin-bottom: 16px; }
+
+.cx-controls label,
+.cx-filter > span {
+  display: block;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 4px; }
+
+#cx-q {
+  width: 100%;
+  max-width: 560px;
+  padding: 9px 12px;
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+
+#cx-q:focus { outline: 2px solid var(--blue); outline-offset: -1px; }
+
+.cx-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px; }
+
+.cx-filter select {
+  width: 100%;
+  min-height: 108px;
+  padding: 4px;
+  font: inherit;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff; }
+
+.cx-filter select:focus { outline: 2px solid var(--blue); outline-offset: -1px; }
+
+.cx-actions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.cx-actions button {
+  font: inherit;
+  font-size: 13px;
+  padding: 7px 14px;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--blue);
+  cursor: pointer; }
+
+.cx-actions button:hover { background: var(--blue); color: #fff; }
+
+/* --- results -------------------------------------------------------- */
+
+.cx-count { font-size: 13px; color: var(--muted); margin: 16px 0 8px; }
+.cx-count b { color: var(--ink); }
+
+.cx-tablewrap { border: 1px solid var(--line); border-radius: 4px; overflow-x: auto; }
+
+.cx-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+
+.cx-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--tint);
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none; }
+
+.cx-table th:hover { color: var(--blue); }
+.cx-table th[aria-sort] { color: var(--blue); }
+.cx-table th .cx-arrow { font-size: 9px; margin-left: 3px; }
+
+.cx-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top; }
+
+.cx-table tbody tr:hover { background: var(--tint); }
+
+.cx-title { min-width: 360px; }
+.cx-num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cx-nowrap { white-space: nowrap; }
+
+.cx-table a { color: var(--blue); }
+
+.cx-more, .cx-status {
+  padding: 14px 24px;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin: 0; }
+
+.cx-foot {
+  border-top: 1px solid var(--line);
+  padding: 20px 24px 40px;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center; }
+
+.cx-foot a { color: var(--blue); }
+
+@media (max-width: 640px) {
+  .cx, .cx-head { padding-left: 16px; padding-right: 16px; }
+  .cx-title { min-width: 240px; }
+}

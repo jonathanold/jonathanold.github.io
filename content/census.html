@@ -1,0 +1,46 @@
++++
+title = "India Census Explorer"
+summary = "Search and download the 40,214 tables in the Indian Census archive, 1951 to 2011."
+layout = "app"
+styles = ["/css/census.css"]
+scripts = ["/js/census.js"]
++++
+
+<header class="cx-head">
+  <h1>India Census Explorer</h1>
+  <p class="cx-sub">Search and download Indian Census tables (1951&ndash;2011)</p>
+</header>
+
+<main class="cx" id="cx" hidden>
+  <form class="cx-controls" id="cx-controls" autocomplete="off">
+    <div class="cx-search">
+      <label for="cx-q">Free text search</label>
+      <input type="search" id="cx-q" placeholder="e.g. migration bihar">
+    </div>
+    <div class="cx-filters" id="cx-filters"></div>
+    <div class="cx-actions">
+      <button type="button" id="cx-reset">Reset all</button>
+      <button type="button" id="cx-csv">Download results as CSV</button>
+    </div>
+  </form>
+
+  <p class="cx-count" id="cx-count"></p>
+
+  <div class="cx-tablewrap">
+    <table class="cx-table">
+      <thead>
+        <tr id="cx-headrow"></tr>
+      </thead>
+      <tbody id="cx-body"></tbody>
+    </table>
+    <p class="cx-more" id="cx-more" hidden></p>
+  </div>
+</main>
+
+<p class="cx-status" id="cx-status">Loading the catalogue&hellip;</p>
+
+<footer class="cx-foot">
+  <p>Developed by Jonathan Old. Data from the
+     <a href="https://censusindia.gov.in/nada/index.php/catalog" target="_blank" rel="noopener">Census of India catalogue</a>;
+     every file is served by censusindia.gov.in.</p>
+</footer>
