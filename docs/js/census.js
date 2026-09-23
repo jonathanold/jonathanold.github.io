@@ -27,7 +27,7 @@
     { key: "downloads", label: "Downloads", cls: "cx-num",    get: function (i) { return D.downloads[i]; } }
   ];
 
-  // Topic filters are conjunctive: pick two topics and a row must match both,
+  // The topic filter is conjunctive: pick two topics and a row must match both,
   // as the Streamlit version did by chaining filters.
   function everyTermInTitle(i, picked) {
     var title = D.lower[i], ok = true;
@@ -85,28 +85,8 @@
       },
       test: function (i, picked) { return picked.has(String(D.year[i])); } },
 
-    { id: "keywords", label: "Keywords",
-      // `filters` holds combinations like "PCA, SC"; the control offers the
-      // individual keywords and matches any row whose combination includes one.
-      values: function () {
-        var seen = new Set();
-        D.dicts.filters.forEach(function (f) {
-          if (f) f.split(", ").forEach(function (k) { seen.add(k); });
-        });
-        return Array.from(seen).sort().map(function (k) { return { value: k, label: k }; });
-      },
-      test: function (i, picked) {
-        var parts = D.filterParts[D.filters[i]];
-        for (var p = 0; p < parts.length; p++) if (picked.has(parts[p])) return true;
-        return false;
-      } },
-
-    { id: "topics1", label: "Topics (1 word)",
+    { id: "topics1", label: "Topics",
       values: function () { return D.dicts.topics1.map(function (t) { return { value: t, label: t }; }); },
-      test: function (i, picked) { return everyTermInTitle(i, picked); } },
-
-    { id: "topics2", label: "Topics (2 words)",
-      values: function () { return D.dicts.topics2.map(function (t) { return { value: t, label: t }; }); },
       test: function (i, picked) { return everyTermInTitle(i, picked); } }
   ];
 
@@ -138,9 +118,7 @@
       table: r.table,
       year: r.year,
       state: r.state,
-      filters: r.filters,
-      // "PCA, SC" -> ["PCA","SC"], once per dictionary entry rather than per row
-      filterParts: raw.dicts.filters.map(function (f) { return f ? f.split(", ") : []; })
+      filters: r.filters
     };
   }
 

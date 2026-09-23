@@ -100,7 +100,6 @@ def main(src, meta_src, dest):
             "state": state,
             "filters": filt,
             "topics1": meta["top_30_1word"],
-            "topics2": meta["top_30_2word"],
         },
         "rows": {
             "title": list(df["title"]),

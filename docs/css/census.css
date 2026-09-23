@@ -76,16 +76,17 @@ body.appbody {
   display: block;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 1px;
   color: var(--muted);
-  margin-bottom: 4px; }
+  margin-bottom: 5px; }
 
 #cx-q {
   width: 100%;
   max-width: 560px;
-  padding: 9px 12px;
+  padding: 10px 13px;
   font: inherit;
+  font-size: 15px;
   border: 1px solid #ccc;
   border-radius: 4px; }
 
@@ -93,15 +94,15 @@ body.appbody {
 
 .cx-filters {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 14px; }
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px; }
 
 /* Each filter is a list of checkboxes rather than a multi-select: a plain
    click adds or drops a value, with nothing to hold down and no way to wipe
    the selection by mis-clicking. */
 .cx-filter {
   margin: 0;
-  padding: 8px 10px 10px;
+  padding: 10px 12px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   min-width: 0; }
@@ -112,7 +113,7 @@ body.appbody {
   padding: 0 4px;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 1px;
   color: var(--muted); }
 
@@ -126,11 +127,11 @@ body.appbody {
   min-height: 16px;
   margin-bottom: 4px; }
 
-.cx-selected { font-size: 11px; color: var(--blue); }
+.cx-selected { font-size: 12px; color: var(--blue); }
 
 .cx-clear {
   font: inherit;
-  font-size: 11px;
+  font-size: 12px;
   padding: 0;
   border: 0;
   background: none;
@@ -142,24 +143,24 @@ body.appbody {
 
 .cx-find {
   width: 100%;
-  margin-bottom: 5px;
-  padding: 4px 6px;
+  margin-bottom: 6px;
+  padding: 6px 8px;
   font: inherit;
-  font-size: 12px;
+  font-size: 14px;
   border: 1px solid #ddd;
   border-radius: 3px; }
 
 .cx-options {
-  max-height: 148px;
+  max-height: 190px;
   overflow-y: auto;
   overscroll-behavior: contain; }
 
 .cx-opt {
   display: flex;
   align-items: flex-start;
-  gap: 6px;
-  padding: 2px 4px;
-  font-size: 13px;
+  gap: 8px;
+  padding: 4px 4px;
+  font-size: 15px;
   line-height: 1.35;
   border-radius: 3px;
   cursor: pointer; }
@@ -168,6 +169,8 @@ body.appbody {
 
 .cx-opt input {
   flex: none;
+  width: 15px;
+  height: 15px;
   margin: 2px 0 0;
   accent-color: var(--blue);
   cursor: pointer; }
