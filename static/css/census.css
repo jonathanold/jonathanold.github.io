@@ -74,8 +74,9 @@ body.appbody {
 
 .cx-search { margin-bottom: 16px; }
 
-.cx-controls label,
-.cx-filter > span {
+/* Only the free-text label: the checkbox rows are labels too, and were being
+   set in bold uppercase Georgia along with it. */
+.cx-search label {
   display: block;
   font-family: Georgia, serif;
   font-weight: 700;
@@ -97,20 +98,87 @@ body.appbody {
 
 .cx-filters {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 12px; }
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px; }
 
-.cx-filter select {
-  width: 100%;
-  min-height: 108px;
-  padding: 4px;
-  font: inherit;
-  font-size: 13px;
+/* Each filter is a list of checkboxes rather than a multi-select: a plain
+   click adds or drops a value, with nothing to hold down and no way to wipe
+   the selection by mis-clicking. */
+.cx-filter {
+  margin: 0;
+  padding: 8px 10px 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background: #fff; }
+  min-width: 0; }
 
-.cx-filter select:focus { outline: 2px solid var(--blue); outline-offset: -1px; }
+.cx-filter.cx-active { border-color: var(--blue); }
+
+.cx-filter legend {
+  padding: 0 4px;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--muted); }
+
+.cx-filter.cx-active legend { color: var(--blue); }
+
+.cx-optbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 16px;
+  margin-bottom: 4px; }
+
+.cx-selected { font-size: 11px; color: var(--blue); }
+
+.cx-clear {
+  font: inherit;
+  font-size: 11px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  text-decoration: underline;
+  cursor: pointer; }
+
+.cx-clear:hover { color: var(--blue); }
+
+.cx-find {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 4px 6px;
+  font: inherit;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 3px; }
+
+.cx-options {
+  max-height: 148px;
+  overflow-y: auto;
+  overscroll-behavior: contain; }
+
+.cx-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 2px 4px;
+  font-size: 13px;
+  line-height: 1.35;
+  border-radius: 3px;
+  cursor: pointer; }
+
+.cx-opt:hover { background: var(--tint); }
+
+.cx-opt input {
+  flex: none;
+  margin: 2px 0 0;
+  accent-color: var(--blue);
+  cursor: pointer; }
+
+.cx-opt input:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 
 .cx-actions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
 

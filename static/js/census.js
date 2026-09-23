@@ -145,24 +145,67 @@
 
   /* ------------------------------------------------------------ controls */
 
-  function picked(id) {
-    var sel = el("cx-f-" + id);
-    var out = new Set();
-    for (var i = 0; i < sel.selectedOptions.length; i++) out.add(sel.selectedOptions[i].value);
-    return out;
-  }
+  /* Each filter is a scrollable list of checkboxes: click to add, click again
+     to drop, nothing to hold down, and the selection is always visible.  The
+     chosen values live here rather than in the DOM, so that rebuilding a list
+     -- the sub-tables do that whenever the series change -- does not lose
+     them.  Lists longer than this get their own type-to-narrow box; there are
+     297 sub-tables. */
+  var SEARCHABLE_FROM = 12;
+  var chosen = {};
+
+  function picked(id) { return chosen[id]; }
 
   function fill(f) {
-    var sel = el("cx-f-" + f.id);
-    var keep = picked(f.id);
-    sel.innerHTML = "";
-    f.values({ series: picked("series") }).forEach(function (o) {
-      var opt = document.createElement("option");
-      opt.value = o.value;
-      opt.textContent = o.label;
-      if (keep.has(o.value)) opt.selected = true;
-      sel.appendChild(opt);
+    var list = el("cx-o-" + f.id);
+    var options = f.values({ series: chosen.series });
+    var available = new Set(options.map(function (o) { return o.value; }));
+
+    // Drop anything the reader had chosen that this list no longer offers.
+    chosen[f.id].forEach(function (v) { if (!available.has(v)) chosen[f.id].delete(v); });
+
+    list.innerHTML = "";
+    options.forEach(function (o) {
+      var row = document.createElement("label");
+      row.className = "cx-opt";
+      row.dataset.search = o.label.toLowerCase();
+
+      var box = document.createElement("input");
+      box.type = "checkbox";
+      box.value = o.value;
+      box.checked = chosen[f.id].has(o.value);
+      box.addEventListener("change", function () {
+        if (box.checked) chosen[f.id].add(o.value);
+        else chosen[f.id].delete(o.value);
+        if (f.id === "series") refreshDependent();
+        mark(f);
+        run();
+      });
+
+      var text = document.createElement("span");
+      text.textContent = o.label;
+
+      row.appendChild(box);
+      row.appendChild(text);
+      list.appendChild(row);
     });
+    mark(f);
+  }
+
+  /* The "3 selected / clear" line above each list. */
+  function mark(f) {
+    var n = chosen[f.id].size;
+    var note = el("cx-n-" + f.id);
+    note.textContent = n ? n + " selected" : "";
+    el("cx-c-" + f.id).hidden = n === 0;
+    el("cx-g-" + f.id).classList.toggle("cx-active", n > 0);
+  }
+
+  function clearOne(f) {
+    chosen[f.id].clear();
+    if (f.id === "series") refreshDependent();
+    fill(f);
+    run();
   }
 
   function refreshDependent() { fill(FILTERS[1]); }   // sub-tables follow series
@@ -170,24 +213,59 @@
   function buildFilters() {
     var wrap = el("cx-filters");
     wrap.innerHTML = "";
+
     FILTERS.forEach(function (f) {
-      var box = document.createElement("label");
-      box.className = "cx-filter";
-      var caption = document.createElement("span");
-      caption.textContent = f.label;
-      var sel = document.createElement("select");
-      sel.multiple = true;
-      sel.size = 5;
-      sel.id = "cx-f-" + f.id;
-      sel.addEventListener("change", function () {
-        if (f.id === "series") refreshDependent();
-        run();
-      });
-      box.appendChild(caption);
-      box.appendChild(sel);
-      wrap.appendChild(box);
+      chosen[f.id] = new Set();
+
+      var group = document.createElement("fieldset");
+      group.className = "cx-filter";
+      group.id = "cx-g-" + f.id;
+
+      var legend = document.createElement("legend");
+      legend.textContent = f.label;
+      group.appendChild(legend);
+
+      var bar = document.createElement("div");
+      bar.className = "cx-optbar";
+      var note = document.createElement("span");
+      note.className = "cx-selected";
+      note.id = "cx-n-" + f.id;
+      var clear = document.createElement("button");
+      clear.type = "button";
+      clear.className = "cx-clear";
+      clear.id = "cx-c-" + f.id;
+      clear.textContent = "clear";
+      clear.hidden = true;
+      clear.addEventListener("click", function () { clearOne(f); });
+      bar.appendChild(note);
+      bar.appendChild(clear);
+      group.appendChild(bar);
+
+      var list = document.createElement("div");
+      list.className = "cx-options";
+      list.id = "cx-o-" + f.id;
+      group.appendChild(list);
+      wrap.appendChild(group);
     });
+
+    // The narrow-this-list boxes need the option counts, so they are added
+    // once the lists have been filled.
     FILTERS.forEach(function (f) { fill(f); });
+    FILTERS.forEach(function (f) {
+      var list = el("cx-o-" + f.id);
+      if (list.children.length < SEARCHABLE_FROM) return;
+      var find = document.createElement("input");
+      find.type = "search";
+      find.className = "cx-find";
+      find.placeholder = "Narrow this list\u2026";
+      find.addEventListener("input", function () {
+        var q = find.value.toLowerCase();
+        Array.prototype.forEach.call(list.children, function (row) {
+          row.hidden = q !== "" && row.dataset.search.indexOf(q) === -1;
+        });
+      });
+      list.parentNode.insertBefore(find, list);
+    });
   }
 
   /* ------------------------------------------------------------ filtering */
@@ -355,8 +433,15 @@
     el("cx-q").addEventListener("input", debounce(run, 150));
     el("cx-reset").addEventListener("click", function () {
       el("cx-q").value = "";
-      FILTERS.forEach(function (f) { el("cx-f-" + f.id).selectedIndex = -1; });
-      refreshDependent();
+      FILTERS.forEach(function (f) { chosen[f.id].clear(); });
+      Array.prototype.forEach.call(document.querySelectorAll(".cx-find"), function (i) {
+        i.value = "";
+      });
+      FILTERS.forEach(function (f) { fill(f); });
+      // A narrow-this-list box may have hidden rows before the reset.
+      Array.prototype.forEach.call(document.querySelectorAll(".cx-opt"), function (r) {
+        r.hidden = false;
+      });
       run();
     });
     el("cx-csv").addEventListener("click", csv);
