@@ -163,3 +163,9 @@ h1.site-title a:active {
   font-size: 15px;
   line-height: 1.5;
   color: #333; }
+
+/* The teaching page nests per-term headings under "Section materials"; without
+   this an h4 is smaller than the body text in the theme's stylesheet. */
+h4 {
+  font-size: 15px;
+  margin: 22px 0 6px; }
