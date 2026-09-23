@@ -23,8 +23,15 @@
     <script data-goatcounter="https://jonathanold.goatcounter.com/count"
       async src="//gc.zgo.at/count.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico" | relURL }}">
+    {{- /* GitHub Pages caches assets for ten minutes independently of the page,
+         so a reader can otherwise get new markup with the previous stylesheet
+         or script.  Hashing the file's own contents into the URL means a
+         changed asset is simply a different URL. */ -}}
     {{- range .Params.styles }}
-    <link rel="stylesheet" href="{{ . | relURL }}">
+    <link rel="stylesheet" href="{{ . | relURL }}?v={{ substr (md5 (readFile (printf "static%s" .))) 0 8 }}">
+    {{- end }}
+    {{- with .Params.data }}
+    <script>window.CENSUS_DATA = "{{ . | relURL }}?v={{ substr (md5 (readFile (printf "static%s" .))) 0 8 }}";</script>
     {{- end }}
   </head>
   <body class="appbody">
@@ -33,7 +40,7 @@
     </nav>
     {{ .Content }}
     {{- range .Params.scripts }}
-    <script src="{{ . | relURL }}" defer></script>
+    <script src="{{ . | relURL }}?v={{ substr (md5 (readFile (printf "static%s" .))) 0 8 }}" defer></script>
     {{- end }}
   </body>
 </html>

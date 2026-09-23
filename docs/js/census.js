@@ -7,7 +7,8 @@
 (function () {
   "use strict";
 
-  var DATA_URL = "/data/census.json";
+  // The layout hands over a content-hashed URL; the plain path is the fallback.
+  var DATA_URL = window.CENSUS_DATA || "/data/census.json";
   var PAGE = 200;               // rows appended per scroll
   var el = function (id) { return document.getElementById(id); };
 
