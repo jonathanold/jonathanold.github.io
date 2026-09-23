@@ -18,7 +18,7 @@
 
 /* India Census Explorer.  A standalone full-width page, so it does not inherit
    the site's style.css; the family and the blue are the site's, and the
-   Playfair title keeps the look the Streamlit version had. */
+   whole page is set in it: one clean sans rather than a display serif. */
 
 :root {
   --ink: #2b2929;
@@ -49,22 +49,18 @@ body.appbody {
 .cx-head { padding: 34px 24px 18px; text-align: center; }
 
 .cx-head h1 {
-  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
-  font-size: clamp(28px, 5vw, 52px);
-  letter-spacing: -1px;
-  text-transform: uppercase;
+  font-size: clamp(26px, 4.4vw, 44px);
+  letter-spacing: -0.02em;
   margin: 0 0 6px; }
 
 .cx-sub {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: 16px;
+  font-size: 15px;
   color: var(--muted);
   margin: 0 auto;
   padding-bottom: 16px;
   max-width: 800px;
-  border-bottom: 2px solid var(--line); }
+  border-bottom: 1px solid var(--line); }
 
 .cx { padding: 0 24px 40px; }
 
@@ -75,10 +71,9 @@ body.appbody {
 .cx-search { margin-bottom: 16px; }
 
 /* Only the free-text label: the checkbox rows are labels too, and were being
-   set in bold uppercase Georgia along with it. */
+   set in bold uppercase along with it. */
 .cx-search label {
   display: block;
-  font-family: Georgia, serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 11px;
@@ -115,7 +110,6 @@ body.appbody {
 
 .cx-filter legend {
   padding: 0 4px;
-  font-family: Georgia, serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 11px;
@@ -245,7 +239,6 @@ body.appbody {
 .cx-foot {
   border-top: 1px solid var(--line);
   padding: 20px 24px 40px;
-  font-family: Georgia, serif;
   font-size: 12px;
   color: var(--muted);
   text-align: center; }
