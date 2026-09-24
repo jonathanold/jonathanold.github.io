@@ -13,7 +13,7 @@ Welcome to my website! I am a Ph.D. candidate in economics at the University of 
 
 I work in political economy and development economics. My job market paper studies collusion and prices in public procurement in India. I have also worked on political reservations and conflict in India, democratic transitions and state repression, electoral cycles in deforestation, and healthy ageing.
 
-Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://www.lse.ac.uk/people/oriana-bandiera" target="_blank">Oriana Bandiera</a> at the LSE, where I also did a masters in economics.
+Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.github.io/" target="_blank">Oriana Bandiera</a> at the LSE, where I also did a masters in economics.
 
 
 
