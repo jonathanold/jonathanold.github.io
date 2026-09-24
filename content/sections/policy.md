@@ -1,8 +1,8 @@
-* Bureaucracy and development. With <a href="https://www.lse.ac.uk/economics/people/faculty/tim-besley" target="_blank">Tim Besley</a>, <a href="https://robinburgess.com/" target="_blank">Robin Burgess </a>, <a href="https://adnanqkhan.com/" target="_blank">Adnan Khan</a> and  <a href="http://guoxu.org/" target="_blank">Guo Xu</a>. In: VoxEU / CEPR Policy Portal
-(2021). <a href="https://voxeu.org/article/bureaucracy-and-development" target="_blank">Link to article</a>
+* Bureaucracy and development. With <a href="https://www.lse.ac.uk/people/tim-besley" target="_blank">Tim Besley</a>, <a href="https://robinburgess.com/" target="_blank">Robin Burgess </a>, <a href="https://adnanqkhan.com/" target="_blank">Adnan Khan</a> and  <a href="https://www.guoxu.org/" target="_blank">Guo Xu</a>. In: VoxEU / CEPR Policy Portal
+(2021). <a href="https://cepr.org/voxeu/columns/bureaucracy-and-development" target="_blank">Link to article</a>
 
 * The Interaction Between Covid-19 and an Ageing Society. With <a href="https://profandrewjscott.com/" target="_blank">Andrew J. Scott</a>. In: VoxEU / CEPR Policy Portal
-(2020). <a href="https://voxeu.org/article/interaction-between-covid-19-and-ageing-society" target="_blank">Link to article</a>
+(2020). <a href="https://cepr.org/voxeu/columns/interaction-between-covid-19-and-ageing-society" target="_blank">Link to article</a>
 
 * Sparprojekt oder Milchmädchenrechnung? Die finanziellen Effekte eines Bundeslandes „Mitteldeutschland [Fiscal aspects of a 'Länder' merger]. With <a href="https://sites.google.com/site/roeselfelix/" target="_blank">Felix Rösel</a>. In: ifo Dresden berichtet 25/02 (2018). 12–17. <a href="https://www.ifo.de/DocDL/ifoDD_18-02_12-17_Old.pdf" target="_blank">Link to pdf</a>
 
