@@ -1,24 +1,25 @@
 works:
-- title: "Mandated Political Representation and Low-Level Conflict: Evidence from India"
+- title: "Power-Sharing and Low-Level Conflict: Evidence from Political Reservations in India"
   pdflink: ""
+  note: "[New draft coming soon!]"
   book: "Working Paper, available on request"
-  coauthors: 
+  coauthors:
   links:
     - url: "/audio/kalx-the-graduates-jonathan-old.mp3"
       text: "📻 Radio interview with KALX.FM"
   abstract: >
-    This paper analyzes the effect of political reservations on low-level subnational conflict in India. The recent literature on the impact of reservations on public goods provison finds that reservations benefit the targeted minorities. This may come at the detriment of other minorities or forward castes. I explore the latter possibility in a simple formal model of targeted public goods provision. The model indicates that reservations reduce conflict the larger and economically more disadvantaged the targeted minority is. However, this result may be mediated by reelection incentives. I investigate the predictions of the model with empirical data from Indian constituencies and village-level surveys. At the constituency level, where politicians can be reelected, reservations are associated with significantly lower levels of conflict. At the village level, the rotation of reservations constitutes an implicit term limit, and reservation is, if at all, associated with more conflict.
-
-
-- title: "(When) Do Democracies Repress Less?"
-  pdflink: "/pdf/2021_When_do_democracies_repress_less.pdf"
-  book: "Working Paper"
-  coauthors: "Martin Rößler and Patrick Zwerschke"
-  links:
-    - url: "/pdf/2021_When_do_democracies_repress_less_Appendix.pdf"
-      text: "Online Appendix"
-  abstract: >
-   Although there is consensus that full democracies are less repressive than other regime types, the establishment of full democracy is not always followed by reduced state repression. Against that background, this paper examines heterogeneity in the relationship between democracy and government violations of human rights. Drawing on arguments from the civil war literature, we develop a simple model that highlights opposing effects of democracy on state repression. Consequently, the net effect of democracy is shown to be ambiguous. Furthermore, the model reveals that pacifying (adverse) effects of democracy are more likely to dominate in countries with higher (lower) income levels. These implications are tested empirically using different methodological approaches, including time-series cross-sectional regressions, event studies, and a recent generalization of the synthetic control method. Our analyses confirm that democracy is related to reduced repression in relatively rich countries, whereas we find no or even adverse effects in poor countries.
-
-
-
+    This paper analyzes the effect of an important power-sharing institution — political
+    reservations for historically disadvantaged minorities — on low-level subnational conflict
+    in India. Previous research has identified positive impacts of reservations on public goods
+    provision benefitting the targeted minorities. However, reservations may come at the
+    detriment of other groups, leading to backlash and potentially higher conflict. I empirically
+    investigate this question with panel data from Indian districts and assembly constituencies.
+    Exploiting exogenous variation in reservations stemming from rules in the process of
+    apportioning reserved seats, I show that reservations are consistently leading to lower
+    levels of conflict. The combination of district- and constituency-level analysis shows that
+    this is not a displacement effect, and that potential backlash at the district level is
+    outweighed by direct conflict reduction. I explore mechanisms behind this result and show
+    that (1) conflict reductions have been particularly pronounced for killings of security
+    personnel, (2) conflict reductions have been stronger in areas with active Naxalite
+    insurgent activity, and (3) conflict reductions were accompanied by reductions in
+    caste-related conflict events and crimes against lower castes.

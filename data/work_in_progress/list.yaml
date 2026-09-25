@@ -1,0 +1,11 @@
+works:
+- title: "(When) Do Democracies Repress Less?"
+  pdflink: "/pdf/2021_When_do_democracies_repress_less.pdf"
+  note: "Pre-Ph.D. work"
+  book: "Work in progress"
+  coauthors: "Martin Rößler and Patrick Zwerschke"
+  links:
+    - url: "/pdf/2021_When_do_democracies_repress_less_Appendix.pdf"
+      text: "Online Appendix"
+  abstract: >
+   Although there is consensus that full democracies are less repressive than other regime types, the establishment of full democracy is not always followed by reduced state repression. Against that background, this paper examines heterogeneity in the relationship between democracy and government violations of human rights. Drawing on arguments from the civil war literature, we develop a simple model that highlights opposing effects of democracy on state repression. Consequently, the net effect of democracy is shown to be ambiguous. Furthermore, the model reveals that pacifying (adverse) effects of democracy are more likely to dominate in countries with higher (lower) income levels. These implications are tested empirically using different methodological approaches, including time-series cross-sectional regressions, event studies, and a recent generalization of the synthetic control method. Our analyses confirm that democracy is related to reduced repression in relatively rich countries, whereas we find no or even adverse effects in poor countries.

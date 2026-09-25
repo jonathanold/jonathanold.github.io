@@ -19,11 +19,14 @@
 {{ with .Site.Data.job_market_paper }}
 <p style="line-height:1.07" class="contactinfo"><a href="{{ $home }}#jobmarketpaper">Job Market Paper</a></p>
 {{ end }}
-{{ with .Site.Data.publications }}
-<p style="line-height:1.07" class="contactinfo"><a href="{{ $home }}#publications">Publications</a></p>
-{{ end }}
 {{ with .Site.Data.working_papers }}
 <p style="line-height:1.07" class="contactinfo"><a href="{{ $home }}#workingpapers">Working Papers</a></p>
+{{ end }}
+{{ with .Site.Data.work_in_progress }}
+<p style="line-height:1.07" class="contactinfo"><a href="{{ $home }}#workinprogress">Work in Progress</a></p>
+{{ end }}
+{{ with .Site.Data.publications }}
+<p style="line-height:1.07" class="contactinfo"><a href="{{ $home }}#publications">Publications</a></p>
 {{ end }}
 <p style="line-height:1.07" class="contactinfo"><a href="{{ "/teaching/" | relURL }}">Teaching</a></p>
 
