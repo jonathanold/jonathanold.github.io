@@ -1,22 +1,26 @@
 /* Site-wide overrides layered on top of the theme's style.css, which lives in
    the academimal submodule and is therefore left untouched. */
 
-/* The header is two sticky boxes (see layouts/partials/header.html): the title
-   pins at top:0 and the nav below it at top:75px, both set by the theme. The
-   portrait is deliberately not inside either one -- see the note in that file.
-   With nav only, the box is ~350px and fits any plausible window, so no
-   height threshold and no inner scrollbar are needed. */
-#header01,
-#header02 {
-  max-height: 100vh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: thin;
+/* The sidebar does not stick.
+
+   The theme pins the title at top:0 and the nav at top:75px, both with an
+   opaque white background and a z-index above the page. Every arrangement
+   that keeps that stickiness breaks something, because the portrait lives in
+   the same narrow column:
+     - portrait inside the sticky box, pinned by its top: the box grows past
+       the viewport on a short window and the portrait is stranded below the
+       fold for good;
+     - pinned by its bottom instead: the portrait is reachable, but the whole
+       nav is pushed off the top of the screen;
+     - portrait outside the box, nav sticky: the portrait scrolls underneath
+       the opaque pinned nav and vanishes behind it.
+   The third is what a sticky, opaque element above scrolling content in one
+   column will always do. Letting the column scroll normally costs a pinned
+   nav and fixes all three at once, at every window size and zoom level. */
+.headx {
+  position: static;
 }
 
-#header02 {
-  max-height: calc(100vh - 75px);   /* it pins 75px down, so it has that much less room */
-}
 
 header img.portrait {
   display: block;
@@ -25,19 +29,7 @@ header img.portrait {
   height: auto;
 }
 
-/* Below 767px the theme drops sticky positioning and the header stacks above
-   the content, so the caps must come off or the sidebar gets its own
-   scrollbar on a phone. */
-@media (max-width: 767px) {
-  .headx,
-  #header01,
-  #header02 {
-    max-height: none;
-    overflow-y: visible;
-    top: auto;
-    bottom: auto;
-  }
-}
+
 
 /* The secondary nav links (Posts / Policy / Resources / Archive) sit on one
    wrapped line under a quiet label, rather than one per line. */
