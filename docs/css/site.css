@@ -35,3 +35,23 @@ header img.portrait {
     overflow-y: visible;
   }
 }
+
+/* The secondary nav links (Posts / Policy / Resources / Archive) sit on one
+   wrapped line under a quiet label, rather than one per line. */
+.navgroup-label {
+  margin: 14px 0 3px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  line-height: 1.07;
+}
+
+.navgroup {
+  line-height: 1.45;
+  margin: 0;
+}
+
+.navgroup-sep {
+  color: #ccc;
+}
