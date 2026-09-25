@@ -1,4 +1,20 @@
 works:
+- title: "Hidden Campaign Finance: Evidence from India"
+  pdflink: ""
+  book: "Work in progress"
+  coauthors: "Amol Singh Raswan"
+  abstract: >
+    Firms exploit anonymous donation channels, giving to parties other than those in their
+    publicly disclosed portfolio.
+
+- title: "Cognitive Enrichment and Human Capital: Experimental Evidence from Developing Countries"
+  pdflink: ""
+  book: "Work in progress"
+  coauthors: "Uyanga Byambaa"
+  abstract: >
+    Randomized school-based chess programs in Kenya and Malawi raise multiple dimensions of
+    cognitive ability, with larger gains among students who were weaker at baseline.
+
 - title: "(When) Do Democracies Repress Less?"
   pdflink: "/pdf/2021_When_do_democracies_repress_less.pdf"
   note: "Pre-Ph.D. work"
