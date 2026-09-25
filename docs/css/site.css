@@ -56,3 +56,36 @@ a.pdflink {
   font-size: 0.9em;
   white-space: nowrap;
 }
+
+/* Keep the sidebar a fixed column and let the text take the rest.
+
+   .wrapper is a flex row of header (270px + padding) and section (700px),
+   1058px in all. Below that the two must shrink, and a flex item's automatic
+   minimum size is its min-content width -- which, for the sidebar, is driven
+   by the portrait: the file is 3192px wide and max-width:100% is cyclic, so
+   the browser falls back on the intrinsic width. The sidebar therefore
+   refused to shrink and ate the text column instead. At a 1024px viewport
+   the sidebar stood at 583px and the text at 310px, with the portrait
+   blown up to 495px; at 1164px the same page was a correct 351/682 with a
+   263px portrait. That is the jump between 110% and 125% zoom.
+
+   min-width:0 removes the intrinsic floor, the fixed basis holds the sidebar
+   at its intended width, and the portrait is capped in pixels so it can
+   never drive the column again. */
+.wrapper > header {
+  flex: 0 0 270px;   /* an explicit basis: 'auto' would size it to the short
+                        bio on one line, which is ~900px of max-content */
+  min-width: 0;
+}
+
+.wrapper > section {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+  max-width: 700px;
+}
+
+header img.portrait {
+  width: 270px;
+  max-width: 100%;
+}
