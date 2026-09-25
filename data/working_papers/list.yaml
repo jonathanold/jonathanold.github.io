@@ -5,8 +5,6 @@ works:
   book: "Working Paper"
   coauthors:
   links:
-    - url: "/pdf/2026_Power_sharing_and_low_level_conflict.pdf"
-      text: "[PDF]"
     - url: "/audio/kalx-the-graduates-jonathan-old.mp3"
       text: "📻 Radio interview with KALX.FM"
   abstract: >

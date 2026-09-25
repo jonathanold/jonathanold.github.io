@@ -55,3 +55,9 @@ header img.portrait {
 .navgroup-sep {
   color: #ccc;
 }
+
+/* [PDF] hangs off the venue line; keep it quieter than the title link. */
+a.pdflink {
+  font-size: 0.9em;
+  white-space: nowrap;
+}
