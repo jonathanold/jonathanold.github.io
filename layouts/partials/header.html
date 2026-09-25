@@ -50,12 +50,21 @@
         <div class="headx" id="header02">
              <hr/>
       {{ partial "sidebar.html" . }} 
+        </div>
 
+        {{- /* The portrait sits OUTSIDE the sticky box, in normal flow.
+             Inside it, the box stood ~678px and needed a window ~755px tall
+             before the photo cleared the fold; below that the photo was
+             stranded. Pinning the box by its bottom edge instead rescued the
+             photo but pushed the whole nav off the top of the screen on a
+             short window -- the sidebar became a portrait with no links.
+             With the photo out here the sticky box is nav-only (~350px), so
+             it fits any plausible window, and the photo is always reachable
+             by ordinary page scrolling. No viewport-height threshold to go
+             stale when a nav item is added. */ -}}
         {{ with .Site.Params.logo }}
         <img class="portrait" src="{{ . | relURL }}" alt="Portrait of Jonathan Old" />
         {{ end }}
-
-        </div>
       <!-- </div> -->
     </header>
 

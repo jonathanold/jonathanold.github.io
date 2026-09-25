@@ -2,29 +2,20 @@
    the academimal submodule and is therefore left untouched. */
 
 /* The header is two sticky boxes (see layouts/partials/header.html): the title
-   pins at top:0, the nav block below it.
-
-   The nav block pins by its BOTTOM edge, not its top. Pinning it at top:75px
-   only works while it is shorter than the viewport minus 75px -- on a laptop
-   window shorter than about 780px the portrait at its foot fell past the
-   bottom of the screen and no amount of page scrolling brought it back, which
-   is the glitch that was reported. Sticking the bottom edge instead means the
-   foot of the block is what stays on screen, so the portrait is always
-   reachable; scrolling back up releases the block and returns the top of the
-   nav. This needs no viewport-height threshold and so does not go stale when
-   a nav item is added. .headx is painted white by the theme, so where the two
-   boxes meet on a short screen the title still covers the nav cleanly. */
+   pins at top:0 and the nav below it at top:75px, both set by the theme. The
+   portrait is deliberately not inside either one -- see the note in that file.
+   With nav only, the box is ~350px and fits any plausible window, so no
+   height threshold and no inner scrollbar are needed. */
+#header01,
 #header02 {
-  top: auto;
-  bottom: 0;
-}
-
-/* Guard for the title box only, which is short but not guaranteed to be. */
-#header01 {
   max-height: 100vh;
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
+}
+
+#header02 {
+  max-height: calc(100vh - 75px);   /* it pins 75px down, so it has that much less room */
 }
 
 header img.portrait {
