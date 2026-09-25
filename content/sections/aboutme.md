@@ -20,6 +20,14 @@ Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" t
 
 
 
+<!--
+The three research figures are hidden for now; they will be replaced with
+figures from the job market paper. Nothing has been deleted: the images are
+still in static/images/, the hugo-easy-gallery shortcodes and CSS are still
+wired up, and this block only needs uncommenting. (Go template comments do
+not work in content files -- only shortcodes are processed there -- so this
+note lives inside the HTML comment.)
+
 {{< load-photoswipe >}}
 
 {{< gallery >}}
@@ -27,3 +35,4 @@ Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" t
   {{< figure link="/images/electoral_cycles_in_deforestation_in_Indonesia.jpg" thumb="-thumb" caption="Electoral cycles in deforestation in Indonesia"  alt="Electoral cycles in deforestation in Indonesia: The figure shows the evolution of deforestation rates across an electoral cycle of five years. In the election year, deforestation drops substantially, but much less so in the protected forest.">}}
   {{< figure link="/images/low_level_conflict_in_India.jpg"  caption="Low-level conflict in India since 2015" alt="Low-level conflict in India since 2015: The map aggregates ACLED data on low-level conflict to the level of electoral districts for state assembly elections. In my paper, I show that districts with a seat reserved for the Scheduled Castes have experienced less conflict since 2015.">}}
 {{< /gallery >}}
+-->
