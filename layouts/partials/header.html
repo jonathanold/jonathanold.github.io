@@ -24,6 +24,7 @@
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
         <link rel="stylesheet" href="{{ "/css/posts.css" | relURL }}">
+        <link rel="stylesheet" href="{{ "/css/site.css" | relURL }}?v={{ substr (md5 (readFile "static/css/site.css")) 0 8 }}">
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     </head> 
 
@@ -40,12 +41,18 @@
 
              <hr/>
       {{ partial "sidebar.html" . }} 
-                <!-- begin photo -->
-                {{ with .Site.Params.logo }}
-                <img src="{{ . | relURL }}" alt="Logo" />
-                {{ end }}
 
         </div>
+
+        {{- /* The portrait deliberately sits OUTSIDE .headx. That div is
+             position:sticky; top:0, and a sticky box taller than the viewport
+             can never scroll its own lower edge into view -- with the photo
+             inside, the sidebar was ~1090px tall and the photo was permanently
+             below the fold. Out here it is in normal flow, so it scrolls with
+             the page, and .headx is short enough for sticky to work properly. */ -}}
+        {{ with .Site.Params.logo }}
+        <img class="portrait" src="{{ . | relURL }}" alt="Portrait of Jonathan Old" />
+        {{ end }}
       <!-- </div> -->
     </header>
 

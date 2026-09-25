@@ -13,6 +13,8 @@ Welcome to my website! I am a Ph.D. candidate in economics at the University of 
 
 I work in political economy and development economics. My job market paper studies collusion and prices in public procurement in India. I have also worked on political reservations and conflict in India, democratic transitions and state repression, electoral cycles in deforestation, and healthy ageing.
 
+My dissertation is supervised by <a href="https://ftrebbi.com/" target="_blank">Francesco Trebbi</a>, <a href="https://emiguel.econ.berkeley.edu/" target="_blank">Edward Miguel</a>, and <a href="https://berkeley-econ.github.io/ffinan-site/" target="_blank">Frederico Finan</a>.
+
 Before my Ph.D., I worked as a predoc with  <a href="https://robinburgess.com" target="_blank">Robin Burgess</a> and <a href="https://orianabandiera.github.io/" target="_blank">Oriana Bandiera</a> at the LSE, where I also did a masters in economics.
 
 

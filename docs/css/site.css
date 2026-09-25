@@ -1,0 +1,32 @@
+/* Site-wide overrides layered on top of the theme's style.css, which lives in
+   the academimal submodule and is therefore left untouched. */
+
+/* The portrait sits outside .headx now (see layouts/partials/header.html) so
+   that it scrolls with the page instead of being trapped below the fold of a
+   sticky box. It just needs a little air under the nav. */
+header img.portrait {
+  display: block;
+  margin-top: 18px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Belt and braces: should the sticky sidebar ever grow taller than the
+   viewport again, let it scroll its own overflow rather than hiding the
+   bottom of itself permanently. With the portrait moved out, the content is
+   well under 100vh and no scrollbar appears. */
+.headx {
+  max-height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+/* Below 767px the theme drops sticky positioning altogether and the header
+   stacks above the content, so neither cap applies. */
+@media (max-width: 767px) {
+  .headx {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
