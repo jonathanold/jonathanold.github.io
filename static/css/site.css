@@ -1,20 +1,12 @@
 /* Site-wide overrides layered on top of the theme's style.css, which lives in
    the academimal submodule and is therefore left untouched. */
 
-/* The portrait sits outside .headx now (see layouts/partials/header.html) so
-   that it scrolls with the page instead of being trapped below the fold of a
-   sticky box. It just needs a little air under the nav. */
-header img.portrait {
-  display: block;
-  margin-top: 18px;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Belt and braces: should the sticky sidebar ever grow taller than the
-   viewport again, let it scroll its own overflow rather than hiding the
-   bottom of itself permanently. With the portrait moved out, the content is
-   well under 100vh and no scrollbar appears. */
+/* The header is two sticky boxes (see layouts/partials/header.html): the title
+   pins at top:0, the nav block at top:75px. Neither is taller than the
+   viewport, so both scroll their full height into view -- including the
+   portrait at the bottom of the second box. The cap below is a guard: if the
+   nav ever does outgrow the viewport, it scrolls its own overflow rather than
+   hiding its lower edge for good. */
 .headx {
   max-height: 100vh;
   overflow-y: auto;
@@ -22,10 +14,23 @@ header img.portrait {
   scrollbar-width: thin;
 }
 
-/* Below 767px the theme drops sticky positioning altogether and the header
-   stacks above the content, so neither cap applies. */
+#header02 {
+  max-height: calc(100vh - 75px);   /* it pins 75px down, so it has that much less room */
+}
+
+header img.portrait {
+  display: block;
+  margin-top: 23px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Below 767px the theme drops sticky positioning and the header stacks above
+   the content, so the caps must come off or the sidebar gets its own
+   scrollbar on a phone. */
 @media (max-width: 767px) {
-  .headx {
+  .headx,
+  #header02 {
     max-height: none;
     overflow-y: visible;
   }

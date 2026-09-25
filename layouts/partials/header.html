@@ -34,25 +34,28 @@
 
     <header>
       <!--<div class="header">-->
+        {{- /* Two sticky boxes rather than one, as on himani-arora-ha.github.io:
+             the title pins at top:0 and the nav block at top:75px (both tops are
+             set by the theme's #header01 / #header02 rules). Keeping them
+             separate, with the short bio between them in normal flow, keeps each
+             sticky box well under the viewport height -- a single sticky box
+             taller than the viewport can never scroll its own lower edge into
+             view, which is what used to bury the portrait. */ -}}
         <div class="headx" id="header01">
           <h1 class="site-title"><a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></h1>
+        </div>
 
       {{ .Site.Params.shortbio }} 
 
+        <div class="headx" id="header02">
              <hr/>
       {{ partial "sidebar.html" . }} 
 
-        </div>
-
-        {{- /* The portrait deliberately sits OUTSIDE .headx. That div is
-             position:sticky; top:0, and a sticky box taller than the viewport
-             can never scroll its own lower edge into view -- with the photo
-             inside, the sidebar was ~1090px tall and the photo was permanently
-             below the fold. Out here it is in normal flow, so it scrolls with
-             the page, and .headx is short enough for sticky to work properly. */ -}}
         {{ with .Site.Params.logo }}
         <img class="portrait" src="{{ . | relURL }}" alt="Portrait of Jonathan Old" />
         {{ end }}
+
+        </div>
       <!-- </div> -->
     </header>
 
