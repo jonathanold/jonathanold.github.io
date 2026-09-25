@@ -2,20 +2,29 @@
    the academimal submodule and is therefore left untouched. */
 
 /* The header is two sticky boxes (see layouts/partials/header.html): the title
-   pins at top:0, the nav block at top:75px. Neither is taller than the
-   viewport, so both scroll their full height into view -- including the
-   portrait at the bottom of the second box. The cap below is a guard: if the
-   nav ever does outgrow the viewport, it scrolls its own overflow rather than
-   hiding its lower edge for good. */
-.headx {
+   pins at top:0, the nav block below it.
+
+   The nav block pins by its BOTTOM edge, not its top. Pinning it at top:75px
+   only works while it is shorter than the viewport minus 75px -- on a laptop
+   window shorter than about 780px the portrait at its foot fell past the
+   bottom of the screen and no amount of page scrolling brought it back, which
+   is the glitch that was reported. Sticking the bottom edge instead means the
+   foot of the block is what stays on screen, so the portrait is always
+   reachable; scrolling back up releases the block and returns the top of the
+   nav. This needs no viewport-height threshold and so does not go stale when
+   a nav item is added. .headx is painted white by the theme, so where the two
+   boxes meet on a short screen the title still covers the nav cleanly. */
+#header02 {
+  top: auto;
+  bottom: 0;
+}
+
+/* Guard for the title box only, which is short but not guaranteed to be. */
+#header01 {
   max-height: 100vh;
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
-}
-
-#header02 {
-  max-height: calc(100vh - 75px);   /* it pins 75px down, so it has that much less room */
 }
 
 header img.portrait {
@@ -30,9 +39,12 @@ header img.portrait {
    scrollbar on a phone. */
 @media (max-width: 767px) {
   .headx,
+  #header01,
   #header02 {
     max-height: none;
     overflow-y: visible;
+    top: auto;
+    bottom: auto;
   }
 }
 
